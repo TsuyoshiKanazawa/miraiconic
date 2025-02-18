@@ -1,0 +1,41 @@
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+@mixin setScale($s) {
+  transform: scale($s);
+  transform-origin: left top;
+  height: calc(100% / $s);
+  width: calc(100% / $s);
+}
+
+@mixin lineHeightCrop($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+}
