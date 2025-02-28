@@ -1,15 +1,15 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 @font-face {
-  font-family: 'PixelMplus12';
-  src: url('/assets/fonts/PixelMplus12-Bold.ttf') format('truetype');
+  font-family: 'DinCondensedBold';
+  src: url('/assets/fonts/din-condensed-bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   * {
-    font-family: "PixelMplus12", sans-serif;
+    font-family: "Noto Sans JP", serif;
     letter-spacing: 0.10em;
   }
   main {
@@ -51,7 +51,7 @@ img {
 .fade-leave-to {
   opacity: 0;
   transform: translateY(15px);
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
 .inview {
@@ -94,6 +94,11 @@ img {
   @include mixins.max-screen(768px) {
     display: flex !important;
   }
+}
+
+.mask {
+  overflow: hidden;
+  position: relative;
 }
 
 /*
