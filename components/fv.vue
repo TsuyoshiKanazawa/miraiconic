@@ -51,12 +51,19 @@ export default {
   background-color: #fff;
   position: relative;
   overflow: hidden;
+  @include mixins.max-screen(768px) {
+    height: 148vw;
+  }
   .fv__text__wrapper {
     position: absolute;
     bottom: 21px;
     left: 10%;
     z-index: 10;
     transition: transform 1s ease-out;
+    @include mixins.max-screen(768px) {
+      bottom: 40%;
+      left: 5%;
+    }
     img {
       display: block;
     }
@@ -64,11 +71,19 @@ export default {
       width: 70vw;
       max-width: 1040px;
       min-width: 500px;
+      @include mixins.max-screen(768px) {
+        width: 90vw;
+        min-width: auto;
+      }
     }
     .fv__title {
       width: 52.5vw;
       max-width: 779px;
       min-width: 300px;
+      @include mixins.max-screen(768px) {
+        width: 90vw;
+        min-width: auto;
+      }
     }
   }
   /* fv__img__wrapperはレイアウト上の基点となる */
@@ -93,6 +108,12 @@ export default {
     top: 18%;
     left: -7%;
     animation: fv__img1 1.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    @include mixins.max-screen(768px) {
+      width: 20vw;
+      top: auto;
+      bottom: 5%;
+      left: -2%;
+    }
   }
   .fv__img__parallax .fv__img2 {
     width: 13vw;
@@ -100,6 +121,11 @@ export default {
     top: 38%;
     left: 23%;
     animation: fv__img2 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    @include mixins.max-screen(768px) {
+      width: 20vw;
+      top: 20%;
+      left: 15%;
+    }
   }
   .fv__img__parallax .fv__img3 {
     width: 30vw;
@@ -108,6 +134,12 @@ export default {
     right: 20%;
     transform: translateY(-50%);
     animation: fv__img3 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    @include mixins.max-screen(768px) {
+      width: 40vw;
+      top: 15%;
+      right: -10%;
+      animation: fv__img3__sp 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    }
   }
   .fv__img__parallax .fv__img4 {
     width: 35vw;
@@ -115,6 +147,11 @@ export default {
     bottom: 0%;
     right: -5%;
     animation: fv__img4 1.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    @include mixins.max-screen(768px) {
+      width: 60vw;
+      bottom: -5%;
+      right: -5%;
+    }
   }
 }
 
@@ -148,6 +185,18 @@ export default {
   }
   50% {
     transform: translateY(-100%) rotate(-180deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+}
+
+@keyframes fv__img3__sp {
+  0% {
+    transform: translateY(-150%) rotate(-180deg);
+  }
+  50% {
+    transform: translateY(-150%) rotate(-180deg);
   }
   100% {
     transform: translateY(-50%) rotate(0deg);

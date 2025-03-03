@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/',
     head: {
-      title: 'ミライコニック',
+      title: '株式会社ミライコニック',
       htmlAttrs: {
         lang: 'ja',
         prefix: 'og: http://ogp.me/ns#'
@@ -30,12 +30,12 @@ export default defineNuxtConfig({
         { hid: 'og:site_name', property: 'og:site_name', content: '' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:url', property: 'og:url', content: '' },
-        { hid: 'og:title', property: 'og:title', content: '' },
+        { hid: 'og:title', property: 'og:title', content: '株式会社ミライコニック' },
         { hid: 'og:description', property: 'og:description', content: '' },
         { hid: 'og:image', property: 'og:image', content: '/img/OGP.jpg' },
         { hid: 'twitter:card', property: 'twitter:card', content: 'summary' },
         { hid: 'twitter:site', property: 'twitter:site', content: '@' },
-        { hid: 'twitter:title', property: 'twitter:title', content: '' },
+        { hid: 'twitter:title', property: 'twitter:title', content: '株式会社ミライコニック' },
         { hid: 'twitter:description', property: 'twitter:description', content: '' },
         { hid: 'twitter:image', property: 'twitter:image', content: '/img/OGP.jpg' }
       ],

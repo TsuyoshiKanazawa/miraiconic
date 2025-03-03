@@ -11,9 +11,9 @@
       <div class="service__container__contents">
         <div class="service__container__contents__item" v-observe="'inview'">
           <img src="/img/service/service1.jpg" alt="service1" class="service__container__contents__item__img">
-          <div class="service__container__contents__item__text" v-observe="'inview'">
-            <h4 class="service__container__contents__item__text__title">モデリング・ファミリ制作</h4>
-            <p class="service__container__contents__item__text__text">
+          <div class="service__container__contents__item__text">
+            <h4 class="service__container__contents__item__text__title" v-observe="'inview'">モデリング・ファミリ制作</h4>
+            <p class="service__container__contents__item__text__text" v-observe="'inview'">
               高度な技術力を持つスペシャリストが、<br>
               プロジェクトにおけるBIM活用の目的に応じて最適なモデルや<br>
               ファミリを制作いたします。<br>
@@ -23,9 +23,9 @@
           </div>
         </div>
         <div class="service__container__contents__item" v-observe="'inview'">
-          <div class="service__container__contents__item__text" v-observe="'inview'">
-            <h4 class="service__container__contents__item__text__title">ビジュアライゼーション制作</h4>
-            <p class="service__container__contents__item__text__text">
+          <div class="service__container__contents__item__text">
+            <h4 class="service__container__contents__item__text__title" v-observe="'inview'">ビジュアライゼーション制作</h4>
+            <p class="service__container__contents__item__text__text" v-observe="'inview'">
               BIMモデルと連携したスピーディーなビジュアライゼーションを<br>
               制作し、合意形成をスムーズにサポートいたします。<br>
               静止画、パノラマ、動画、VRに加え、<br>
@@ -37,9 +37,9 @@
         </div>
         <div class="service__container__contents__item" v-observe="'inview'">
           <img src="/img/service/service3.jpg" alt="service3" class="service__container__contents__item__img">
-          <div class="service__container__contents__item__text" v-observe="'inview'">
-            <h4 class="service__container__contents__item__text__title">コンサルティング</h4>
-            <p class="service__container__contents__item__text__text">
+          <div class="service__container__contents__item__text">
+            <h4 class="service__container__contents__item__text__title" v-observe="'inview'">コンサルティング</h4>
+            <p class="service__container__contents__item__text__text" v-observe="'inview'">
               BIM導入・活用に関する豊富な知見と実績を基に、<br>
               お客様の課題解決をサポートいたします。<br>
               最適なBIM戦略の策定から実際のテンプレート制作まで、<br>
@@ -49,9 +49,9 @@
           </div>
         </div>
         <div class="service__container__contents__item" v-observe="'inview'">
-          <div class="service__container__contents__item__text" v-observe="'inview'">
-            <h4 class="service__container__contents__item__text__title">教育支援</h4>
-            <p class="service__container__contents__item__text__text">
+          <div class="service__container__contents__item__text">
+            <h4 class="service__container__contents__item__text__title" v-observe="'inview'">教育支援</h4>
+            <p class="service__container__contents__item__text__text" v-observe="'inview'">
               各社に合わせたBIM教育プログラムで人材育成を支援します。<br>
               基本から実践的なカリキュラム策定、教材制作、<br>
               リアルおよびオンラインによる講師対応をいたします。<br>
@@ -160,7 +160,7 @@ export default {
           margin-top: min(5.2vw, 75px);
           position: relative;
           z-index: 9;
-          h4 {
+          &__title {
             font-size: min(2.5vw, 36px);
             letter-spacing: 0.03em;
             max-width: 510px;
@@ -168,8 +168,12 @@ export default {
             transform: translateY(min(3.47vw, 50px));
             transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
             opacity: 0;
+            &.inview {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
-          p {
+          &__text {
             font-size: min(1.04vw, 15px);
             margin-top: min(1.11vw, 16px);
             font-weight: 500;
@@ -180,6 +184,10 @@ export default {
             transform: translateY(min(3.47vw, 50px));
             transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
             opacity: 0;
+            &.inview {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
           &:nth-child(even) {
             padding: min(5.69vw, 82px) min(2.5vw, 37px) min(2.5vw, 37px) min(15.27vw, 220px);

@@ -15,37 +15,37 @@
         <div class="menu__inner">
           <ul class="menu__item">
             <li>
-              <nuxt-link to="#top" href="#top" v-smooth-scroll>
+              <nuxt-link to="#top" href="#top" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;TOP
               </nuxt-link>
               <div class="menu__item__line short"></div>
             </li>
             <li>
-              <nuxt-link to="#about" href="#about" v-smooth-scroll>
+              <nuxt-link to="#about" href="#about" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;About Us
               </nuxt-link>
               <div class="menu__item__line Medium"></div>
             </li>
             <li>
-              <nuxt-link to="#service" href="#service" v-smooth-scroll>
+              <nuxt-link to="#service" href="#service" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Service
               </nuxt-link>
               <div class="menu__item__line Medium"></div>
             </li>
             <li>
-              <nuxt-link to="#qa" href="#qa" v-smooth-scroll>
+              <nuxt-link to="#qa" href="#qa" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Q&A
               </nuxt-link>
               <div class="menu__item__line short"></div>
             </li>
             <li>
-              <nuxt-link to="#corporate-info" href="#corporate-info" v-smooth-scroll>
+              <nuxt-link to="#corporate-info" href="#corporate-info" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Corporate Info
               </nuxt-link>
               <div class="menu__item__line"></div>
             </li>
             <li>
-              <nuxt-link to="#footer" href="#footer" v-smooth-scroll>
+              <nuxt-link to="#footer" href="#footer" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Contact
               </nuxt-link>
               <div class="menu__item__line Medium"></div>
@@ -87,6 +87,11 @@ export default {
   height: 100px;
   z-index: 100;
   padding: 2.5% 5% 0 5%;
+  @include mixins.max-screen(768px) {
+    background-color: #fff;
+    height: 16vw;
+    padding: 4% 5% 0 5%;
+  }
   .header__inner {
     display: flex;
     justify-content: space-between;
@@ -94,6 +99,9 @@ export default {
     .header__logo {
       img {
         width: 181px;
+        @include mixins.max-screen(768px) {
+          width: 150px;
+        }
       }
     }
     .hamberger {
@@ -109,21 +117,33 @@ export default {
         background-color: #252526;
         transition: transform 0.3s ease-in-out;
         position: relative;
+        @include mixins.max-screen(768px) {
+          width: 38px;
+        }
         &.top {
           margin-top: 0px;
         }
         &.middle {
           margin-top: 11px;
+          @include mixins.max-screen(768px) {
+            margin-top: 9px;
+          }
           transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
         &.bottom {
           margin-top: 11px;
+          @include mixins.max-screen(768px) {
+            margin-top: 9px;
+          }
         }
       }
       &.is-open {
         .hamberger__line {
           &.top {
             transform: rotate(45deg) translateY(11px) translateX(7px);
+            @include mixins.max-screen(768px) {
+              transform: rotate(45deg) translateY(9px) translateX(7px);
+            }
           }
           &.middle {
             width: 0;
@@ -131,6 +151,9 @@ export default {
           }
           &.bottom {
             transform: rotate(-45deg) translateY(-11px) translateX(7px);
+            @include mixins.max-screen(768px) {
+              transform: rotate(-45deg) translateY(-9px) translateX(7px);
+            }
           }
         }
 
@@ -150,6 +173,10 @@ export default {
       transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
       transform: translateX(100%);
       opacity: 0;
+      @include mixins.max-screen(768px) {
+        width: 100vw;
+        border-bottom: 2px solid #252526;
+      }
       &.is-open {
         transform: translateX(0);
         opacity: 1;
