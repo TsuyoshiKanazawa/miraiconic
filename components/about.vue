@@ -27,33 +27,25 @@
           <span>山口 晃</span>
         </div>
       </div>
-      <div class="floating-wrapper">
-        <img src="/img/about/about-pt1.png" alt="aboutBg3" class="about_pt1" v-observe="'inview'">
+      <div class="about__bg__wrapper" style="z-index: 11;">
+        <div class="about__bg__wrapper__contents1" v-observe="'inview'">
+          <img src="/img/about/about-pt1.png" alt="aboutBg3" class="about_pt1">
+        </div>
       </div>
-      <div class="floating-wrapper">
-        <img src="/img/about/about-pt2.png" alt="aboutBg3" class="about_pt2" v-observe="'inview'">
+      <div class="about__bg__wrapper" style="z-index: 0;">
+        <div class="about__bg__wrapper__contents2" v-observe="'inview'">
+          <img src="/img/about/about-pt2.png" alt="aboutBg3" class="about_pt2">
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import scrollParallaxMixin from '@/mixins/scrollParallaxMixin';
 export default {
   name: 'About',
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      // 例：スクロール量に応じたオフセット（0.1倍程度の軽い追従）
-      const offset = window.scrollY * 0.1;
-      // CSS変数 --scroll-offset にオフセット値を設定
-      document.documentElement.style.setProperty('--scroll-offset', `${offset}px`);
-    }
-  }
+  mixins: [scrollParallaxMixin],
 }
 </script>
 
@@ -73,6 +65,7 @@ export default {
     background-repeat: no-repeat;
     position: relative;
     padding-bottom: min(3.47vw, 50px);
+    position: relative;
 
     .about__container__contents {
       padding: min(2.5vw, 50px) 6vw;
@@ -82,8 +75,8 @@ export default {
       color: #252526;
       transform: translate(0, -3.47vw);
       position: relative;
-      z-index: 10;
       overflow: hidden;
+      z-index: 10;
       .about__contents__line {
         position: absolute;
         top: -100%;
@@ -148,39 +141,62 @@ export default {
       }
     }
     &.inview {
-      .about__container__contents {
         .about__contents__line {
           top: 0%;
         }
+    }
+  }
+  .about__bg__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(var(--scroll-offset, 0px));
+    transition: transform 0.8s ease-in-out;
+    &__contents1 {
+      width: fit-content;
+      transform: translateX(51%) rotate(180deg);
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: max(-250vw, -250px);
+      transition: transform 0.8s ease-in-out;
+      position: relative;
+      .about_pt1 {
+        width: 17.36vw;
+        max-width: 250px;
+        display: block;
+        transition: transform 0.8s ease-in-out;
+        position: relative;
+        margin-right: 0;
+        margin-left: auto;
+        z-index: 2;
+      }
+      &.inview {
+        transform: translateX(51%) rotate(0);
       }
     }
-  }
-  .about_pt1 {
-    position: absolute;
-    top: -15vw;
-    right: 0;
-    width: 17.36vw;
-    max-width: 250px;
-    display: block;
-    transform: translateX(51%) rotate(180deg);
-    transition: transform 0.8s ease-in-out, top 0.8s ease-in-out;
-    z-index: 20;
-    &.inview {
-      transform: translateX(51%) translateY(var(--scroll-offset, 0px)) rotate(0deg);
+    &__contents2 {
+      width: fit-content;
+      margin-right: auto;
+      margin-left: 0;
+      transition: transform 0.8s ease-in-out;
+      position: relative;
+
+      .about_pt2 {
+        width: 43.05vw;
+        max-width: 620px;
+        transition: transform 0.8s ease-in-out;
+        position: relative;
+        transform: translate(-90%, 90%);
+      }
+      &.inview {
+        .about_pt2 {
+          transform: translate(0, 0);
+        }
+      }
     }
-  }
-  .about_pt2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 43.05vw;
-    max-width: 620px;
-    z-index: 1;
-    transform: translate(-100%, 100%);
-    transition: transform 0.8s ease-in-out;
-    &.inview {
-      transform: translate(0, 0) translateY(var(--scroll-offset, 0px));
-    }
+
   }
 }
 </style>

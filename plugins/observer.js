@@ -10,9 +10,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             el.classList.add(binding.value || 'inview');
-          } else {
+          }/* else {
             el.classList.remove(binding.value || 'inview');
-          }
+          }*/
         });
       }, observerOptions);
 

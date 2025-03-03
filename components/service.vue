@@ -21,7 +21,6 @@
               ファミリ設計で、実務でのベストプラクティスを実現します。
             </p>
           </div>
-          <img src="/img/service/service-pt1.png" alt="service-pt1" class="service__container__contents__item__pt1">
         </div>
         <div class="service__container__contents__item" v-observe="'inview'">
           <div class="service__container__contents__item__text" v-observe="'inview'">
@@ -48,7 +47,6 @@
               実践的なアドバイスで、現場で使えるノウハウを提供いたします。
             </p>
           </div>
-          <img src="/img/service/service-pt2.png" alt="service-pt2" class="service__container__contents__item__pt2">
         </div>
         <div class="service__container__contents__item" v-observe="'inview'">
           <div class="service__container__contents__item__text" v-observe="'inview'">
@@ -64,14 +62,30 @@
           <img src="/img/service/service4.jpg" alt="service4" class="service__container__contents__item__img">
         </div>
       </div>
-      <img src="/img/service/service-pt3.png" alt="service-pt3" class="service__container__pt3">
+      <div class="service__bg__wrapper1" style="z-index: 0;">
+        <div class="service__bg__wrapper__contents1">
+          <img src="/img/service/service-pt1.png" alt="service-pt3" class="service__container__pt1" v-observe="'inview'">
+        </div>
+      </div>
+      <div class="service__bg__wrapper2" style="z-index: 0;">
+        <div class="service__bg__wrapper__contents2">
+          <img src="/img/service/service-pt2.png" alt="service-pt3" class="service__container__pt2" v-observe="'inview'">
+        </div>
+      </div>
+      <div class="service__bg__wrapper3" style="z-index: 0;">
+        <div class="service__bg__wrapper__contents3">
+          <img src="/img/service/service-pt3.png" alt="service-pt3" class="service__container__pt3" v-observe="'inview'">
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+import scrollParallaxMixin from '@/mixins/scrollParallaxMixin';
 export default {
   name: 'Service',
+  mixins: [scrollParallaxMixin],
 }
 </script>
 
@@ -119,7 +133,7 @@ export default {
         align-items: center;
         justify-content: center;
         position: relative;
-        
+        z-index: 10;
         &__img {
           max-width: 640px;
           width: 44.44vw;
@@ -127,10 +141,10 @@ export default {
           object-fit: cover;
           border-radius: min(8.33vw, 120px);
           position: relative;
-          transition: box-shadow 0.3s ease-in-out;
+          transition: box-shadow .5s ease-in-out;
+          transition-delay: .3s;
           &:nth-child(odd) {
             z-index: 10;
-            box-shadow: max(-0.34vw, -5px) max(-0.34vw, -5px) 0px 0px #85C1DE;
           }
           &:nth-child(even) {
             z-index: 15;
@@ -195,32 +209,69 @@ export default {
             }
           }
         }
-        &__pt1 {
-          position: absolute;
-          top: 90%;
-          left: 0;
-          max-width: 163px;
-          width: 11.31vw;
-          transform: translateX(max(-4.02vw, -58px)) rotate(-16.03deg);
-        }
-        &__pt2 {
-          position: absolute;
-          top: 0;
-          right: 2%;
-          max-width: 132px;
-          width: 9.16vw;
-          z-index: 8;
+      }
+    }
+    .service__bg__wrapper1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 10;
+      .service__bg__wrapper__contents1 {
+        margin-top: min(41.66vw, 600px);
+        margin-left: max(-3.47vw, -50px);
+        transform: translateY(var(--scroll-offset, 0px));
+        transition: transform 0.8s ease-in-out;
+        .service__container__pt1 {
+          width: min(11.31vw, 163px);
+          transform: rotate(-16.03deg) scale(0);
+          transition: transform 0.5s ease-in-out;
+          &.inview {
+            transform: rotate(-16.03deg) scale(1);
+          }
         }
       }
     }
-    &__pt3 {
+    .service__bg__wrapper2 {
       position: absolute;
-      bottom: max(-2.98vw, -43px);
+      top: 0;
+      right: 0;
+      height: 100%;
+      z-index: 10;
+      .service__bg__wrapper__contents2 {
+        margin-top: min(76.38vw, 1100px);
+        transform: translateY(var(--scroll-offset, 0px));
+        transition: transform 0.8s ease-in-out;
+        .service__container__pt2 {
+          width: min(8.88vw, 128px);
+          transform: scale(0);
+          transition: transform 0.5s ease-in-out;
+          &.inview {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+    .service__bg__wrapper3 {
+      position: absolute;
+      top: 0;
       left: 0;
-      max-width: 89px;
-      width: 6.18vw;
-      z-index: 8;
-      transform: rotate(30.32deg);
+      height: 100%;
+      z-index: 10;
+      .service__bg__wrapper__contents3 {
+        margin-top: min(118.05vw, 1700px);
+
+        transform: translateY(var(--scroll-offset, 0px));
+        transition: transform 0.8s ease-in-out;
+        .service__container__pt3 {
+          width: min(97.22vw, 89px);
+          transform: rotate(30.32deg) scale(0);
+          transition: transform 0.5s ease-in-out;
+          &.inview {
+            transform: rotate(30.32deg) scale(1);
+          }
+        }
+      }
     }
   }
 }
