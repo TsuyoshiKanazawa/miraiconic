@@ -94,7 +94,7 @@ export default {
   background-color: #F2F2F2;
   color: #252526;
   .service__container {
-    padding-top: 5.55vw;
+    padding-top: min(5vw, 72px);
     padding-bottom: min(9.58vw, 138px);
     position: relative;
     overflow: hidden;
