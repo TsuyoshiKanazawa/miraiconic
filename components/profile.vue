@@ -49,7 +49,12 @@
         </svg>
         <div class="profile__container__item__text">
           <h4>所在地</h4>
-          <p>〒108-0075 東京都港区港南2-17-1 京王品川ビル2階06号室</p>
+          <a target="_blank" href="https://www.google.co.jp/maps/search/%E3%80%92108-0075+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E6%B8%AF%E5%8D%972-17-1+%E4%BA%AC%E7%8E%8B%E5%93%81%E5%B7%9D%E3%83%93%E3%83%AB2%E9%9A%8E06%E5%8F%B7%E5%AE%A4/@35.6274621,139.7391918,883m/data=!3m2!1e3!4b1?hl=ja&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D">
+            〒108-0075 東京都港区港南2-17-1 京王品川ビル2階06号室
+            <svg width="34" height="42" viewBox="0 0 34 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 0C7.62672 0 0.000173068 7.5369 0.000173068 16.7895C-0.0614513 30.324 16.354 41.5464 17 42C17 42 34.0615 30.324 33.9998 16.8C33.9998 7.5369 26.3733 0 17 0ZM17 25.2C12.3038 25.2 8.50009 21.441 8.50009 16.8C8.50009 12.159 12.3038 8.4 17 8.4C21.6962 8.4 25.4999 12.159 25.4999 16.8C25.4999 21.441 21.6962 25.2 17 25.2Z" fill="black"/>
+            </svg>
+          </a>
         </div>
       </div>
       <div class="profile__container__item" v-observe="'inview'">
@@ -166,6 +171,20 @@ export default {
           font-weight: 700;
           color: #252526;
           letter-spacing: 0.03em;
+        }
+        a {
+          font-size: min(1.80vw, 26px);
+          line-height: min(2.70vw, 39px);
+          font-weight: 700;
+          color: #252526;
+          letter-spacing: 0.03em;
+          display: flex;
+          gap: min(1.73vw, 25px);
+          svg {
+            display: block;
+            width: min(2.36vw, 34px);
+            height: min(2.91vw, 42px);
+          }
         }
       }
     }
