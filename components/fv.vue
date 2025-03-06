@@ -30,6 +30,7 @@ export default {
     return {
       parallaxSpeed: 10,
       scrollY: 0,
+      isWindows: navigator.userAgent.indexOf('Windows') !== -1, // Windowsかどうかを判別する変数
     };
   },
   computed: {
@@ -39,6 +40,7 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    console.log(this.isWindows);
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll);
