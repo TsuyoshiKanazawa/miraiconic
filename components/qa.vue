@@ -4,7 +4,7 @@
       <div class="mask">
         <h3 class="qa__title" v-observe="'inview'">Q&A</h3>
       </div>
-      <img src="/img/titleLine.png" alt="line" class="title_line">
+      <img src="/img/titleLine.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="qa__title__sub" v-observe="'inview'">質問にお答えします</h3>
       </div>
@@ -157,12 +157,12 @@
     </div>
     <div class="qa__bg__wrapper1" style="z-index: 1;">
       <div class="qa__bg__wrapper__contents1">
-        <img src="/img/qa/qa-pt1.png" alt="qa_bg" class="qa__container__pt1" v-observe="'inview'">
+        <img src="/img/service/service-pt2.svg" alt="qa_bg" class="qa__container__pt1" v-observe="'inview'">
       </div>
     </div>
     <div class="qa__bg__wrapper2" style="z-index: 1;">
       <div class="qa__bg__wrapper__contents2">
-        <img src="/img/qa/qa-pt2.png" alt="qa_bg" class="qa__container__pt2" v-observe="'inview'">
+        <img src="/img/service/service-pt1.svg" alt="qa_bg" class="qa__container__pt2" v-observe="'inview'">
       </div>
     </div>
   </section>

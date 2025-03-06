@@ -4,7 +4,7 @@
       <div class="mask">
         <h3 class="features__title" v-observe="'inview'">Features</h3>
       </div>
-      <img src="/img/titleLine.png" alt="line" class="title_line">
+      <img src="/img/titleLine.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="features__title__sub" v-observe="'inview'">ミライコニックの特徴</h3>
       </div>
@@ -106,17 +106,17 @@
       </div>
       <div class="features__bg__wrapper1" style="z-index: 1;">
         <div class="features__bg__wrapper__contents1">
-          <img src="/img/service/service-pt1.png" alt="features-pt3" class="features__container__pt1" v-observe="'inview'">
+          <img src="/img/service/service-pt1.svg" alt="features-pt3" class="features__container__pt1" v-observe="'inview'">
         </div>
       </div>
       <div class="features__bg__wrapper2" style="z-index: 1;">
         <div class="features__bg__wrapper__contents2">
-          <img src="/img/service/service-pt2.png" alt="features-pt2" class="features__container__pt2" v-observe="'inview'">
+          <img src="/img/service/service-pt2.svg" alt="features-pt2" class="features__container__pt2" v-observe="'inview'">
         </div>
       </div>
       <div class="features__bg__wrapper3" style="z-index: 1;">
         <div class="features__bg__wrapper__contents3">
-          <img src="/img/about/about-pt2.png" alt="features-pt3" class="features__container__pt3" v-observe="'inview'">
+          <img src="/img/about/about-pt2.svg" alt="features-pt3" class="features__container__pt3" v-observe="'inview'">
         </div>
       </div>
     </div>

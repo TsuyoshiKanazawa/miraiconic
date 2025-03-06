@@ -4,7 +4,7 @@
       <div class="mask">
         <h3 class="profile__title" v-observe="'inview'">Profile</h3>
       </div>
-      <img src="/img/titleLine.png" alt="line" class="title_line">
+      <img src="/img/titleLine.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="profile__title__sub" v-observe="'inview'">会社情報</h3>
       </div>
@@ -76,7 +76,7 @@
     </div>
     <div class="profile__bg__wrapper1" style="z-index: 1;">
       <div class="profile__bg__wrapper__contents1">
-        <img src="/img/profile/profile-pt1.png" alt="profile_bg" class="profile__container__pt1" v-observe="'inview'">
+        <img src="/img/profile/profile-pt1.svg" alt="profile_bg" class="profile__container__pt1" v-observe="'inview'">
       </div>
     </div>
   </section>
@@ -178,12 +178,16 @@ export default {
           font-weight: 700;
           color: #252526;
           letter-spacing: 0.03em;
+          transition: opacity 0.1s ease-in-out;
           display: flex;
           gap: min(1.73vw, 25px);
           svg {
             display: block;
             width: min(2.36vw, 34px);
             height: min(2.91vw, 42px);
+          }
+          &:hover {
+            opacity: 0.7;
           }
         }
       }

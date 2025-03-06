@@ -4,7 +4,7 @@
       <div class="mask">
         <h2 class="service__title" v-observe="'inview'">Service</h2>
       </div>
-      <img src="/img/titleLine.png" alt="line" class="title_line">
+      <img src="/img/titleLine.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="service__title__sub" v-observe="'inview'">ミライコニックのサービス</h3>
       </div>
@@ -64,17 +64,17 @@
       </div>
       <div class="service__bg__wrapper1" style="z-index: 0;">
         <div class="service__bg__wrapper__contents1">
-          <img src="/img/service/service-pt1.png" alt="service-pt3" class="service__container__pt1" v-observe="'inview'">
+          <img src="/img/service/service-pt1.svg" alt="service-pt3" class="service__container__pt1" v-observe="'inview'">
         </div>
       </div>
       <div class="service__bg__wrapper2" style="z-index: 0;">
         <div class="service__bg__wrapper__contents2">
-          <img src="/img/service/service-pt2.png" alt="service-pt3" class="service__container__pt2" v-observe="'inview'">
+          <img src="/img/service/service-pt2.svg" alt="service-pt3" class="service__container__pt2" v-observe="'inview'">
         </div>
       </div>
       <div class="service__bg__wrapper3" style="z-index: 0;">
         <div class="service__bg__wrapper__contents3">
-          <img src="/img/service/service-pt3.png" alt="service-pt3" class="service__container__pt3" v-observe="'inview'">
+          <img src="/img/service/service-pt3.svg" alt="service-pt3" class="service__container__pt3" v-observe="'inview'">
         </div>
       </div>
     </div>

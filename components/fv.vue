@@ -1,16 +1,23 @@
 <template>
   <section class="fv">
     <div class="fv__text__wrapper">
-      <img src="/img/fv_text.png" alt="copy" class="fv__text">
-      <img src="/img/fv_title.png" alt="fv_title" class="fv__title">
+      <div class="mask">
+        <img src="/img/fv-text1.svg" alt="fv_title" class="fv__text1">
+      </div>
+      <div class="mask">
+        <img src="/img/fv-text2.svg" alt="fv_title" class="fv__text2">
+      </div>
+      <div class="mask">
+        <img src="/img/fv-title.svg" alt="fv_title" class="fv__title">
+      </div>
     </div>
     <!-- 親ラッパー内にパララックス用ラッパーを新規追加 -->
     <div class="fv__img__wrapper">
       <div class="fv__img__parallax" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
-        <img src="/img/fv-pt1.png" alt="fv_img" class="fv__img1">
-        <img src="/img/fv-pt2.png" alt="fv_img" class="fv__img2">
-        <img src="/img/fv-pt3.png" alt="fv_img" class="fv__img3">
-        <img src="/img/fv-pt4.png" alt="fv_img" class="fv__img4">
+        <img src="/img/fv-pt1.svg" alt="fv_img" class="fv__img1">
+        <img src="/img/fv-pt2.svg" alt="fv_img" class="fv__img2">
+        <img src="/img/fv-pt3.svg" alt="fv_img" class="fv__img3">
+        <img src="/img/fv-pt4.svg" alt="fv_img" class="fv__img4">
       </div>
     </div>
   </section>
@@ -67,19 +74,39 @@ export default {
     img {
       display: block;
     }
-    .fv__text {
+    .fv__text1 {
+      display: block;
+      width: 46.59vw;
+      max-width: 671px;
+      min-width: 500px;
+      height: min(5.8vw, 83.52px);
+      margin-bottom: 2%;
+      animation: fv__text 2.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+      @include mixins.max-screen(768px) {
+        width: 90vw;
+        min-width: auto;
+      }
+    }
+    .fv__text2 {
+      display: block;
       width: 70vw;
       max-width: 1040px;
       min-width: 500px;
+      height: min(6.5vw, 93.7px);
+      margin-bottom: 2%;
+      animation: fv__text 2.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
       @include mixins.max-screen(768px) {
         width: 90vw;
         min-width: auto;
       }
     }
     .fv__title {
+      display: block;
       width: 52.5vw;
       max-width: 779px;
       min-width: 300px;
+      height: min(8.33vw, 120px);
+      animation: fv__title 2.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
       @include mixins.max-screen(768px) {
         width: 90vw;
         min-width: auto;
@@ -152,6 +179,29 @@ export default {
       bottom: -5%;
       right: -5%;
     }
+  }
+}
+@keyframes fv__text {
+  0% {
+    transform: translateY(130%);
+  }
+  50% {
+    transform: translateY(130%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fv__title {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 

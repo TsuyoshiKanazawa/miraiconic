@@ -3,7 +3,7 @@
     <img src="/img/about/aboutBg1.jpg" alt="aboutBg1" class="about_bg1">
     <div class="about__container" v-observe="'inview'">
       <div class="about__container__contents">
-        <img src="/img/about/aboutLine.png" alt="line" class="about__contents__line">
+        <img src="/img/about/aboutLine.svg" alt="line" class="about__contents__line">
         <div class="about__title__wrapper mask" v-observe="'inview'">
           <h2 class="about__title">About Us</h2>
         </div>
@@ -29,12 +29,12 @@
       </div>
       <div class="about__bg__wrapper" style="z-index: 11;">
         <div class="about__bg__wrapper__contents1" v-observe="'inview'">
-          <img src="/img/about/about-pt1.png" alt="aboutBg3" class="about_pt1">
+          <img src="/img/about/about-pt1.svg" alt="aboutBg3" class="about_pt1">
         </div>
       </div>
       <div class="about__bg__wrapper" style="z-index: 0;">
         <div class="about__bg__wrapper__contents2" v-observe="'inview'">
-          <img src="/img/about/about-pt2.png" alt="aboutBg3" class="about_pt2">
+          <img src="/img/about/about-pt2.svg" alt="aboutBg3" class="about_pt2">
         </div>
       </div>
     </div>

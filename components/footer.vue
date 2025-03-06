@@ -20,9 +20,9 @@
       </p>
     </div>
     <div class="footer__bg-container" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
-      <img src="/img/fv-pt3.png" alt="footer-bg" class="footer__bg1">
-      <img src="/img/fv-pt1.png" alt="footer-bg" class="footer__bg2">
-      <img src="/img/fv-pt4.png" alt="footer-bg" class="footer__bg3">
+      <img src="/img/fv-pt3.svg" alt="footer-bg" class="footer__bg1">
+      <img src="/img/fv-pt1.svg" alt="footer-bg" class="footer__bg2">
+      <img src="/img/fv-pt4.svg" alt="footer-bg" class="footer__bg3">
     </div>
   </footer>
 </template>
@@ -66,6 +66,10 @@ export default {
         line-height: 1;
         font-size: min(3.47vw, 50px);
         font-family: 'DinCondensedBold', sans-serif;
+        transition: opacity 0.1s ease-in-out;
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -74,8 +78,14 @@ export default {
     justify-content: center;
     gap: min(1.38vw, 20px);
     margin-top: min(3.19vw, 46px);
+    position: relative;
+    z-index: 100;
     a {
       cursor: pointer;
+      transition: opacity 0.1s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+      }
       img {
         height: min(3.19vw, 46px);
       }
