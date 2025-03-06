@@ -75,37 +75,37 @@
               <nuxt-link to="#top" href="#top" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;TOP
               </nuxt-link>
-              <div class="menu__item__line short"></div>
+              <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
             </li>
             <li>
               <nuxt-link to="#about" href="#about" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;About Us
               </nuxt-link>
-              <div class="menu__item__line Medium"></div>
+              <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
             </li>
             <li>
               <nuxt-link to="#service" href="#service" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Service
               </nuxt-link>
-              <div class="menu__item__line Medium"></div>
+              <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
             </li>
             <li>
               <nuxt-link to="#qa" href="#qa" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Q&A
               </nuxt-link>
-              <div class="menu__item__line short"></div>
+              <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
             </li>
             <li>
               <nuxt-link to="#corporate-info" href="#corporate-info" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Corporate Info
               </nuxt-link>
-              <div class="menu__item__line"></div>
+              <div class="menu__item__line" :class="{ 'is-windows': isWindows }"></div>
             </li>
             <li>
               <nuxt-link to="#footer" href="#footer" v-smooth-scroll @click="isOpen = false">
                 /&nbsp;&nbsp;Contact
               </nuxt-link>
-              <div class="menu__item__line Medium"></div>
+              <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
             </li>
           </ul>
         </div>
@@ -130,6 +130,7 @@ export default {
   data() {
     return {
       isOpen: false,
+      isWindows: navigator.userAgent.indexOf('Windows') !== -1, // Windowsかどうかを判別する変数
     };
   },
 };
@@ -265,7 +266,7 @@ export default {
             }
             .menu__item__line {
               position: absolute;
-              top: 0;
+              top: -10%;
               left: 0;
               width: 0;
               height: 100%;
@@ -277,6 +278,9 @@ export default {
               }
               &.Medium {
                 transition: width 0.3s ease-in-out;
+              }
+              &.is-windows {
+                top: 0;
               }
             }
             &:hover {
