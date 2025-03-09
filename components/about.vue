@@ -3,7 +3,9 @@
     <img src="/img/about/aboutBg1.jpg" alt="aboutBg1" class="about_bg1">
     <div class="about__container" v-observe="'inview'">
       <div class="about__container__contents">
-        <img src="/img/about/aboutLine.svg" alt="line" class="about__contents__line">
+        <div class="about__line__wrapper mask">
+          <img src="/img/about/aboutLine.svg" alt="line" class="about__contents__line">
+        </div>
         <div class="about__title__wrapper mask" v-observe="'inview'">
           <h2 class="about__title">About Us</h2>
         </div>
@@ -20,7 +22,7 @@
           最新のテクノロジーと豊富な経験に基づくエンパシー（共感性）を融合させることで、<br>
           お客様に最適なBIMエクスペリエンスをお届けすることをお約束いたします。
         </p>
-        <img src="/img/about/aboutPic.png" alt="about_img1" class="about__img1">
+        <img src="/img/about/aboutPic.png" alt="Yamaguchi's photo" class="about__img1">
         <div class="about__img__text">
           代表取締役
           <br>
@@ -70,20 +72,39 @@ export default {
     .about__container__contents {
       padding: min(2.5vw, 50px) 6vw;
       background-color: #fff;
-      width: 88.9vw;
+      width: 93vw;
+      max-width: 1310px;
       margin: 0 0 0 auto;
       color: #252526;
       transform: translate(0, -3.47vw);
       position: relative;
-      overflow: hidden;
       z-index: 10;
-      .about__contents__line {
+      @include mixins.min-screen(1441px) {
+        margin-right: calc((100vw - 1440px) / 2);
+        margin-left: auto;
+        &::after {
+          content: '';
+          display: block;
+          width: calc((100vw - 1440px) / 2);
+          height: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          right: calc((1440px - 100vw) / 2);
+          z-index: 10;
+        }
+      }
+      .about__line__wrapper {
         position: absolute;
-        top: -100%;
+        top: 0%;
         left: 4vw;
-        width: 1.08vw;
-        max-width: 15.7px;
-        transition: top 0.8s ease-in-out;
+        width: fit-content;
+        .about__contents__line {
+          width: 1.08vw;
+          max-width: 15.7px;
+          transition: transform 0.8s ease-in-out;
+          transform: translateY(-100%);
+        }
       }
       .about__title__wrapper {
         .about__title {
@@ -141,9 +162,16 @@ export default {
       }
     }
     &.inview {
+      .about__line__wrapper {
         .about__contents__line {
-          top: 0%;
+          transform: translateY(0);
         }
+      }
+      .about__title__wrapper {
+        .about__title {
+          transform: translateY(0);
+        }
+      }
     }
   }
   .about__bg__wrapper {

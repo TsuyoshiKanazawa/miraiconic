@@ -81,7 +81,7 @@ export default {
       min-width: 500px;
       height: min(5.8vw, 83.52px);
       margin-bottom: 2%;
-      animation: fv__text 2.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+      animation: fv__text 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
       @include mixins.max-screen(768px) {
         width: 90vw;
         min-width: auto;
@@ -94,7 +94,7 @@ export default {
       min-width: 500px;
       height: min(6.5vw, 93.7px);
       margin-bottom: 2%;
-      animation: fv__text 2.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+      animation: fv__text 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
       @include mixins.max-screen(768px) {
         width: 90vw;
         min-width: auto;
@@ -106,7 +106,7 @@ export default {
       max-width: 779px;
       min-width: 300px;
       height: min(8.33vw, 120px);
-      animation: fv__title 2.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+      animation: fv__title 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
       @include mixins.max-screen(768px) {
         width: 90vw;
         min-width: auto;
@@ -185,7 +185,7 @@ export default {
   0% {
     transform: translateY(130%);
   }
-  50% {
+  65% {
     transform: translateY(130%);
   }
   100% {
@@ -197,7 +197,7 @@ export default {
   0% {
     transform: translateY(100%);
   }
-  50% {
+  65% {
     transform: translateY(100%);
   }
   100% {
