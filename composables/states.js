@@ -1,2 +1,2 @@
 // 認証ユーザー（firebaseのAuthentication）
-//export const useAuthUser = () => useState('authUser', () => null)
+export const useIsMobile = () => useState('isMobile', () => false)

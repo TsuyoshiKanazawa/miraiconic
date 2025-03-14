@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ 'hide': hide }">
     <div class="header__inner">
       <div class="header__logo">
         <a href="/">
@@ -63,63 +63,63 @@
           </svg>
         </a>
       </div>
-      <div class="hamberger" @click="isOpen = !isOpen" :class="{ 'is-open': isOpen }">
+      <div class="hamberger" @click="openMenu" :class="{ 'is-open': isOpen }">
         <div class="hamberger__line top"></div>
         <div class="hamberger__line middle"></div>
         <div class="hamberger__line bottom"></div>
       </div>
-      <div class="menu" :class="{ 'is-open': isOpen }">
-        <div class="menu__inner">
-          <ul class="menu__item">
-            <li>
-              <nuxt-link to="#top" href="#top" v-smooth-scroll @click="isOpen = false">
-                /&nbsp;&nbsp;TOP
-              </nuxt-link>
-              <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
-            </li>
-            <li>
-              <nuxt-link to="#about" href="#about" v-smooth-scroll @click="isOpen = false">
-                /&nbsp;&nbsp;About Us
-              </nuxt-link>
-              <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
-            </li>
-            <li>
-              <nuxt-link to="#service" href="#service" v-smooth-scroll @click="isOpen = false">
-                /&nbsp;&nbsp;Service
-              </nuxt-link>
-              <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
-            </li>
-            <li>
-              <nuxt-link to="#qa" href="#qa" v-smooth-scroll @click="isOpen = false">
-                /&nbsp;&nbsp;Q&A
-              </nuxt-link>
-              <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
-            </li>
-            <li>
-              <nuxt-link to="#corporate-info" href="#corporate-info" v-smooth-scroll @click="isOpen = false">
-                /&nbsp;&nbsp;Corporate Info
-              </nuxt-link>
-              <div class="menu__item__line" :class="{ 'is-windows': isWindows }"></div>
-            </li>
-            <li>
-              <nuxt-link to="#footer" href="#footer" v-smooth-scroll @click="isOpen = false">
-                /&nbsp;&nbsp;Contact
-              </nuxt-link>
-              <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
-            </li>
-          </ul>
-        </div>
-        <div class="sns__inner">
-          <a href="/">
-            <img src="/img/insta.png" alt="instagram">
-          </a>
-          <a href="/">
-            <img src="/img/x.png" alt="x">
-          </a>
-        </div>
-        <div class="copyright">
-          <p>©2025 MIRAICONIC</p>
-        </div>
+    </div>
+    <div class="menu" :class="{ 'is-open': isOpen }">
+      <div class="menu__inner">
+        <ul class="menu__item">
+          <li>
+            <nuxt-link to="#top" v-smooth-scroll @click="isOpen = false">
+              /&nbsp;&nbsp;TOP
+            </nuxt-link>
+            <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
+          </li>
+          <li>
+            <nuxt-link to="#about" v-smooth-scroll @click="isOpen = false">
+              /&nbsp;&nbsp;About Us
+            </nuxt-link>
+            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+          </li>
+          <li>
+            <nuxt-link to="#service" v-smooth-scroll @click="isOpen = false">
+              /&nbsp;&nbsp;Service
+            </nuxt-link>
+            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+          </li>
+          <li>
+            <nuxt-link to="#qa" v-smooth-scroll @click="isOpen = false">
+              /&nbsp;&nbsp;Q&A
+            </nuxt-link>
+            <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
+          </li>
+          <li>
+            <nuxt-link to="#corporate-info" v-smooth-scroll @click="isOpen = false">
+              /&nbsp;&nbsp;Corporate Info
+            </nuxt-link>
+            <div class="menu__item__line" :class="{ 'is-windows': isWindows }"></div>
+          </li>
+          <li>
+            <nuxt-link to="#footer" v-smooth-scroll @click="isOpen = false">
+              /&nbsp;&nbsp;Contact
+            </nuxt-link>
+            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="sns__inner">
+        <a href="https://www.instagram.com/miraiconic/" target="_blank">
+          <img src="/img/insta.png" alt="instagram">
+        </a>
+        <a href="https://x.com/MIRAICONIC" target="_blank">
+          <img src="/img/x.png" alt="x">
+        </a>
+      </div>
+      <div class="copyright">
+        <p>©2025 MIRAICONIC</p>
       </div>
     </div>
   </header>
@@ -131,7 +131,48 @@ export default {
     return {
       isOpen: false,
       isWindows: navigator.userAgent.indexOf('Windows') !== -1, // Windowsかどうかを判別する変数
+      hide: false,
+      lastScroll: 0,
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll < 150) {
+        // スクロール位置が100px未満なら常に表示
+        this.hide = false;
+      } else if (currentScroll > this.lastScroll) {
+        // 100px以上かつ下方向にスクロール中なら隠す
+        this.hide = true;
+      } else {
+        // 100px以上かつ上方向にスクロール中なら表示
+        this.hide = false;
+      }
+      this.lastScroll = currentScroll;
+    },
+    openMenu () {
+      this.isOpen = !this.isOpen;
+      if (useIsMobile().value) {
+        if (this.isOpen) {
+          window.addEventListener('wheel', this.preventScroll, { passive: false });
+          window.addEventListener('touchmove', this.preventScroll, { passive: false });
+          console.log('スクロールオフ');
+        } else {
+          window.removeEventListener('wheel', this.preventScroll);
+          window.removeEventListener('touchmove', this.preventScroll);
+          console.log('スクロールオン');
+        }
+      }
+    },
+    preventScroll(e) {
+      e.preventDefault();
+    }
   },
 };
 </script>
@@ -143,12 +184,17 @@ export default {
   left: 0;
   width: 100%;
   height: 100px;
-  z-index: 100;
+  z-index: 110;
   padding: 2.5% 5% 0 5%;
   @include mixins.max-screen(768px) {
+    height: 60px;
+    padding: 15px 5% 0 5%;
     background-color: #fff;
-    height: 16vw;
-    padding: 4% 5% 0 5%;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    &.hide {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
   }
   .header__inner {
     display: flex;
@@ -180,6 +226,9 @@ export default {
         }
         &.top {
           margin-top: 0px;
+          @include mixins.max-screen(768px) {
+            margin-top: 4px;
+          }
         }
         &.middle {
           margin-top: 11px;
@@ -217,72 +266,83 @@ export default {
 
       }
     }
-    .menu {
-      position: fixed;
-      top: -2px;
-      right: 0;
-      width: 66.31vh;
-      height: 100vh;
-      background-color: #F2F2F2;
-      z-index: 100;
-      border-top: 2px solid #252526;
-      border-left: 2px solid #252526;
-      border-top-left-radius: 13.26vh;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      transform: translateX(100%);
-      opacity: 0;
+
+  }
+  .menu {
+    position: fixed;
+    top: -2px;
+    right: 0;
+    width: 66.31vh;
+    height: 100vh;
+    background-color: #F2F2F2;
+    z-index: 100;
+    border-top: 2px solid #252526;
+    border-left: 2px solid #252526;
+    border-top-left-radius: 13.26vh;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
+    @include mixins.max-screen(768px) {
+      width: 100vw;
+      border-bottom: 2px solid #252526;
+      margin-top: 2px;
+      height: min(166.33vw, 100vh);
+    }
+    &.is-open {
+      transform: translateX(0);
+      opacity: 1 !important;
+    }
+    .menu__inner {
+      padding: 12.59vh 5% 3.97vh;
       @include mixins.max-screen(768px) {
-        width: 100vw;
-        border-bottom: 2px solid #252526;
+        padding-top: 10vh;
       }
-      &.is-open {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      .menu__inner {
-        padding: 12.59vh 5% 3.97vh;
-        .menu__item {
-          list-style: none;
-          margin: 5% auto;
+      .menu__item {
+        list-style: none;
+        margin: 5% auto;
+        width: fit-content;
+        display: block;
+        li {
+          margin-bottom: 3%;
+          position: relative;
           width: fit-content;
-          display: block;
-          li {
-            margin-bottom: 3%;
+          padding: 0 10px;
+          a {
+            font-family: 'DinCondensedBold', sans-serif;
+            font-weight: normal;
+            font-size: 7.42vh;
+            color: #252526;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
             position: relative;
-            width: fit-content;
-            padding: 0 10px;
-            a {
-              font-family: 'DinCondensedBold', sans-serif;
-              font-size: 7.42vh;
-              font-weight: bold;
-              color: #252526;
-              text-decoration: none;
-              transition: color 0.2s ease-in-out;
-              position: relative;
-              z-index: 1;
-              letter-spacing: 0.02em;
-              white-space: pre-wrap;
-              line-height: 1.2;
+            z-index: 1;
+            letter-spacing: 0.02em;
+            white-space: pre-wrap;
+            line-height: 1.2;
+            @include mixins.max-screen(768px) {
+              font-size: min(13.33vw, 5.5vh);
             }
-            .menu__item__line {
-              position: absolute;
-              top: -10%;
-              left: 0;
-              width: 0;
-              height: 100%;
-              background-color: #252526;
-              background-color: yellow;
-              transition: width 0.4s ease-in-out;
-              &.short {
-                transition: width 0.2s ease-in-out;
-              }
-              &.Medium {
-                transition: width 0.3s ease-in-out;
-              }
-              &.is-windows {
-                top: 0;
-              }
+          }
+          .menu__item__line {
+            position: absolute;
+            top: -10%;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #252526;
+            background-color: yellow;
+            transition: width 0.4s ease-in-out;
+            &.short {
+              transition: width 0.2s ease-in-out;
             }
+            &.Medium {
+              transition: width 0.3s ease-in-out;
+            }
+            &.is-windows {
+              top: 0;
+            }
+          }
+          @include mixins.min-screen(769px) {
             &:hover {
               .menu__item__line {
                 width: 100%;
@@ -291,32 +351,44 @@ export default {
           }
         }
       }
-      .sns__inner {
-        display: flex;
-        justify-content: flex-start;
-        margin-left: min(19.62vh, 158px);
-        gap: 2vh;
-        a {
-          transition: opacity 0.1s ease-in-out;
+    }
+    .sns__inner {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 18.47vh;
+      gap: 2vh;
+      @include mixins.max-screen(768px) {
+        justify-content: center;
+        margin-left: 0;
+      }
+      a {
+        transition: opacity 0.1s ease-in-out;
+        @include mixins.min-screen(769px) {
           &:hover {
             opacity: 0.7;
           }
-          img {
-            height: 6.10vh;
-          }
+        }
+        img {
+          height: 6.10vh;
         }
       }
-      .copyright {
-        font-size: 2.65vh;
-        font-weight: bold;
-        color: #252526;
-        text-align: right;
-        margin-top: 5vh;
-        margin-right: 3vh;
-        p {
-          letter-spacing: 0.01em;
-          font-family: 'DinCondensedBold', sans-serif;
-        }
+    }
+    .copyright {
+      font-size: 2.65vh;
+      font-weight: bold;
+      color: #252526;
+      text-align: right;
+      margin-top: 5vh;
+      margin-right: 3vh;
+      @include mixins.max-screen(768px) {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+      }
+      p {
+        letter-spacing: 0.01em;
+        font-family: 'DinCondensedBold', sans-serif;
+        font-weight: normal;
       }
     }
   }

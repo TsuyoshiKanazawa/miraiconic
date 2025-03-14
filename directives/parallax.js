@@ -1,7 +1,12 @@
 // ~/directives/parallax.js
 export default {
   mounted(el, binding) {
-    const speed = binding.value?.speed ?? 0.5;
+    let speed
+    if (!useIsMobile().value) {
+      speed = binding.value?.speed ?? 0.3;
+    } else {
+      speed = binding.value?.speed ?? 0.1;
+    }
 
     // ラッパー要素を作成（レイアウトに合わせて display や width の調整が必要な場合は変更してください）
     const wrapper = document.createElement('div');

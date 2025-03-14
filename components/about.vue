@@ -4,7 +4,8 @@
     <div class="about__container" v-observe="'inview'">
       <div class="about__container__contents">
         <div class="about__line__wrapper mask">
-          <img src="/img/about/aboutLine.svg" alt="line" class="about__contents__line">
+          <img v-if="!useIsMobile().value" src="/img/about/aboutLine.svg" alt="line" class="about__contents__line">
+          <img v-if="useIsMobile().value" src="/img/about/aboutLine-sp.png" alt="line" class="about__contents__line">
         </div>
         <div class="about__title__wrapper mask" v-observe="'inview'">
           <h2 class="about__title">About Us</h2>
@@ -14,13 +15,13 @@
         </h3>
         <p class="about__text fade-enter-from" v-observe="'inview'">
           株式会社ミライコニックは、<br>
-          BIMによる建設プロジェクトの革新をトータルにサポートいたします。<br>
-          実務経験豊富なスタッフが、高品質なBIMモデルの構築および、<br>
-          初心者から上級者までの教育を包括的に提供しています。<br>
-          私たちは日々進化する技術をいち早く取り入れるだけでなく、その伝達方法にも工夫を凝らし、<br>
-          DX推進を人々の心躍る体験と共に実現することで、建設業界の発展に寄与してまいります。<br>
-          最新のテクノロジーと豊富な経験に基づくエンパシー（共感性）を融合させることで、<br>
-          お客様に最適なBIMエクスペリエンスをお届けすることをお約束いたします。
+          BIMによる建設プロジェクトの革新を<br class="sp-only">トータルにサポートいたします。<br>
+          実務経験豊富なスタッフが、<br class="sp-only">高品質なBIMモデルの構築および、<br>
+          初心者から上級者までの教育を包括的に<br class="sp-only">提供しています。<br>
+          私たちは日々進化する技術を<br class="sp-only">いち早く取り入れるだけでなく、<br class="sp-only">その伝達方法にも工夫を凝らし、<br>
+          DX推進を人々の心躍る体験と共に<br class="sp-only">実現することで、<br class="sp-only">建設業界の発展に寄与してまいります。<br>
+          最新のテクノロジーと豊富な経験に基づく<br class="sp-only">エンパシー（共感性）を融合させることで、<br>
+          お客様に最適なBIMエクスペリエンスを<br class="sp-only">お届けすることをお約束いたします。
         </p>
         <img src="/img/about/aboutPic.png" alt="Yamaguchi's photo" class="about__img1">
         <div class="about__img__text">
@@ -68,7 +69,9 @@ export default {
     position: relative;
     padding-bottom: min(3.47vw, 50px);
     position: relative;
-
+    @include mixins.max-screen(768px) {
+      background-image: url('/img/about/aboutBg2-sp.jpg');
+    }
     .about__container__contents {
       padding: min(2.5vw, 50px) 6vw;
       background-color: #fff;
@@ -94,28 +97,44 @@ export default {
           z-index: 10;
         }
       }
+      @include mixins.max-screen(783px) {
+        width: 94.66vw;
+        padding: 8vw 0 0 0;
+      }
       .about__line__wrapper {
         position: absolute;
         top: 0%;
         left: 4vw;
         width: fit-content;
+        height: fit-content;
+        padding: 0;
         .about__contents__line {
           width: 1.08vw;
           max-width: 15.7px;
           transition: transform 0.8s ease-in-out;
           transform: translateY(-100%);
+          @include mixins.max-screen(768px) {
+            width: 2.3vw;
+            max-width: none;
+            display: block;
+            margin: 0;
+          }
         }
       }
       .about__title__wrapper {
         .about__title {
           font-family: 'DinCondensedBold', sans-serif;
           font-size: min(3.47vw, 50px);
-          font-weight: bold;
+          font-weight: normal;
           color: #252526;
           letter-spacing: 0.01em;
           display: block;
           transform: translateY(100%);
           transition: transform 0.8s ease-in-out;
+          @include mixins.max-screen(768px) {
+            font-size: 8vw;
+            margin-left: 10.66vw;
+          }
         }
         &.inview {
           .about__title {
@@ -134,14 +153,24 @@ export default {
           transform: translateY(0);
           opacity: 1;
         }
+        @include mixins.max-screen(768px) {
+          line-height: 1.5;
+          font-size: 8vw;
+          margin-left: 10.66vw;
+        }
       }
       .about__text {
         font-size: min(1.04vw, 15px);
-        font-weight: medium;
+        font-weight: 500;
         color: #252526;
         line-height: 2.2;
         margin-top: 1.5vw;
         letter-spacing: 0.05em;
+        @include mixins.max-screen(768px) {
+          font-size: 3.73vw;
+          margin-left: 10.66vw;
+          line-height: 2;
+        }
       }
       .about__img1 {
         position: absolute;
@@ -149,15 +178,30 @@ export default {
         left: min(56vw, 790px);
         width: 15.76vw;
         max-width: 227px;
+        @include mixins.max-screen(768px) {
+          position: static;
+          width: 41.33vw;
+          margin: 0 auto;
+          display: block;
+        }
       }
       .about__img__text {
         position: absolute;
         bottom: 2%;
         left: min(73vw, 1030px);
         font-size: min(0.69vw, 10px);
-        font-weight: medium;
+        font-weight: 500;
+        @include mixins.max-screen(768px) {
+          font-size: 2.66vw;
+          bottom: 1%;
+          right: 6%;
+          left: auto;
+        }
         span {
           font-size: min(1.52vw, 22px);
+          @include mixins.max-screen(768px) {
+            font-size: 5.33vw;
+          }
         }
       }
     }
@@ -190,6 +234,9 @@ export default {
       margin-top: max(-250vw, -250px);
       transition: transform 0.8s ease-in-out;
       position: relative;
+      @include mixins.max-screen(768px) {
+        margin-top: -20vw;
+      }
       .about_pt1 {
         width: 17.36vw;
         max-width: 250px;
@@ -199,6 +246,10 @@ export default {
         margin-right: 0;
         margin-left: auto;
         z-index: 2;
+        @include mixins.max-screen(768px) {
+          width: 26.66vw;
+          max-width: auto;  
+        }
       }
       &.inview {
         transform: translateX(51%) rotate(0);
@@ -210,6 +261,11 @@ export default {
       margin-left: 0;
       transition: transform 0.8s ease-in-out;
       position: relative;
+      @include mixins.max-screen(768px) {
+        margin-top: 120vw;
+        margin-left: -30vw;
+      }
+
 
       .about_pt2 {
         width: 43.05vw;
@@ -217,6 +273,10 @@ export default {
         transition: transform 0.8s ease-in-out;
         position: relative;
         transform: translate(-90%, 90%);
+        @include mixins.max-screen(768px) {
+          width: 100vw;
+          max-width: auto;  
+        }
       }
       &.inview {
         .about_pt2 {

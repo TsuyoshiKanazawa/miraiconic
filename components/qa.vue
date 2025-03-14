@@ -4,15 +4,21 @@
       <div class="mask">
         <h3 class="qa__title" v-observe="'inview'">Q&A</h3>
       </div>
-      <img src="/img/titleLine.svg" alt="line" class="title_line">
+      <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+      <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="qa__title__sub" v-observe="'inview'">質問にお答えします</h3>
       </div>
       <div class="qa__container__item" v-observe="'inview'">
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
         <div class="qa__container__item__question">
           <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,17 +35,22 @@
         </div>
       </div>
       <div class="qa__container__item" v-observe="'inview'">
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
         <div class="qa__container__item__question">
           <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="30" height="30" rx="10" fill="#252526"/>
           </svg>
           <h4 class="qa__container__item__question__title">
-            遠隔でもモデリング対応を依頼することは可能ですか？
+            遠隔でもモデリングを依頼することは可能ですか？
           </h4>
         </div>
         <div class="qa__container__item__answer">
@@ -49,10 +60,15 @@
         </div>
       </div>
       <div class="qa__container__item" v-observe="'inview'">
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
         <div class="qa__container__item__question">
           <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,10 +85,15 @@
         </div>
       </div>
       <div class="qa__container__item" v-observe="'inview'">
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
         <div class="qa__container__item__question">
           <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,15 +105,20 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            丁寧なヒアリングを通じた最適な段取りを行い、初期導入に最適なコストを見極めてイチからサポートいたします。過去案件のトレース、トライアル案件の実施、テンプレートやファミリの準備まで幅広く対応しております。
+            丁寧なヒアリングを通じて最適な段取りを行い、初期導入において最適なコストを見極め、イチからサポートいたします。過去案件のトレース、トライアル案件の実施、テンプレートやファミリの準備まで幅広く対応しております。​
           </p>
         </div>
       </div>
       <div class="qa__container__item" v-observe="'inview'">
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
         <div class="qa__container__item__question">
           <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,10 +135,15 @@
         </div>
       </div>
       <div class="qa__container__item" v-observe="'inview'">
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
         <div class="qa__container__item__question">
           <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,10 +160,15 @@
         </div>
       </div>
       <div class="qa__container__item" v-observe="'inview'">
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
         <div class="qa__container__item__question">
           <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,10 +183,15 @@
             オートデスク認定トレーニングセンター（ATC）でのRevitユーザー検定やBIM利用技術者試験があります。資格取得済の講師による対策講座の実施も可能ですので、一度ご相談ください。
           </p>
         </div>
-        <svg class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
         </svg>
       </div>
 
@@ -183,6 +224,9 @@ export default {
   position: relative;
   overflow: hidden;
   background-color: #F2F2F2;
+  @include mixins.max-screen(768px) {
+    padding-top: 20vw;
+  }
   p, h4 {
     color: #252526;
   }
@@ -191,11 +235,15 @@ export default {
     text-align: center;
     letter-spacing: 0.01em;
     font-family: 'DinCondensedBold', sans-serif;
+    font-weight: normal;
     transform: translateY(100%);
     transition: transform 0.8s ease-in-out;
     color: #252526;
     &.inview {
       transform: translateY(0);
+    }
+    @include mixins.max-screen(768px) {
+      font-size: 16vw;
     }
   }
   .title_line {
@@ -203,6 +251,10 @@ export default {
     width: 6.25vw;
     max-width: 90px;
     margin: 0 auto;
+    @include mixins.max-screen(768px) {
+      width: 23.46vw;
+      max-width: auto;
+    }
   }
   &__title__sub {
     font-size: min(1.25vw, 18px);
@@ -216,6 +268,9 @@ export default {
     &.inview {
       transform: translateY(0);
     }
+    @include mixins.max-screen(768px) {
+      font-size: 4.26vw;
+    }
   }
   &__container {
     background-color: #fff;
@@ -226,12 +281,19 @@ export default {
     border-radius: min(8.33vw, 120px);
     position: relative;
     z-index: 10;
+    @include mixins.max-screen(768px) {
+      width: 92vw;
+      padding: 7vw 2vw 12vw;
+    }
     &__item {
       opacity: 0;
       transform: translateY(50%);
       transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
       position: relative;
       z-index: 10;
+      @include mixins.max-screen(768px) {
+        transform: translateY(10vw);
+      }
       &.inview {
         opacity: 1;
         transform: translateY(0);
@@ -246,18 +308,42 @@ export default {
         gap: min(1.25vw, 18px);
         padding: 0 min(5.55vw, 80px);
         margin-top: min(1.59vw, 23px);
+        @include mixins.max-screen(768px) {
+          padding: 0 0 0 3vw;
+        }
         &__title {
           font-size: min(1.94vw, 28px);
+          @include mixins.max-screen(768px) {
+            font-size: 4.26vw;
+            line-height: 1.5;
+            letter-spacing: 0.03em;
+            width: 74.93vw;
+          }
         }
         &__icon {
           width: min(2.08vw, 30px);
+          @include mixins.max-screen(768px) {
+            width: 5.33vw;
+            height: 5.33vw;
+            margin-top: 0.5vw;
+            margin-bottom: auto;
+          }
         }
       }
       &__answer {
-        padding: 0 min(6.25vw, 90px) 0 min(9.02vw, 130px);
+        padding: 0 min(7.63vw, 110px) 0 min(9.02vw, 130px);
         margin: min(1.59vw, 23px) 0;
+        @include mixins.max-screen(768px) {
+          padding: 0 3vw 0 9.5vw;
+        }
         &__text {
           font-size: min(1.25vw, 18px);
+          letter-spacing: 0.05em;
+          font-weight: 500;
+          @include mixins.max-screen(768px) {
+            font-size: 3.73vw;
+            line-height: 1.5;
+          }
         }
       }
     }
@@ -272,10 +358,16 @@ export default {
       margin-left: min(2.77vw, 40px);
       transform: translateY(var(--scroll-offset, 0px));
       transition: transform 0.8s ease-in-out;
+      @include mixins.max-screen(768px) {
+        margin-left: -3vw;
+      }
       .qa__container__pt1 {
         width: min(14.65vw, 211px);
         transform: scale(0);
         transition: transform 0.5s ease-in-out;
+        @include mixins.max-screen(768px) {
+          width: 36.26vw;
+        }
         &.inview {
           transform: scale(1);
         }
@@ -292,12 +384,19 @@ export default {
       margin-right: max(-4.86vw, -70px);
       transform: translateY(var(--scroll-offset, 0px));
       transition: transform 0.8s ease-in-out;
+      @include mixins.max-screen(768px) {
+        margin-top: 270vw;
+        margin-right: -17.4vw;
+      }
       .qa__container__pt2 {
         width: min(15.90vw, 229px);
         transform: scale(0);
         transition: transform 0.5s ease-in-out;
         &.inview {
           transform: scale(1);
+        }
+        @include mixins.max-screen(768px) {
+          width: 34.93vw;
         }
       }
     }
