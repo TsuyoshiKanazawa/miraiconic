@@ -162,11 +162,11 @@ export default {
         if (this.isOpen) {
           window.addEventListener('wheel', this.preventScroll, { passive: false });
           window.addEventListener('touchmove', this.preventScroll, { passive: false });
-          console.log('スクロールオフ');
+          //console.log('スクロールオフ');
         } else {
           window.removeEventListener('wheel', this.preventScroll);
           window.removeEventListener('touchmove', this.preventScroll);
-          console.log('スクロールオン');
+          //console.log('スクロールオン');
         }
       }
     },
@@ -295,7 +295,7 @@ export default {
     .menu__inner {
       padding: 12.59vh 5% 3.97vh;
       @include mixins.max-screen(768px) {
-        padding-top: 10vh;
+        padding: 8vh 5% 1.97vh;
       }
       .menu__item {
         list-style: none;
@@ -320,7 +320,7 @@ export default {
             white-space: pre-wrap;
             line-height: 1.2;
             @include mixins.max-screen(768px) {
-              font-size: min(13.33vw, 5.5vh);
+              font-size: min(13.33vw, 6vh);
             }
           }
           .menu__item__line {
@@ -370,6 +370,10 @@ export default {
         }
         img {
           height: 6.10vh;
+          @include mixins.max-screen(768px) {
+            width: min(12.26vw, 46px);
+            height: auto;
+          }
         }
       }
     }
@@ -384,11 +388,11 @@ export default {
         position: absolute;
         bottom: 10px;
         right: 0;
+        font-size: 4.26vw;
       }
       p {
         letter-spacing: 0.01em;
         font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
       }
     }
   }

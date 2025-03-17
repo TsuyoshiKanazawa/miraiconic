@@ -80,7 +80,7 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            統合モデルの作成や干渉チェックのためのモデル整理から実際の設定まで、お客様のご要望に応じて対応可能です。
+            はい。通常のモデリングだけでなく、BIM Collaborate Proを使用したクラウドワークシェアリングにも​対応可能です。
           </p>
         </div>
       </div>
@@ -357,7 +357,7 @@ export default {
       margin-top: min(2.08vw, 30px);
       margin-left: min(2.77vw, 40px);
       transform: translateY(var(--scroll-offset, 0px));
-      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-out;
       @include mixins.max-screen(768px) {
         margin-left: -3vw;
       }
@@ -383,7 +383,7 @@ export default {
       margin-top: min(76.38vw, 1100px);
       margin-right: max(-4.86vw, -70px);
       transform: translateY(var(--scroll-offset, 0px));
-      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-out;
       @include mixins.max-screen(768px) {
         margin-top: 270vw;
         margin-right: -17.4vw;

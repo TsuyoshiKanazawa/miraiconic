@@ -572,7 +572,7 @@ export default {
       margin-top: max(-6.94vw, -100px);
       margin-right: max(-6.25vw, -90px);
       transform: translateY(var(--scroll-offset, 0px));
-      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-out;
       @include mixins.max-screen(768px) {
         margin-top: 20vw;
         margin-right: -12.5vw;
@@ -599,7 +599,7 @@ export default {
       margin-top: min(76.38vw, 1100px);
       margin-left: max(-6.25vw, -50px);
       transform: translateY(var(--scroll-offset, 0px));
-      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-out;
       @include mixins.max-screen(768px) {
         margin-top: 340vw;
         margin-left: 3vw;
@@ -627,7 +627,7 @@ export default {
       margin-top: min(118.05vw, 1700px);
       margin-left: 0;
       transform: translateY(var(--scroll-offset, 0px));
-      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-out;
       @include mixins.max-screen(768px) {
         margin-top: 660vw;
       }

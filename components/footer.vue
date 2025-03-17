@@ -146,7 +146,7 @@ export default {
     height: 100%;
     z-index: 0;
     transform: translateY(var(--scroll-offset, 0px));
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-out;
   }
   &__bg1 {
     width: min(19.58vw, 282px);

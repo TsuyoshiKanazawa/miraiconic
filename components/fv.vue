@@ -16,7 +16,11 @@
       <div class="fv__img__parallax" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
         <img src="/img/fv-pt1.svg" alt="fv_img" class="fv__img1">
         <img src="/img/fv-pt2.svg" alt="fv_img" class="fv__img2">
-        <img src="/img/fv-pt3.svg" alt="fv_img" class="fv__img3">
+        <svg class="fv__img3" width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M225 450C349.264 450 450 349.264 450 225C450 100.736 349.264 0 225 0C100.736 0 0 100.736 0 225C0 349.264 100.736 450 225 450Z" fill="#85C1DE"/>
+          <path d="M225.439 349C157.054 349 101.439 293.386 101.439 225C101.439 156.614 157.054 101 225.439 101V349Z" fill="#3676B6"/>
+        </svg>
+
         <img src="/img/fv-pt4.svg" alt="fv_img" class="fv__img4">
       </div>
     </div>
@@ -135,6 +139,7 @@ export default {
     top: 18%;
     left: -7%;
     animation: fv__img1 1.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    transform: translate(0, 0);
     @include mixins.max-screen(768px) {
       width: 20vw;
       top: auto;
@@ -160,11 +165,14 @@ export default {
     top: 0%;
     right: 20%;
     transform: translateY(-50%);
-    animation: fv__img3 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    @include mixins.min-screen(769px) {
+      animation: fv__img3 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    }
     @include mixins.max-screen(768px) {
       width: 40vw;
       top: 15%;
       right: -10%;
+      transform: translateY(-50%);
       animation: fv__img3__sp 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
     }
   }

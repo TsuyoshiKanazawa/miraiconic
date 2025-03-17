@@ -136,7 +136,6 @@ export default {
     text-align: center;
     letter-spacing: 0.01em;
     font-family: 'DinCondensedBold', sans-serif;
-    font-weight: normal;
     transform: translateY(100%);
     transition: transform 0.8s ease-in-out;
     color: #252526;
@@ -217,7 +216,7 @@ export default {
           line-height: min(2.70vw, 39px);
           text-align: end;
           width: min(7.63vw, 110px);
-          font-weight: 600;
+          font-weight: 700;
           color: #252526;
           letter-spacing: 0.05em;
           @include mixins.max-screen(768px) {
@@ -281,7 +280,7 @@ export default {
       margin-top: min(48.61vw, 700px);
       margin-left: min(2.77vw, 40px);
       transform: translateY(var(--scroll-offset, 0px));
-      transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-out;
       @include mixins.max-screen(768px) {
         margin-top: 160vw;
       }

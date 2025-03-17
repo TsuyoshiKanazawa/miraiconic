@@ -30,7 +30,7 @@
           <span>山口 晃</span>
         </div>
       </div>
-      <div class="about__bg__wrapper" style="z-index: 11;">
+      <div class="about__bg__wrapper" style="z-index: 11;" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
         <div class="about__bg__wrapper__contents1" v-observe="'inview'">
           <img src="/img/about/about-pt1.svg" alt="aboutBg3" class="about_pt1">
         </div>
@@ -144,7 +144,7 @@ export default {
       }
       .about__title__sub {
         font-size: min(4.03vw, 58px);
-        font-weight: bold;
+        font-weight: 700;
         letter-spacing: 0.03em;
         transform: translateY(30%);
         opacity: 0;
@@ -224,8 +224,8 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    transform: translateY(var(--scroll-offset, 0px));
-    transition: transform 0.8s ease-in-out;
+    transform: translateY(var(--scroll-offset));
+    transition: transform 0.8s ease-out;
     &__contents1 {
       width: fit-content;
       transform: translateX(51%) rotate(180deg);
