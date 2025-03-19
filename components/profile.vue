@@ -136,6 +136,7 @@ export default {
     text-align: center;
     letter-spacing: 0.01em;
     font-family: 'DinCondensedBold', sans-serif;
+    font-weight: normal;
     transform: translateY(100%);
     transition: transform 0.8s ease-in-out;
     color: #252526;
@@ -279,10 +280,11 @@ export default {
     .profile__bg__wrapper__contents1 {
       margin-top: min(48.61vw, 700px);
       margin-left: min(2.77vw, 40px);
-      transform: translateY(var(--scroll-offset, 0px));
+      transform: translate3d(0, var(--scroll-offset, 0px), 0);
       transition: transform 0.8s ease-out;
+      will-change: transform;
       @include mixins.max-screen(768px) {
-        margin-top: 160vw;
+        margin-top: 90vw;
       }
       .profile__container__pt1 {
         width: min(10.55vw, 152px);

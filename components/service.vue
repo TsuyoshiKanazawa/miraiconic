@@ -277,8 +277,9 @@ export default {
       .service__bg__wrapper__contents1 {
         margin-top: min(41.66vw, 600px);
         margin-left: max(-3.47vw, -50px);
-        transform: translateY(var(--scroll-offset, 0px));
+        transform: translate3d(0, var(--scroll-offset, 0px), 0);
         transition: transform 0.8s ease-out;
+        will-change: transform;
         @include mixins.max-screen(768px) {
           margin-top: 120vw;
         }
@@ -303,8 +304,9 @@ export default {
       z-index: 10;
       .service__bg__wrapper__contents2 {
         margin-top: min(76.38vw, 1100px);
-        transform: translateY(var(--scroll-offset, 0px));
+        transform: translate3d(0, var(--scroll-offset, 0px), 0);
         transition: transform 0.8s ease-out;
+        will-change: transform;
         @include mixins.max-screen(768px) {
           margin-top: 350vw;
         }
@@ -329,8 +331,9 @@ export default {
       z-index: 10;
       .service__bg__wrapper__contents3 {
         margin-top: min(118.05vw, 1700px);
-        transform: translateY(var(--scroll-offset, 0px));
+        transform: translate3d(0, var(--scroll-offset, 0px), 0);
         transition: transform 0.8s ease-out;
+        will-change: transform;
         @include mixins.max-screen(768px) {
           margin-top: 450vw;
         }

@@ -626,7 +626,7 @@ export default {
     .features__bg__wrapper__contents3 {
       margin-top: min(118.05vw, 1700px);
       margin-left: 0;
-      transform: translateY(var(--scroll-offset, 0px));
+      transform: translate3d(0, var(--scroll-offset, 0px), 0);
       transition: transform 0.8s ease-out;
       @include mixins.max-screen(768px) {
         margin-top: 660vw;

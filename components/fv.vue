@@ -13,7 +13,8 @@
     </div>
     <!-- 親ラッパー内にパララックス用ラッパーを新規追加 -->
     <div class="fv__img__wrapper">
-      <div class="fv__img__parallax" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
+      <!--:style="{ transform: 'translate3d(0, ' + parallaxOffset + 'px, 0)' }"-->
+      <div class="fv__img__parallax" >
         <img src="/img/fv-pt1.svg" alt="fv_img" class="fv__img1">
         <img src="/img/fv-pt2.svg" alt="fv_img" class="fv__img2">
         <svg class="fv__img3" width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,12 +29,17 @@
 </template>
 
 <script>
+import scrollParallaxMixin from '@/mixins/scrollParallaxMixin';
 export default {
   name: 'Fv',
+  mixins: [scrollParallaxMixin],
   data() {
     return {
       parallaxSpeed: 10,
       scrollY: 0,
+      ticking: false,
+      isVisible: false,
+      observer: null,
     };
   },
   computed: {
@@ -43,13 +49,30 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        this.isVisible = entry.isIntersecting;
+      });
+    });
+    this.observer.observe(this.$el);
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll);
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   },
   methods: {
     handleScroll() {
-      this.scrollY = window.scrollY;
+      if (!this.ticking) {
+        window.requestAnimationFrame(() => {
+          if (this.isVisible) {
+            this.scrollY = window.scrollY;
+          }
+          this.ticking = false;
+        });
+        this.ticking = true;
+      }
     },
   },
 };
@@ -131,6 +154,8 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
+    will-change: transform;
+    transform: translate3d(0, var(--scroll-offset, 0px), 0);
   }
   /* 以下、子要素はfv__img__parallax内で元々のtop/left指定とアニメーションがそのまま効く */
   .fv__img__parallax .fv__img1 {
@@ -140,6 +165,7 @@ export default {
     left: -7%;
     animation: fv__img1 1.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
     transform: translate(0, 0);
+    will-change: transform;
     @include mixins.max-screen(768px) {
       width: 20vw;
       top: auto;
@@ -153,6 +179,7 @@ export default {
     top: 38%;
     left: 23%;
     animation: fv__img2 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    will-change: transform;
     @include mixins.max-screen(768px) {
       width: 20vw;
       top: 20%;
@@ -165,6 +192,7 @@ export default {
     top: 0%;
     right: 20%;
     transform: translateY(-50%);
+    will-change: transform;
     @include mixins.min-screen(769px) {
       animation: fv__img3 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
     }
@@ -182,6 +210,7 @@ export default {
     bottom: 0%;
     right: -5%;
     animation: fv__img4 1.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
+    will-change: transform;
     @include mixins.max-screen(768px) {
       width: 60vw;
       bottom: -5%;

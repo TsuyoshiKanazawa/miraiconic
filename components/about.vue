@@ -224,7 +224,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    transform: translateY(var(--scroll-offset));
+    transform: translate3d(0, var(--scroll-offset), 0);
     transition: transform 0.8s ease-out;
     &__contents1 {
       width: fit-content;

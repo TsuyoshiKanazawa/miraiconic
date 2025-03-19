@@ -73,37 +73,37 @@
       <div class="menu__inner">
         <ul class="menu__item">
           <li>
-            <nuxt-link to="#top" v-smooth-scroll @click="isOpen = false">
+            <nuxt-link to="#top" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;TOP
             </nuxt-link>
             <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#about" v-smooth-scroll @click="isOpen = false">
+            <nuxt-link to="#about" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;About Us
             </nuxt-link>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#service" v-smooth-scroll @click="isOpen = false">
+            <nuxt-link to="#service" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Service
             </nuxt-link>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#qa" v-smooth-scroll @click="isOpen = false">
+            <nuxt-link to="#qa" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Q&A
             </nuxt-link>
             <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#corporate-info" v-smooth-scroll @click="isOpen = false">
+            <nuxt-link to="#corporate-info" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Corporate Info
             </nuxt-link>
             <div class="menu__item__line" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#footer" v-smooth-scroll @click="isOpen = false">
+            <nuxt-link to="#footer" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Contact
             </nuxt-link>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>

@@ -55,7 +55,7 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            はい。通常のモデリングだけでなく、BIM Collaborate Proを使用したクラウドワークシェアリングにも対応可能です。
+            はい。通常のモデリングだけでなく、BIM Collaborate Proを使用したクラウドワークシェアリングにも<br class="pc-only">​対応可能です。
           </p>
         </div>
       </div>
@@ -80,7 +80,7 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            はい。通常のモデリングだけでなく、BIM Collaborate Proを使用したクラウドワークシェアリングにも​対応可能です。
+            統合モデルの作成や干渉チェックのためのモデル整理から実際の設定まで、お客様のご要望に応じて対応可能です。
           </p>
         </div>
       </div>
@@ -105,7 +105,7 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            丁寧なヒアリングを通じて最適な段取りを行い、初期導入において最適なコストを見極め、イチからサポートいたします。過去案件のトレース、トライアル案件の実施、テンプレートやファミリの準備まで幅広く対応しております。​
+            丁寧なヒアリングを通じて最適な段取りを行い、初期導入において最適なコストを見極め、イチからサポートいたします。<br>過去案件のトレース、トライアル案件の実施、テンプレートやファミリの準備まで幅広く対応しております。​
           </p>
         </div>
       </div>
@@ -356,8 +356,9 @@ export default {
     .qa__bg__wrapper__contents1 {
       margin-top: min(2.08vw, 30px);
       margin-left: min(2.77vw, 40px);
-      transform: translateY(var(--scroll-offset, 0px));
+      transform: translate3d(0, var(--scroll-offset, 0px), 0);
       transition: transform 0.8s ease-out;
+      will-change: transform;
       @include mixins.max-screen(768px) {
         margin-left: -3vw;
       }
@@ -382,8 +383,9 @@ export default {
     .qa__bg__wrapper__contents2 {
       margin-top: min(76.38vw, 1100px);
       margin-right: max(-4.86vw, -70px);
-      transform: translateY(var(--scroll-offset, 0px));
+      transform: translate3d(0, var(--scroll-offset, 0px), 0);
       transition: transform 0.8s ease-out;
+      will-change: transform;
       @include mixins.max-screen(768px) {
         margin-top: 270vw;
         margin-right: -17.4vw;
