@@ -80,7 +80,7 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            統合モデルの作成や干渉チェックのためのモデル整理から実際の設定まで、お客様のご要望に応じて対応可能です。
+            統合モデルの作成や干渉チェックのためのモデル整理から実際の設定まで、お客様のご要望に応じて<br class="pc-only">対応可能です。
           </p>
         </div>
       </div>
@@ -105,7 +105,7 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            丁寧なヒアリングを通じて最適な段取りを行い、初期導入において最適なコストを見極め、イチからサポートいたします。<br>過去案件のトレース、トライアル案件の実施、テンプレートやファミリの準備まで幅広く対応しております。​
+            丁寧なヒアリングを通じて最適な段取りを行い、初期導入において最適なコストを見極め、<br class="pc-only">イチからサポートいたします。<br>過去案件のトレース、トライアル案件実施、テンプレートやファミリの準備まで幅広く対応しております。​
           </p>
         </div>
       </div>
@@ -130,7 +130,7 @@
         </div>
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
-            BIM・CADともに、リアルおよびオンライン向けのテキスト、動画、それに伴う演習データの制作に対応しております。
+            BIM・CADともに、リアルおよびオンライン向けのテキスト、動画、それに伴う演習データの制作に対応<br class="pc-only">しております。
           </p>
         </div>
       </div>
