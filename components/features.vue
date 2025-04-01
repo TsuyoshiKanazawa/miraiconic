@@ -26,7 +26,7 @@
                   【制作のシーン】
                 </h4>
                 <p class="features__container__experience__container__item__container__text" v-observe="'inview'">
-                  講師業で培った明快な説明と、教材作成スキルを活かした<br class="pc-only">わかりやすい資料作成によって、<br class="sp-only">透明性のある業務報告を行います。
+                  講師業で培った明快な説明と、教材作成スキルを活かした<br class="pc-only">わかりやすい資料によって、<br class="sp-only">透明性のある業務報告を行います。
                 </p>
               </div>
             </div>
