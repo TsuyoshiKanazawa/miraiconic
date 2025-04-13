@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         { hid: 'twitter:image', property: 'twitter:image', content: 'https://miraconi.com/img/OGP.jpg' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: 'https://miraconi.com/favicon.ico' }
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
       ]
     }
   },
