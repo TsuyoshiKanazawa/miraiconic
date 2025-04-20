@@ -141,7 +141,6 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-
 .news {
   background-color: #F2F2F2;
   padding-bottom: min(60px, 4.16vw);
@@ -152,7 +151,6 @@ export default defineComponent({
     border-radius: min(120px, 8.33vw);
     padding: min(100px, 6.94vw) min(80px, 5.55vw);
     margin-top: min(90px, 6.25vw);
-    
     .news-item {
       position: relative;
       display: flex;
