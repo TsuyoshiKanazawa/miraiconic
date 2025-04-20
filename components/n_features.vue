@@ -1,6 +1,7 @@
 <template>
   <section class="features">
     <div class="features__container">
+      <!--
       <div class="mask">
         <h3 class="features__title" v-observe="'inview'">Features</h3>
       </div>
@@ -8,7 +9,7 @@
       <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="features__title__sub" v-observe="'inview'">ミライコニックの特徴</h3>
-      </div>
+      </div>-->
       <div class="features__container__experience">
         <div class="features__container__experience__wrapper">
           <h3 class="features__container__experience__title" v-observe="'inview'">
@@ -103,6 +104,7 @@
           </p>
         </div>
       </div>
+      <FormsButton name="Service" link="/service" class="FormsButton" />
       <div class="features__bg__wrapper1" style="z-index: 1;">
         <div class="features__bg__wrapper__contents1">
           <img src="/img/service/service-pt1.svg" alt="features-pt3" class="features__container__pt1" v-observe="'inview'">

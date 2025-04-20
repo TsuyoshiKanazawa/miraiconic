@@ -4,7 +4,10 @@ export default defineNuxtConfig({
     public: {
       gtm: {
         id: 'GTM-5FHGLTTF'
-      }
+      },
+      spaceUid: process.env.NEWT_SPACE_UID,
+      cdnApiToken: process.env.NEWT_CDN_API_TOKEN,
+      siteUrl: 'https://miraconi.com'
     }
   },
   compatibilityDate: '2024-11-01',
