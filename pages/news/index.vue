@@ -141,6 +141,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+
 .news {
   background-color: #F2F2F2;
   padding-bottom: min(60px, 4.16vw);
