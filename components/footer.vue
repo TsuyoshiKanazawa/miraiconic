@@ -139,24 +139,36 @@ export default {
   position: relative;
   overflow: hidden;
   padding: min(3.47vw, 50px) min(5.55vw, 80px);
+  z-index: 12;
   @include mixins.max-screen(768px) {
-    border-top: 2px solid #252526;
-    height: auto;
-    padding-bottom: 5vw;
+    //border-top: 2px solid #252526;
+    height: 130.66vw;
+    padding: 10vw 6vw 5vw;
   }
   &__logo {
     a {
       display: block;
       height: min(3.61vw, 52px);
+      @include mixins.max-screen(768px) {
+        height: 10.66vw;
+      }
       svg {
         height: min(3.61vw, 52px);
         width: min(258px, 17.91vw);
+        @include mixins.max-screen(768px) {
+          width: 53.33vw;
+          height: 10.66vw;
+        }
       }
     }
 
     p {
       font-size: min(16px, 1.11vw);
       font-weight: bold;
+      @include mixins.max-screen(768px) {
+        font-size: 3.73vw;
+        margin-top: 1.33vw;
+      }
     }
   }
   &__menu {
@@ -164,18 +176,27 @@ export default {
     justify-content: flex-start;
     gap: min(2.77vw, 40px);
     margin-top: min(4.86vw, 70px);
+    @include mixins.max-screen(768px) {
+      gap: 8vw;
+    }
     &__item {
       font-size: min(20px, 1.38vw);
       letter-spacing: 0.01em;
       font-family: 'DinCondensedBold', sans-serif;
       font-weight: normal;
       color: #252526;
+      @include mixins.max-screen(768px) {
+        font-size: 4.8vw;
+      }
       &__list {
         list-style: none;
         border-top: 2px solid #252526;
         width: min(200px, 13.88vw);
         margin-top: min(0.34vw, 5px);
         color: #252526;
+        @include mixins.max-screen(768px) {
+          width: 37.33vw;
+        }
         li {
           a {
             font-size: min(20px, 1.38vw);
@@ -184,6 +205,9 @@ export default {
             font-weight: normal;
             margin: min(0.55vw, 8px) 0;
             color: #252526;
+            @include mixins.max-screen(768px) {
+              font-size: 4.8vw;
+            }
           }
 
         }
@@ -207,6 +231,16 @@ export default {
     border: 2px solid #3676B6;
     transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
     cursor: pointer;
+    @include mixins.max-screen(768px) {
+      bottom: 23.33vw;
+      width: 81.33vw;
+      height: 16.53vw;
+      border-top-left-radius: 2.66vw;
+      border-bottom-left-radius: 2.66vw;
+      padding-left: 5vw;
+      padding-top: 1vw;
+      box-shadow: 1.06vw 1.06vw 0 0 #252526;
+    }
     p {
       color: #fff;
       font-family: 'DinCondensedBold', sans-serif;
@@ -214,11 +248,20 @@ export default {
       font-size: min(70px, 4.86vw);
       letter-spacing: 0.01em;
       line-height: min(30px, 2.08vw);
+      @include mixins.max-screen(768px) {
+        font-size: 13.33vw;
+        line-height: 16.53vw;
+      }
     }
     svg {
       width: min(47px, 3.26vw);
       height: min(47px, 3.26vw);
       margin-left: min(1.38vw, 20px);
+      @include mixins.max-screen(768px) {
+        width: 11.2vw;
+        height: 11.2vw;
+        margin-left: 4vw;
+      }
     }
     &:hover {
       background-color: #fff;
@@ -240,9 +283,17 @@ export default {
     top: min(3.47vw, 50px);
     right: min(5.55vw, 80px);
     cursor: pointer;
+    @include mixins.max-screen(768px) {
+      top: 10vw;
+      right: 6vw;
+    }
     svg {
       width: min(70px, 4.86vw);
       height: min(70px, 4.86vw);
+      @include mixins.max-screen(768px) {
+        width: 10.13vw;
+        height: 10.13vw;
+      }
     }
   }
   &__copyright {

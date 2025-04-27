@@ -7,11 +7,12 @@
         :key="item._id"
         class="news-item"
       >
-        <svg class="news-line-top" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" class="news-line-top" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
         </svg>
+        <img v-if="useIsMobile().value" class="news-line-top" src="/img/news/newsLine.svg" alt="" />
         <p class="news-date">{{ item.date }}</p>
         <h3 class="news-title">{{ item.title }}</h3>
         <NuxtLink
@@ -21,12 +22,14 @@
         >
           GO
         </NuxtLink>
-        <svg class="news-line-bottom" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
-          <circle cx="3" cy="3" r="3" fill="#252526"/>
-          <circle cx="1117" cy="3" r="3" fill="#252526"/>
-        </svg>
       </div>
+      <svg v-if="!useIsMobile().value" class="news-line-bottom" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
+        <circle cx="3" cy="3" r="3" fill="#252526"/>
+        <circle cx="1117" cy="3" r="3" fill="#252526"/>
+      </svg>
+      <img v-if="useIsMobile().value" class="news-line-bottom" src="/img/news/newsLine.svg" alt="" />
+
       <!-- ページネーション -->
       <div class="pagination">
         <button class="pagination-button" @click="prevPage" :disabled="currentPage === 1">
@@ -58,16 +61,27 @@
         </button>
       </div>
     </div>
-
+    <div class="news-bg__wrapper top" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
+      <div class="news-bg__wrapper__contents1" v-observe="'inview'">
+        <img src="/img/news/news-pt1.svg" alt="newsBg1" class="news_pt1">
+      </div>
+    </div>
+    <div class="news-bg__wrapper bottom" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
+      <div class="news-bg__wrapper__contents2" v-observe="'inview'">
+        <img src="/img/news/news-pt2.svg" alt="newsBg2" class="news_pt2">
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { defineComponent, ref, computed } from 'vue'
 import { useNuxtApp } from '#imports'
+import scrollParallaxMixin from '@/mixins/scrollParallaxMixin';
 
 export default defineComponent({
   name: 'News',
+  mixins: [scrollParallaxMixin],
   async setup() {
     const newsItems = await useFetchNewsItem();
 
@@ -144,6 +158,10 @@ export default defineComponent({
 .news {
   background-color: #F2F2F2;
   padding-bottom: min(60px, 4.16vw);
+  position: relative;
+  @include mixins.max-screen(768px) {
+    padding-bottom: 20vw;
+  }
   .news-list {
     width: min(1280px, 88.88vw);
     background-color: #fff;
@@ -151,16 +169,34 @@ export default defineComponent({
     border-radius: min(120px, 8.33vw);
     padding: min(100px, 6.94vw) min(80px, 5.55vw);
     margin-top: min(90px, 6.25vw);
+    position: relative;
+    z-index: 12;
+    @include mixins.max-screen(768px) {
+      width: 92vw;
+      border-radius: 10.66vw;
+      padding: 15vw 0 12vw;
+      margin-top: 15vw;
+    }
     .news-item {
       position: relative;
       display: flex;
       gap: 1.5rem;
       padding: min(20px, 1.38vw) min(43px, 2.98vw);
+      @include mixins.max-screen(768px) {
+        display: block;
+        padding: 3.13vw 5.13vw;
+      }
       .news-title {
         font-size: min(20px, 1.38vw);
         font-weight: 500;
         color: #252526;
         width: min(798px, 55.41vw);
+        line-height: 2;
+        @include mixins.max-screen(768px) {
+          font-size: 3.73vw;
+          line-height: 1.5;
+          width: 61.06vw;
+        }
       }
       .news-date {
         display: block;
@@ -168,6 +204,10 @@ export default defineComponent({
         font-weight: normal;
         font-size: min(30px, 2.08vw);
         letter-spacing: 0.01em;
+        line-height: 1.5;
+        @include mixins.max-screen(768px) {
+          font-size: 3.73vw;
+        }
       }
       .news-link {
         background-color: #3676B6;
@@ -180,37 +220,67 @@ export default defineComponent({
         font-size: min(32px, 2.22vw);
         letter-spacing: 0.01em;
         text-align: center;
+        line-height: min(40px, 2.77vw);
+        @include mixins.max-screen(768px) {
+          position: absolute;
+          top: 50%;
+          right: 5%;
+          transform: translateY(-50%);
+          width: 18.66vw;
+          height: 6.66vw;
+          border-radius: 16vw;
+          font-size: 5.86vw;
+          line-height: 6.66vw;
+        }
       }
       .news-line-top {
         position: absolute;
         top: 0;
         left: 0;
         width: min(1120px, 76.38vw);
+        @include mixins.max-screen(768px) {
+          width: 95%;
+          left: 2.5%;
+        }
       }
       .news-line-bottom {
         display: none;
         position: absolute;
         bottom: 0;
         left: 0;
+        width: min(1120px, 76.38vw);
+        @include mixins.max-screen(768px) {
+          width: 95%;
+          left: 2.5%;
+        }
       }
       &:last-child {
         .news-line-bottom {
           display: block;
-          width: min(1120px, 76.38vw);
         }
       }
+    }
+    .news-line-bottom {
+      display: block;
+      width: min(1120px, 76.38vw);
     }
     .pagination {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
       margin-top: min(40px, 2.77vw);
+      @include mixins.max-screen(768px) {
+        margin-top: 10vw;
+      }
       button {
         font-family: 'DinCondensedBold', sans-serif;
         font-weight: normal;
         font-size: min(34px, 2.36vw);
         letter-spacing: 0.01em;
         background-color: transparent;
+        @include mixins.max-screen(768px) {
+          font-size: 6.93vw;
+        }
         &:disabled {
           color: #ABABAB;
         }
@@ -225,6 +295,12 @@ export default defineComponent({
         }
       }
       .pagination-button {
+        svg {
+          @include mixins.max-screen(768px) {
+            width: 8vw;
+            height: 8vw;
+          }
+        }
         &:disabled {
           svg {
             opacity: 0.5;
@@ -233,7 +309,79 @@ export default defineComponent({
       }
     }
   }
+  .news-bg__wrapper {
+    position: absolute;
+    width: 1px;
+    height: 1%;
+    transform: translate3d(0, var(--scroll-offset), 0);
+    transition: transform 0.8s ease-out;
+    z-index: 2;
+    &__contents1 {
+      width: fit-content;
+      transform: scale(0.1);
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: max(-250vw, -250px);
+      transition: transform 0.8s ease-in-out;
+      position: relative;
+      @include mixins.max-screen(768px) {
+        margin-top: -20vw;
+      }
+      .news_pt1 {
+        width: min(139px, 37.06vw);
+        display: block;
+        transition: transform 0.8s ease-in-out;
+        margin-right: 0;
+        margin-left: auto;
+        @include mixins.max-screen(768px) {
+          width: 18.13vw;
+          max-width: auto;
+        }
+      }
+      &.inview {
+        transform: scale(1);
+      }
+    }
+    &__contents2 {
+      width: fit-content;
+      margin-right: auto;
+      margin-left: 0;
+      transition: transform 0.8s ease-in-out;
+      position: relative;
 
+      .news_pt2 {
+        width: min(217px, 57.86vw);
+        transition: transform 0.8s ease-in-out;
+        position: relative;
+        transform: scale(0.1);
+
+        @include mixins.max-screen(768px) {
+          width: 21.33vw;
+          max-width: auto;
+        }
+      }
+      &.inview {
+        .news_pt2 {
+          transform: scale(1);
+        }
+      }
+    }
+    &.top {
+      top: 40%;
+      right: 10%;
+      @include mixins.max-screen(768px) {
+        top: 15%;
+        right: 14%;
+      }
+    }
+    &.bottom {
+      bottom: 15%;
+      left: -3%;
+      @include mixins.max-screen(768px) {
+        bottom: 10%;
+      }
+    }
+  }
 }
 
 </style>

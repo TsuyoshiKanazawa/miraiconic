@@ -87,23 +87,41 @@ export default {
   background-color: #fff;
   position: relative;
   overflow: hidden;
+  z-index: 20;
+  @include mixins.max-screen(768px) {
+    height: 26.66vw;
+    margin-top: 60px;
+  }
   .top-form__title {
     position: absolute;
     top: 45%;
     left: 10%;
     display: flex;
     gap: 1.38vw;
+    z-index: 1;
+    @include mixins.max-screen(768px) {
+      top: 27%;
+    }
     h1 {
       font-size: 2.5vw;
       font-family: 'DinCondensedBold', sans-serif;
       font-weight: normal;
       font-size: 6.94vw;
       letter-spacing: 0.01em;
+      color: #252526;
+      @include mixins.max-screen(768px) {
+        font-size: 16vw;
+      }
     }
     p {
       font-size: 2.63vw;
       font-weight: bold;
       margin-top: 3vw;
+      color: #252526;
+      @include mixins.max-screen(768px) {
+        font-size: 4.8vw;
+        margin-top: 8vw;
+      }
     }
   }
   /* fv__img__wrapperはレイアウト上の基点となる */
@@ -133,9 +151,8 @@ export default {
     transform: translate(0, 0);
     will-change: transform;
     @include mixins.max-screen(768px) {
-      width: 20vw;
-      top: auto;
-      bottom: 5%;
+      width: 12.79vw;
+      top: 5%;
       left: -2%;
     }
   }
@@ -147,9 +164,9 @@ export default {
     animation: fv__img2 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
     will-change: transform;
     @include mixins.max-screen(768px) {
-      width: 20vw;
-      top: 20%;
-      left: 15%;
+      width: 10.4vw;
+      top: -10%;
+      left: 35%;
     }
   }
   .fv__img__parallax .fv__img3 {
@@ -163,9 +180,9 @@ export default {
       animation: fv__img3 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
     }
     @include mixins.max-screen(768px) {
-      width: 40vw;
-      top: 15%;
-      right: -10%;
+      width: 24vw;
+      top: 0;
+      right: 7%;
       transform: translateY(-50%);
       animation: fv__img3__sp 2s cubic-bezier(0.035, 0.800, 0.115, 1.000);
     }
@@ -178,8 +195,8 @@ export default {
     animation: fv__img4 1.5s cubic-bezier(0.035, 0.800, 0.115, 1.000);
     will-change: transform;
     @include mixins.max-screen(768px) {
-      width: 60vw;
-      bottom: -5%;
+      width: 26.66vw;
+      bottom: -10%;
       right: -5%;
     }
   }

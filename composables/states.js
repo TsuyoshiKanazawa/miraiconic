@@ -3,6 +3,18 @@ export const useIsMobile = () => useState('isMobile', () => false)
 
 export const useNewsItem = () => useState('newsItem', () => null)
 
+export const useContactItem = () => useState('contactItem', () => {
+  return {
+    name: '',
+    nameFurigana: '',
+    companyName: '',
+    email: '',
+    emailCheck: '',
+    phoneNumber: '',
+    message: ''
+  }
+})
+
 export const useFetchNewsItem = async () => {
   const { $newtClient } = useNuxtApp()
   const res = await $newtClient.getContents({
