@@ -18,7 +18,7 @@
         <NuxtLink
           class="news-link"
           :to="`/news/${item.id}`"
-          v-if="item.id"
+          v-if="item.id !== '-'"
         >
           GO
         </NuxtLink>

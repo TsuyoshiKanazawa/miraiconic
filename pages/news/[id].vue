@@ -63,7 +63,7 @@ export default {
   computed: {
     // 有効なIDを持つ記事だけ
     validItems() {
-      return this.newsItems.filter(item => !!item.id)
+      return this.newsItems.filter(item => item.id !== '-')
     },
     // 現在の記事が validItems の何番目か
     currentIndex() {

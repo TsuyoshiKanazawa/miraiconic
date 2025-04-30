@@ -72,7 +72,7 @@
           </li>
           <li class="about">
             <nuxt-link to="/about">
-              About Us
+              About
             </nuxt-link>
           </li>
           <li class="service">
@@ -345,7 +345,7 @@ export default {
               width: min(73px, 5.06vw);
             }
             &.about {
-              width: min(106px, 7.36vw);
+              width: min(73px, 5.06vw);
             }
             &.service {
               width: min(94px, 6.52vw);

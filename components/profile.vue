@@ -105,11 +105,12 @@
         </svg>
       </div>
     </div>
+    <!--
     <div class="profile__bg__wrapper1" style="z-index: 1;">
       <div class="profile__bg__wrapper__contents1">
         <img src="/img/profile/profile-pt1.svg" alt="profile_bg" class="profile__container__pt1" v-observe="'inview'">
       </div>
-    </div>
+    </div>-->
   </section>
 </template>
 
