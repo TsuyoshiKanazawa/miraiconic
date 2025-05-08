@@ -181,7 +181,7 @@ export default defineComponent({
       position: relative;
       display: flex;
       gap: 1.5rem;
-      padding: min(20px, 1.38vw) min(43px, 2.98vw);
+      padding: min(20px, 1.38vw) min(43px, 2.98vw) min(18px, 1.25vw);
       @include mixins.max-screen(768px) {
         display: block;
         padding: 3.13vw 5.13vw;
@@ -221,6 +221,8 @@ export default defineComponent({
         letter-spacing: 0.01em;
         text-align: center;
         line-height: min(40px, 2.77vw);
+        border: 2px solid #3676B6;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         @include mixins.max-screen(768px) {
           position: absolute;
           top: 50%;
@@ -231,6 +233,10 @@ export default defineComponent({
           border-radius: 16vw;
           font-size: 5.86vw;
           line-height: 6.66vw;
+        }
+        &:hover {
+          background-color: #fff;
+          color: #3676B6;
         }
       }
       .news-line-top {
@@ -263,6 +269,10 @@ export default defineComponent({
     .news-line-bottom {
       display: block;
       width: min(1120px, 76.38vw);
+      margin: 0 auto;
+      @include mixins.max-screen(768px) {
+        width: 95%;
+      }
     }
     .pagination {
       display: flex;
@@ -325,7 +335,7 @@ export default defineComponent({
       transition: transform 0.8s ease-in-out;
       position: relative;
       @include mixins.max-screen(768px) {
-        margin-top: -20vw;
+        margin-top: 10vw;
       }
       .news_pt1 {
         width: min(139px, 37.06vw);

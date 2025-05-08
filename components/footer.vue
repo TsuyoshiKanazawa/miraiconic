@@ -149,6 +149,7 @@ export default {
     a {
       display: block;
       height: min(3.61vw, 52px);
+      width: fit-content;
       @include mixins.max-screen(768px) {
         height: 10.66vw;
       }
@@ -205,8 +206,12 @@ export default {
             font-weight: normal;
             margin: min(0.55vw, 8px) 0;
             color: #252526;
+            transition: color 0.2s ease-in-out;
             @include mixins.max-screen(768px) {
               font-size: 4.8vw;
+            }
+            &:hover {
+              color: #3676B6;
             }
           }
 

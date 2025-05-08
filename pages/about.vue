@@ -113,6 +113,7 @@ export default {
 .about {
   position: relative;
   overflow: hidden;
+  color: #252526;
 
   .about__container {
     background-image: url('/img/about/aboutBg2.jpg');

@@ -174,6 +174,7 @@ export default {
     .detail-content {
       margin-top: min(20px, 1.38vw);
       padding: 0 min(40px, 2.77vw);
+      overflow-wrap: break-word;
       @include mixins.max-screen(768px) {
         padding: 0 4.8vw;
       }

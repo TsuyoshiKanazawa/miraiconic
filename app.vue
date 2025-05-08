@@ -5,6 +5,7 @@
       <NuxtPage />
     </main>
     <Footer />
+    <FormsLoading v-if="useLoading().value" />
   </div>
 </template>
 

@@ -340,6 +340,11 @@ export default {
               font-size: min(30px, 2.08vw);
               letter-spacing: 0.01em;
               line-height: min(80px, 5.55vw);
+              transition: color 0.2s ease-in-out;
+              color: #252526;
+              &:hover {
+                color: #3676B6;
+              }
             }
             &.news {
               width: min(73px, 5.06vw);
@@ -364,8 +369,12 @@ export default {
         width: min(94px, 6.52vw);
         a {
           width: min(32px, 2.22vw);
+          transition: opacity 0.2s ease-in-out;
           img {
             width: 100%;
+          }
+          &:hover {
+            opacity: 0.7;
           }
         }
       }

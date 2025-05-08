@@ -39,6 +39,9 @@
           </div>
         </Form>
       </div>
+      <div v-if="errorMessages.length" class="error-summary">
+        <p v-for="(msg, idx) in errorMessages" :key="idx">{{ msg }}</p>
+      </div>
       <button class="contact__background__button" @click="confirm">
         確認に進む
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,8 +59,60 @@ export default {
     const contactItem = useContactItem().value
     console.log(contactItem)
   },
+  data() {
+    return {
+      errors: {
+        name: '',
+        nameFurigana: '',
+        email: '',
+        emailCheck: '',
+        phoneNumber: '',
+        message: ''
+      },
+      contactItem: useContactItem().value,
+    }
+  },
+  computed: {
+    errorMessages() {
+      return Object.values(this.errors).filter(msg => msg)
+    }
+  },
   methods: {
     confirm() {
+      // エラー初期化
+      Object.keys(this.errors).forEach(k => this.errors[k] = '')
+
+      const item = this.contactItem
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      const telRegex   = /^0\d{9,10}$/
+
+      // 必須チェック
+      if (!item.name)             this.errors.name           = 'お名前を入力してください'
+      if (!item.nameFurigana)     this.errors.nameFurigana   = 'お名前(フリガナ)を入力してください'
+      if (!item.email)            this.errors.email          = 'メールアドレスを入力してください'
+      if (!item.emailCheck)       this.errors.emailCheck     = 'メールアドレス（再入力）を入力してください'
+      if (!item.message)          this.errors.message        = 'お問い合わせ内容を入力してください'
+
+      // メール形式チェック
+      if (item.email && !emailRegex.test(item.email)) {
+        this.errors.email = '正しいメールアドレスを入力してください'
+      }
+      // メール一致チェック
+      if (item.email && item.emailCheck && item.email !== item.emailCheck) {
+        this.errors.emailCheck = 'メールアドレスが一致しません'
+      }
+
+      // 電話番号形式チェック（任意）
+      if (item.phoneNumber && !telRegex.test(item.phoneNumber)) {
+        this.errors.phoneNumber = '正しい電話番号を入力してください（ハイフンなし）'
+      }
+
+      // エラーがあれば一覧を表示したまま終了
+      if (this.errorMessages.length) {
+        return
+      }
+
+      // 問題なければ確認画面へ
       this.$router.push('/contact/confirm')
     }
   }
@@ -67,7 +122,7 @@ export default {
 <style lang="scss" scoped>
 .contact {
   background-color: #F2F2F2;
-  padding: min(60px, 5.55vw) 0;
+  padding: 0 0 min(60px, 5.55vw);
   .contact__th {
     font-size: min(22px, 1.52vw);
     text-align: center;
@@ -97,9 +152,10 @@ export default {
       &__form {
         margin-top: min(20px, 1.38vw);
         label {
-          font-size: min(26px, 1.80vw);
+          font-size: min(22px, 1.52vw);
           font-weight: 700;
           line-height: 2;
+          color: #252526;
           span {
             color: #FF0000;
             font-weight: 700;
@@ -107,11 +163,16 @@ export default {
         }
         input {
           width: 100%;
-          height: min(80px, 5.55vw);
+          height: min(60px, 4.16vw);
           padding: min(30px, 2.08vw);
           border-radius: min(12px, 0.83vw);
           background-color: #F2F2F2;
-          font-size: min(22px, 1.52vw);
+          font-size: min(18px, 1.25vw);
+          font-weight: 700;
+          color: #252526;
+          &::placeholder {
+            font-weight: 500;
+          }
         }
         textarea {
           width: 100%;
@@ -120,7 +181,12 @@ export default {
           border-radius: min(12px, 0.83vw);
           background-color: #F2F2F2;
           resize: none;
-          font-size: min(22px, 1.52vw);
+          font-size: min(18px, 1.25vw);
+          font-weight: 700;
+          color: #252526;
+          &::placeholder {
+            font-weight: 500;
+          }
         }
       }
     }
@@ -156,6 +222,18 @@ export default {
             stroke: #3676B6;
           }
         }
+      }
+    }
+    .error-summary {
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      p {
+        list-style: none;
+        color: #e53935 !important;
+        font-size: min(18px, 1.25vw);
+        line-height: 1.4;
+        text-align: center;
       }
     }
   }

@@ -7,7 +7,12 @@ export default defineNuxtConfig({
       },
       spaceUid: process.env.NEWT_SPACE_UID,
       cdnApiToken: process.env.NEWT_CDN_API_TOKEN,
-      siteUrl: 'https://miraconi.com'
+      siteUrl: 'https://miraconi.com',
+      emailjs: {
+        serviceID: 'service_w2py6g6',
+        templateID: 'template_iyvjvau',
+        publicKey: 'OhzGRqewkPcbhrZ0o'
+      }
     }
   },
   compatibilityDate: '2024-11-01',

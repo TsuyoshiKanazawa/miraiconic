@@ -51,6 +51,7 @@ export default {
     letter-spacing: 0.01em;
     position: relative;
     z-index: 10000;
+    color: #fff !important;
   }
   svg {
     position: absolute;
@@ -64,7 +65,7 @@ export default {
   &:hover {
     background-color: #fff;
     .button__inner {
-      color: #3676B6;
+      color: #3676B6 !important;
     }
     svg {
       path {
