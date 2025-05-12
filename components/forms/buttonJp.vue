@@ -41,6 +41,14 @@ export default {
   transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
   border: 2px solid #3676B6;
   margin: 0 auto;
+  @include mixins.max-screen(768px) {
+    width: 80vw;
+    height: 10.66vw;
+    border-radius: 16vw;
+    font-size: 5.33vw;
+    margin: 10vw auto 2vw;
+    box-shadow: 1.06vw 1.06vw 0 0 #252526;
+  }
   .button__inner {
     font-size: min(26px, 1.80vw);
     line-height: min(60px, 4.16vw);
@@ -52,6 +60,10 @@ export default {
     position: relative;
     z-index: 10000;
     color: #fff !important;
+    @include mixins.max-screen(768px) {
+      font-size: 5.33vw;
+      line-height: 1.8;
+    }
   }
   svg {
     position: absolute;
@@ -60,21 +72,29 @@ export default {
     transform: translateY(-50%);
     width: min(36px, 2.4vw);
     height: min(36px, 2.4vw);
-    
-  }
-  &:hover {
-    background-color: #fff;
-    .button__inner {
-      color: #3676B6 !important;
+    @include mixins.max-screen(768px) {
+      width: 7.46vw;
+      height: 7.46vw;
+      right: 1vw;
     }
-    svg {
-      path {
-        fill: #3676B6;
+
+  }
+  @include mixins.min-screen(769px) {
+    &:hover {
+      background-color: #fff;
+      .button__inner {
+        color: #3676B6 !important;
       }
-      circle {
-        stroke: #3676B6;
+      svg {
+        path {
+          fill: #3676B6;
+        }
+        circle {
+          stroke: #3676B6;
+        }
       }
     }
   }
+
 }
 </style>

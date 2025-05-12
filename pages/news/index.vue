@@ -331,7 +331,6 @@ export default defineComponent({
       transform: scale(0.1);
       margin-right: 0;
       margin-left: auto;
-      margin-top: max(-250vw, -250px);
       transition: transform 0.8s ease-in-out;
       position: relative;
       @include mixins.max-screen(768px) {

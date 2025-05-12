@@ -3,7 +3,7 @@
     <FormsTop title="PRIVACY&POLICY" subTitle="プライバシーポリシー" />
     <div class="privacy__background">
       <div class="privacy__background__container">
-        <h2>プライバシーポリシー（個人情報保護方針）</h2>
+        <h2>プライバシーポリシー<br class="sp-only">（個人情報保護方針）</h2>
         <div class="privacy__background__container__content">
           <p>株式会社〇〇〇〇（以下、「当社」といいます）は、当社が運営するウェブサイト（以下、「当サイト」といいます）において提供いただく個人情報の重要性を認識し、以下の方針に基づき適切な取扱いと保護に努めます。</p>
           <div class="privacy__background__container__content__heading">
@@ -80,18 +80,28 @@
 <style lang="scss" scoped>
 .privacy {
   background-color: #F2F2F2;
-  padding: min(60px, 5.55vw) 0;
+  padding: 0 0 min(60px, 5.55vw);
   .privacy__background {
     background-color: #fff;
     width: min(1280px, 88.88vw);
     border-radius: min(120px, 8.33vw);
     margin: min(90px, 6.25vw) auto;
     padding: min(80px, 5.55vw);
+    @include mixins.max-screen(768px) {
+      width: 92vw;
+      border-radius: 10.66vw;
+      padding: min(50px, 13.33vw) min(20px, 5.33vw) min(120px, 8.33vw);
+      margin-top: 15vw;
+    }
     &__container {
       h2 {
         font-size: min(28px, 1.94vw);
         margin-bottom: min(16px, 1.11vw);
         color: #252526;
+        @include mixins.max-screen(768px) {
+          font-size: min(18px, 4.8vw);
+          margin-bottom: min(20px, 2.66vw);
+        }
       }
       &__content {
         p {
@@ -100,6 +110,10 @@
           line-height: 1.8;
           color: #252526;
           font-weight: 500;
+          @include mixins.max-screen(768px) {
+            font-size: min(16px, 4.26vw);
+            margin-bottom: min(30px, 8vw);
+          }
         }
         &__heading {
           position: relative;
@@ -109,6 +123,11 @@
             position: relative;
             z-index: 1;
             padding: 0 min(16px, 1.11vw) 0 0;
+            @include mixins.max-screen(768px) {
+              border-bottom: 1px solid #252526;
+              line-height: 2.5;
+              width: 100%;
+            }
           }
           &__hr {
             width: 100%;
@@ -118,6 +137,9 @@
             top: 50%;
             left: 0;
             z-index: 0;
+            @include mixins.max-screen(768px) {
+              display: none;
+            }
           }
         }
       }

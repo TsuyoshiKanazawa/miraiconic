@@ -1,10 +1,10 @@
 <template>
   <div class="contact">
     <FormsTop title="CONTACT" subTitle="お問い合わせ" />
-    <p class="contact__th">弊社ウェブサイトをご覧いただき、誠にありがとうございます。</p>
-    <p class="contact__text">下記お問い合わせフォームより、必要事項をご記入ください。<br>
-お問い合わせ内容によっては、返信にお時間をいただく場合や、対応が難しい場合がございますので、予めご了承くださいませ。<br>
-なお、よくあるご質問については、Q＆A に掲載しておりますので、こちらもご参照ください。</p>
+    <p class="contact__th">弊社ウェブサイトをご覧いただき、<br class="sp-only">誠にありがとうございます。</p>
+    <p class="contact__text">下記お問い合わせフォームより、<br class="sp-only">必要事項をご記入ください。<br>
+お問い合わせ内容によっては、返信にお時間を<br class="sp-only">いただく場合や、対応が難しい場合が<br class="sp-only">ございますので、予めご了承くださいませ。<br>
+なお、よくあるご質問については、<br class="sp-only">Q＆A に掲載しておりますので、<br class="sp-only">こちらもご参照ください。</p>
     <div class="contact__background">
       <div class="contact__background__container">
         <div class="contact__background__container__required">※必須項目</div>
@@ -128,12 +128,23 @@ export default {
     text-align: center;
     font-weight: 500;
     margin-top: min(70px, 4.86vw);
+    color: #252526;
+    @include mixins.max-screen(768px) {
+      font-size: min(19px, 5.06vw);
+      margin-top: min(50px, 13.33vw);
+    }
   }
   .contact__text {
     font-size: min(16px, 1.11vw);
     text-align: center;
     margin-top: min(12px, 0.83vw);
     font-weight: 500;
+    color: #252526;
+    @include mixins.max-screen(768px) {
+      font-size: min(14px, 3.73vw);
+      line-height: 1.8;
+      margin-top: min(20px, 5.33vw);
+    }
   }
   .contact__background {
     background-color: #fff;
@@ -141,6 +152,12 @@ export default {
     border-radius: min(120px, 8.33vw);
     margin: min(43px, 2.98vw) auto;
     padding: min(80px, 5.55vw);
+    @include mixins.max-screen(768px) {
+      width: 92vw;
+      border-radius: 10.66vw;
+      padding: 8vw 5vw 20vw;
+      margin-top: 10vw;
+    }
     &__container {
       &__required {
         font-size: min(16px, 1.11vw);
@@ -148,14 +165,24 @@ export default {
         color: #FF0000;
         font-weight: 700;
         text-align: center;
+        @include mixins.max-screen(768px) {
+          font-size: 5.33vw;
+        }
       }
       &__form {
         margin-top: min(20px, 1.38vw);
+        @include mixins.max-screen(768px) {
+          margin-top: 5.33vw;
+        }
         label {
           font-size: min(22px, 1.52vw);
           font-weight: 700;
           line-height: 2;
           color: #252526;
+          @include mixins.max-screen(768px) {
+            font-size: 5.33vw;
+            line-height: 2.5;
+          }
           span {
             color: #FF0000;
             font-weight: 700;
@@ -172,6 +199,12 @@ export default {
           color: #252526;
           &::placeholder {
             font-weight: 500;
+            color: #AEAEAE;
+          }
+          @include mixins.max-screen(768px) {
+            font-size: 4.26vw;
+            height: 13.33vw;
+            border-radius: 1.33vw;
           }
         }
         textarea {
@@ -186,6 +219,12 @@ export default {
           color: #252526;
           &::placeholder {
             font-weight: 500;
+            color: #AEAEAE;
+          }
+          @include mixins.max-screen(768px) {
+            font-size: 4.26vw;
+            height: 80vw;
+            border-radius: 1.33vw;
           }
         }
       }
@@ -203,6 +242,14 @@ export default {
       transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
       border: 2px solid #3676B6;
       position: relative;
+      @include mixins.max-screen(768px) {
+        width: 100%;
+        height: 10.66vw;
+        border-radius: 16vw;
+        font-size: 5.33vw;
+        margin: 10vw auto 2vw;
+        
+      }
       svg {
         position: absolute;
         top: 50%;
@@ -210,19 +257,27 @@ export default {
         transform: translateY(-50%);
         width: min(36px, 2.4vw);
         height: min(36px, 2.4vw);
+        @include mixins.max-screen(768px) {
+          width: 7.46vw;
+          height: 7.46vw;
+          right: 1vw;
+        }
       }
-      &:hover {
-        background-color: #fff;
-        color: #3676B6;
-        svg {
-          path {
-            fill: #3676B6;
-          }
-          circle {
-            stroke: #3676B6;
+      @include mixins.min-screen(769px) {
+        &:hover {
+          background-color: #fff;
+          color: #3676B6;
+          svg {
+            path {
+              fill: #3676B6;
+            }
+            circle {
+              stroke: #3676B6;
+            }
           }
         }
       }
+
     }
     .error-summary {
       padding: 1rem;
@@ -234,6 +289,9 @@ export default {
         font-size: min(18px, 1.25vw);
         line-height: 1.4;
         text-align: center;
+        @include mixins.max-screen(768px) {
+          font-size: 4.26vw;
+        }
       }
     }
   }

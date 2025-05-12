@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <FormsTop title="CONTACT" subTitle="お問い合わせ" />
-    <p class="contact__text">以下のお問い合わせ内容をご確認のうえ「送信」よりお問い合わせください。</p>
+    <p class="contact__text">以下のお問い合わせ内容をご確認のうえ<br class="sp-only">「送信」よりお問い合わせください。</p>
     <div class="contact__background">
       <div class="contact__background__container">
         <Form>
@@ -38,7 +38,7 @@
       <div class="contact__background__checkbox">
         <input type="checkbox" id="checkbox" v-model="checkbox">
         <label for="checkbox">
-          <a href="/privacy" target="_blank">プライバシーポリシー</a> に同意のうえ、送信してください。
+          <a href="/privacy" target="_blank">プライバシーポリシー</a> に同意のうえ、<br class="sp-only">送信してください。
         </label>
       </div>
       <button class="contact__background__button back" @click="back">
@@ -128,13 +128,23 @@ export default {
     text-align: center;
     font-weight: 500;
     margin-top: min(70px, 4.86vw);
-    
+    color: #252526;
+    @include mixins.max-screen(768px) {
+      font-size: min(19px, 5.06vw);
+      margin-top: min(50px, 13.33vw);
+    }
   }
   .contact__text {
     font-size: min(16px, 1.11vw);
     text-align: center;
+    margin-top: min(12px, 0.83vw);
     font-weight: 500;
-    margin: min(90px, 6.25vw) 0;
+    color: #252526;
+    @include mixins.max-screen(768px) {
+      font-size: min(14px, 3.73vw);
+      line-height: 1.8;
+      margin-top: min(20px, 5.33vw);
+    }
   }
   .contact__background {
     background-color: #fff;
@@ -142,6 +152,12 @@ export default {
     border-radius: min(120px, 8.33vw);
     margin: min(43px, 2.98vw) auto;
     padding: min(80px, 5.55vw);
+    @include mixins.max-screen(768px) {
+      width: 92vw;
+      border-radius: 10.66vw;
+      padding: 8vw 5vw 20vw;
+      margin-top: 10vw;
+    }
     &__container {
       &__required {
         font-size: min(16px, 1.11vw);
@@ -152,11 +168,18 @@ export default {
       }
       &__form {
         margin-top: min(20px, 1.38vw);
+        @include mixins.max-screen(768px) {
+          margin-top: 5.33vw;
+        }
         label {
           font-size: min(22px, 1.52vw);
           font-weight: 700;
           line-height: 2;
           color: #252526;
+          @include mixins.max-screen(768px) {
+            font-size: 5.33vw;
+            line-height: 2.5;
+          }
           span {
             color: #FF0000;
             font-weight: 700;
@@ -174,6 +197,11 @@ export default {
           &::placeholder {
             font-weight: 500;
           }
+          @include mixins.max-screen(768px) {
+            font-size: 4.26vw;
+            height: 13.33vw;
+            border-radius: 1.33vw;
+          }
         }
         textarea {
           width: 100%;
@@ -188,6 +216,11 @@ export default {
           &::placeholder {
             font-weight: 500;
           }
+          @include mixins.max-screen(768px) {
+            font-size: 4.26vw;
+            height: 80vw;
+            border-radius: 1.33vw;
+          }
         }
       }
     }
@@ -197,17 +230,33 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      @include mixins.max-screen(768px) {
+        position: relative;
+      }
       input {
         margin-right: min(10px, 0.69vw);
         width: min(22px, 1.52vw);
         height: min(22px, 1.52vw);
         align-self: center;
+        @include mixins.max-screen(768px) {
+          width: 4.26vw;
+          height: 4.26vw;
+          position: absolute;
+          top: 25%;
+          left: 0;
+          transform: translateY(-50%);
+        }
       }
       label {
         font-size: min(22px, 1.52vw);
         font-weight: 500;
         color: #252526;
         line-height: 1;
+        @include mixins.max-screen(768px) {
+          font-size: 4vw;
+          line-height: 1.8;
+          margin-left: 5.5vw;
+        }
         a {
           color: #1900FF !important;
           text-decoration: underline;
@@ -227,6 +276,15 @@ export default {
       transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
       border: 2px solid #3676B6;
       position: relative;
+      @include mixins.max-screen(768px) {
+        width: 100%;
+        height: 10.66vw;
+        border-radius: 16vw;
+        font-size: 5.33vw;
+        margin: 5vw auto 2vw;
+        border: 0.53vw solid #3676B6;
+        box-shadow: 1.06vw 1.06vw 0 0 #252526;
+      }
       svg {
         position: absolute;
         top: 50%;
@@ -234,6 +292,11 @@ export default {
         transform: translateY(-50%);
         width: min(36px, 2.4vw);
         height: min(36px, 2.4vw);
+        @include mixins.max-screen(768px) {
+          width: 7.46vw;
+          height: 7.46vw;
+          right: 1vw;
+        }
       }
       &:hover {
         background-color: #fff;
@@ -251,8 +314,14 @@ export default {
         background-color: #fff;
         color: #3676B6;
         border: 2px solid #3676B6;
+        @include mixins.max-screen(768px) {
+          border: 0.53vw solid #3676B6;
+        }
         svg {
           left: min(12px, 0.83vw);
+          @include mixins.max-screen(768px) {
+            left: 1vw;
+          }
           path {
             fill: #3676B6;
           }

@@ -171,37 +171,31 @@
       <div class="menu__inner">
         <ul class="menu__item">
           <li>
-            <nuxt-link to="#top" v-smooth-scroll @click="openMenu">
+            <nuxt-link to="/" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;TOP
             </nuxt-link>
             <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#about" v-smooth-scroll @click="openMenu">
-              /&nbsp;&nbsp;About Us
+            <nuxt-link to="/news" v-smooth-scroll @click="openMenu">
+              /&nbsp;&nbsp;News
             </nuxt-link>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#service" v-smooth-scroll @click="openMenu">
+            <nuxt-link to="/about" v-smooth-scroll @click="openMenu">
+              /&nbsp;&nbsp;About
+            </nuxt-link>
+            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+          </li>
+          <li>
+            <nuxt-link to="/service" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Service
             </nuxt-link>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="#qa" v-smooth-scroll @click="openMenu">
-              /&nbsp;&nbsp;Q&A
-            </nuxt-link>
-            <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
-          </li>
-          <li>
-            <nuxt-link to="#corporate-info" v-smooth-scroll @click="openMenu">
-              /&nbsp;&nbsp;Corporate Info
-            </nuxt-link>
-            <div class="menu__item__line" :class="{ 'is-windows': isWindows }"></div>
-          </li>
-          <li>
-            <nuxt-link to="#footer" v-smooth-scroll @click="openMenu">
+            <nuxt-link to="/contact" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Contact
             </nuxt-link>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
@@ -477,11 +471,11 @@ export default {
     .menu__inner {
       padding: 12.59vh 5% 3.97vh;
       @include mixins.max-screen(768px) {
-        padding: 8vh 5% 1.97vh;
+        padding: min(30vw, 150px) 10% 1.97vh;
       }
       .menu__item {
         list-style: none;
-        margin: 5% auto;
+        margin: 5% 0;
         width: fit-content;
         display: block;
         li {
@@ -540,8 +534,8 @@ export default {
       margin-left: 18.47vh;
       gap: 2vh;
       @include mixins.max-screen(768px) {
-        justify-content: center;
         margin-left: 0;
+        padding-left: 15%;
       }
       a {
         transition: opacity 0.1s ease-in-out;
