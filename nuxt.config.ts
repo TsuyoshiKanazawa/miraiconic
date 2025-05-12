@@ -65,5 +65,42 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@zadigetvoltaire/nuxt-gtm'],
+  modules: ['@zadigetvoltaire/nuxt-gtm', 'nuxt-simple-sitemap'],
+  sitemap: {
+    urls: [
+      {
+        loc: '/',
+        changefreq: 'daily',
+        priority: 1
+      },
+      {
+        loc: '/news',
+        changefreq: 'daily',
+        priority: 0.8
+      },
+      {
+        loc: '/about',
+        changefreq: 'daily',
+        priority: 0.8
+      },
+      {
+        loc: '/service',
+        changefreq: 'daily',
+        priority: 0.8
+      },
+      {
+        loc: '/contact',
+        changefreq: 'daily',
+        priority: 0.8
+      },
+      {
+        loc: '/privacy',
+        changefreq: 'daily',
+        priority: 0.8
+      }
+    ]
+  },
+  site: {
+    url: 'https://miraconi.com'
+  },
 })
