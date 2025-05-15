@@ -71,14 +71,15 @@
             <a href="/news">News</a>
           </li>
           <li>
-            <a href="/about">About us</a>
+            <a href="/about">About</a>
           </li>
           <li>
             <a href="/service">Service</a>
           </li>
+          <!--
           <li>
             <a href="/mascot">Mascot</a>
-          </li>
+          </li>-->
           <li>
             <a href="/privacy">Privacy&Policy</a>
           </li>
@@ -88,10 +89,10 @@
         Social Account
         <ul class="footer__menu__item__list">
           <li>
-            <a href="https://www.instagram.com/miraiconic/">Instagram</a>
+            <a href="https://www.instagram.com/miraiconic/" target="_blank">Instagram</a>
           </li>
           <li>
-            <a href="https://x.com/miraiconic">X</a>
+            <a href="https://x.com/miraiconic" target="_blank">X</a>
           </li>
         </ul>
       </div>

@@ -203,11 +203,12 @@ export default {
         font-weight: 500;
         color: #252526;
         line-height: 2.2;
-        margin-top: 1.5vw;
+        margin-top: min(2.77vw, 40px);
         letter-spacing: 0.05em;
         @include mixins.max-screen(768px) {
           font-size: 3.73vw;
           margin-left: 10.66vw;
+          margin-top: 6vw;
           line-height: 2;
         }
       }
@@ -222,6 +223,7 @@ export default {
           width: 41.33vw;
           margin: 0 auto;
           display: block;
+          margin-top: 5vw;
         }
       }
       .about__img__text {
@@ -371,12 +373,12 @@ export default {
       }
     }
     .about__container__mission {
-      padding: min(5.83vw, 84px) 6vw;
+      padding: min(5.83vw, 84px) min(6.25vw, 90px);
       background-color: #fff;
       width: min(88.19vw, 1270px);
       margin: 0 auto;
       padding-bottom: min(22.22vw, 320px);
-      border-radius: 8.33vw;
+      border-radius: min(8.33vw, 120px);
       overflow: hidden;
       position: relative;
       z-index: 11;

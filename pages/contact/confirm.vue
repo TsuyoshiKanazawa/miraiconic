@@ -137,13 +137,13 @@ export default {
   .contact__text {
     font-size: min(16px, 1.11vw);
     text-align: center;
-    margin-top: min(12px, 0.83vw);
+    margin: min(70px, 4.86vw) 0;
     font-weight: 500;
     color: #252526;
     @include mixins.max-screen(768px) {
       font-size: min(14px, 3.73vw);
       line-height: 1.8;
-      margin-top: min(20px, 5.33vw);
+      margin: 10vw 0;
     }
   }
   .contact__background {
@@ -202,6 +202,11 @@ export default {
             height: 13.33vw;
             border-radius: 1.33vw;
           }
+          &:disabled {
+            color: #252526;
+            -webkit-text-fill-color: #252526;
+            opacity: 1;
+          }
         }
         textarea {
           width: 100%;
@@ -215,6 +220,11 @@ export default {
           color: #252526;
           &::placeholder {
             font-weight: 500;
+          }
+          &:disabled {
+            color: #252526;
+            -webkit-text-fill-color: #252526;
+            opacity: 1;
           }
           @include mixins.max-screen(768px) {
             font-size: 4.26vw;
@@ -276,6 +286,7 @@ export default {
       transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
       border: 2px solid #3676B6;
       position: relative;
+      font-weight: 500;
       @include mixins.max-screen(768px) {
         width: 100%;
         height: 10.66vw;

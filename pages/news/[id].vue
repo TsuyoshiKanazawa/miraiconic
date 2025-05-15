@@ -63,11 +63,11 @@ export default {
   computed: {
     // 有効なIDを持つ記事だけ
     validItems() {
-      return this.newsItems.filter(item => item.id !== '-')
+      return this.newsItems.filter(item => item.mainText !== '')
     },
     // 現在の記事が validItems の何番目か
     currentIndex() {
-      return this.validItems.findIndex(item => item.id === this.newsItem?.id)
+      return this.validItems.findIndex(item => item._id === this.newsItem?._id)
     },
     // ひとつ前のアイテム
     prevItem() {
@@ -86,28 +86,29 @@ export default {
     // ストアにあれば使う、なければフェッチ
     this.newsItems = useNewsItem().value || await useFetchNewsItem()
     this.updateCurrent();
-    console.log(this.validItems);
+    console.log(this.newsItems);
   },
   watch: {
     // ルートの id が変わったら再表示
-    '$route.params.id': 'updateCurrent'
+    '$route.params._id': 'updateCurrent'
   },
   methods: {
     // currentIndex を更新
     updateCurrent() {
       const id = this.$route.params.id
-      this.newsItem = this.newsItems.find(item => item.id === id) || null
+      console.log(this.$route.params);
+      this.newsItem = this.newsItems.find(item => item._id === id) || null
     },
     // 「前の記事」ボタンクリック
     back() {
       if (this.prevItem) {
-        this.$router.push(`/news/${this.prevItem.id}`)
+        this.$router.push(`/news/${this.prevItem._id}`)
       }
     },
     // 「次の記事」ボタンクリック
     next() {
       if (this.nextItem) {
-        this.$router.push(`/news/${this.nextItem.id}`)
+        this.$router.push(`/news/${this.nextItem._id}`)
       }
     }
   }
@@ -135,9 +136,7 @@ export default {
       margin-top: 15vw;
     }
     .detail-header {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
+
       padding: 0 min(40px, 2.77vw);
       @include mixins.max-screen(768px) {
         display: block;
@@ -399,10 +398,12 @@ export default {
 .detail-content {
   margin-top: min(20px, 1.38vw);
   padding: 0 min(40px, 2.77vw);
+  color: #252526;
   p {
     img {
       display: block;
       margin: 0 auto;
+      max-width: 100%;
       @include mixins.max-screen(768px) {
         width: 90%;
       }

@@ -17,11 +17,18 @@
         <h3 class="news-title">{{ item.title }}</h3>
         <NuxtLink
           class="news-link"
-          :to="`/news/${item.id}`"
-          v-if="item.id !== '-'"
+          :to="`/news/${item._id}`"
+          v-if="item.mainText !== ''"
         >
           GO
         </NuxtLink>
+        <a
+          class="news-link"
+          :href="item.url"
+          v-if="item.url !== '' && item.mainText === ''"
+        >
+          GO
+        </a>
       </div>
       <svg v-if="!useIsMobile().value" class="news-line-bottom" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="3" y="2" width="1114" height="2" fill="#252526"/>

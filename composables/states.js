@@ -21,7 +21,7 @@ export const useFetchNewsItem = async () => {
     appUid: 'cpSite',
     modelUid: 'news',
     query: {
-      select: ['title', 'date', 'mainText', '_id', 'id'],
+      select: ['title', 'date', 'mainText', '_id', 'url'],
       order: ['-_sys.customOrder']
     }
   })

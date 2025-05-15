@@ -1,6 +1,10 @@
 <template>
   <div class="top-form">
-    <div class="top-form__title">
+    <div v-if="!isPrivacy" class="top-form__title">
+      <h1>{{ title }}</h1>
+      <p>{{ subTitle }}</p>
+    </div>
+    <div v-if="isPrivacy" class="top-form__title__privacy">
       <h1>{{ title }}</h1>
       <p>{{ subTitle }}</p>
     </div>
@@ -48,6 +52,9 @@ export default {
     parallaxOffset() {
       return this.scrollY / this.parallaxSpeed;
     },
+    isPrivacy() {
+      return this.$route.name === 'privacy';
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
@@ -57,6 +64,7 @@ export default {
       });
     });
     this.observer.observe(this.$el);
+    //console.log(this.$route.name);
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -121,6 +129,40 @@ export default {
       @include mixins.max-screen(768px) {
         font-size: 4.8vw;
         margin-top: 8vw;
+      }
+    }
+  }
+  .top-form__title__privacy {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    display: flex;
+    gap: 1.38vw;
+    z-index: 1;
+    @include mixins.max-screen(768px) {
+      top: 15%;
+      display: block;
+    }
+    h1 {
+      font-size: 2.5vw;
+      font-family: 'DinCondensedBold', sans-serif;
+      font-weight: normal;
+      font-size: 6.94vw;
+      letter-spacing: 0.01em;
+      color: #252526;
+      @include mixins.max-screen(768px) {
+        font-size: 13.33vw;
+        line-height: 1;
+      }
+    }
+    p {
+      font-size: 2.63vw;
+      font-weight: bold;
+      margin-top: 3vw;
+      color: #252526;
+      @include mixins.max-screen(768px) {
+        font-size: 4.8vw;
+        margin-top: 0;
       }
     }
   }

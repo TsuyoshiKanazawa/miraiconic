@@ -31,7 +31,7 @@
           </div>
           <div class="contact__background__container__form">
             <label for="phoneNumber">電話番号</label>
-            <input type="tel" id="phoneNumber" placeholder="08012345678" v-model="useContactItem().value.phoneNumber">
+            <input type="tel" id="phoneNumber" placeholder="080-1234-5678" inputmode="numeric" attern="[0-9\-]*" @input="onInputPhoneNumber" v-model="useContactItem().value.phoneNumber">
           </div>
           <div class="contact__background__container__form">
             <label for="message">お問い合わせ内容<span >※</span></label>
@@ -43,7 +43,7 @@
         <p v-for="(msg, idx) in errorMessages" :key="idx">{{ msg }}</p>
       </div>
       <button class="contact__background__button" @click="confirm">
-        確認に進む
+        確認画面に進む
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="white"/>
           <circle cx="18" cy="18" r="17.5" stroke="white"/>
@@ -84,7 +84,6 @@ export default {
 
       const item = this.contactItem
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      const telRegex   = /^0\d{9,10}$/
 
       // 必須チェック
       if (!item.name)             this.errors.name           = 'お名前を入力してください'
@@ -92,6 +91,10 @@ export default {
       if (!item.email)            this.errors.email          = 'メールアドレスを入力してください'
       if (!item.emailCheck)       this.errors.emailCheck     = 'メールアドレス（再入力）を入力してください'
       if (!item.message)          this.errors.message        = 'お問い合わせ内容を入力してください'
+
+      if (item.nameFurigana && !/^[\u30A0-\u30FFー\s]+$/.test(item.nameFurigana)) {
+        this.errors.nameFurigana = 'お名前(フリガナ)はカタカナで入力してください'
+      }
 
       // メール形式チェック
       if (item.email && !emailRegex.test(item.email)) {
@@ -102,10 +105,10 @@ export default {
         this.errors.emailCheck = 'メールアドレスが一致しません'
       }
 
-      // 電話番号形式チェック（任意）
-      if (item.phoneNumber && !telRegex.test(item.phoneNumber)) {
-        this.errors.phoneNumber = '正しい電話番号を入力してください（ハイフンなし）'
-      }
+      // 電話番号形式チェック
+      //if (item.phoneNumber && /[^0-9\-]/.test(item.phoneNumber)) {
+      //  this.errors.phoneNumber = '正しい電話番号を入力してください'
+      //}
 
       // エラーがあれば一覧を表示したまま終了
       if (this.errorMessages.length) {
@@ -114,6 +117,13 @@ export default {
 
       // 問題なければ確認画面へ
       this.$router.push('/contact/confirm')
+    },
+    onInputPhoneNumber(e) {
+      const raw = e.target.value
+      const filtered = raw.replace(/[^0-9\-]/g, '')
+      // DOM と v-model 双方に反映
+      e.target.value = filtered
+      this.contactItem.phoneNumber = filtered
     }
   }
 }
@@ -242,6 +252,7 @@ export default {
       transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
       border: 2px solid #3676B6;
       position: relative;
+      font-weight: 500;
       @include mixins.max-screen(768px) {
         width: 100%;
         height: 10.66vw;

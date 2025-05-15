@@ -5,7 +5,7 @@
       <div class="privacy__background__container">
         <h2>プライバシーポリシー<br class="sp-only">（個人情報保護方針）</h2>
         <div class="privacy__background__container__content">
-          <p>株式会社〇〇〇〇（以下、「当社」といいます）は、当社が運営するウェブサイト（以下、「当サイト」といいます）において提供いただく個人情報の重要性を認識し、以下の方針に基づき適切な取扱いと保護に努めます。</p>
+          <p>株式会社ミライコニック（以下、「当社」といいます）は、当社が運営するウェブサイト（以下、「当サイト」といいます）において提供いただく個人情報の重要性を認識し、以下の方針に基づき適切な取扱いと保護に努めます。</p>
           <div class="privacy__background__container__content__heading">
             <h2>1. 個人情報の取得について</h2>
             <div class="privacy__background__container__content__heading__hr"></div>
@@ -66,11 +66,10 @@
           </div>
           <p>個人情報に関するお問い合わせは、以下の窓口までご連絡ください。<br>
             <br>
-            【事業者名】株式会社〇〇〇〇<br>
-            【住所】〒123-4567 東京都〇〇区〇〇〇〇<br>
-            【代表者名】代表取締役 〇〇〇〇<br>
-            【電話番号】03-xxxx-xxxx<br>
-            【メールアドレス】info@example.com</p>
+            【事業者名】株式会社ミライコニック<br>
+            【住所】〒108-0075 東京都港区港南2-17-1 京王品川ビル2階06号室<br>
+            【代表者名】代表取締役 山口晃<br>
+            【メールアドレス】info@miraconi.com</p>
         </div>
       </div>
     </div>
