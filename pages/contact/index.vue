@@ -116,7 +116,7 @@ export default {
       }
 
       // 問題なければ確認画面へ
-      this.$router.push('/contact/confirm')
+      this.$router.push('/contact/check')
     },
     onInputPhoneNumber(e) {
       const raw = e.target.value

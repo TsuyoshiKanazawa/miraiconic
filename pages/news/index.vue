@@ -25,6 +25,7 @@
         <a
           class="news-link"
           :href="item.url"
+          target="_blank"
           v-if="item.url !== '' && item.mainText === ''"
         >
           GO

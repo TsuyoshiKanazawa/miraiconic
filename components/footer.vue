@@ -81,7 +81,7 @@
             <a href="/mascot">Mascot</a>
           </li>-->
           <li>
-            <a href="/privacy">Privacy&Policy</a>
+            <a href="/privacypolicy">Privacy&Policy</a>
           </li>
         </ul>
       </div>

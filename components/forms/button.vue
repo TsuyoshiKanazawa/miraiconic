@@ -50,7 +50,7 @@ export default {
     box-shadow: 1.06vw 1.06vw 0 0 #252526;
   }
   .button__inner {
-    font-size: min(26px, 1.80vw);
+    font-size: min(40px, 2.77vw);
     line-height: min(60px, 4.16vw);
     font-weight: 700;
     display: block;
@@ -60,6 +60,8 @@ export default {
     position: relative;
     z-index: 10000;
     color: #fff !important;
+    font-family: 'DinCondensedBold', sans-serif;
+    font-weight: normal;
     @include mixins.max-screen(768px) {
       font-size: 5.33vw;
       line-height: 1.8;
