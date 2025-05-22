@@ -100,6 +100,16 @@
         <div class="progress" :class="{'active': progress === 2}"></div>
         <div class="progress" :class="{'active': progress === 3}"></div>
       </div>
+      <div class="caseStudy-bg__wrapper top" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
+        <div class="caseStudy-bg__wrapper__contents1" v-observe="'inview'">
+          <img src="/img/top/caseStudy-pt1.svg" alt="caseStudyBg1" class="caseStudy_pt1">
+        </div>
+      </div>
+      <div class="caseStudy-bg__wrapper bottom" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
+        <div class="caseStudy-bg__wrapper__contents2" v-observe="'inview'">
+          <img src="/img/top/caseStudy-pt2.svg" alt="caseStudyBg2" class="caseStudy_pt2">
+        </div>
+      </div>
     </div>
     
     <!-- ここの高さ分だけスクロールが生まれる（セクション数−1）×100vh -->
@@ -184,7 +194,7 @@ export default {
 .scroll-wrap {
   position: relative;
   height: 100vh;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .casestudy {
@@ -219,6 +229,8 @@ export default {
     align-items: center;
     gap: min(40px, 2.77vw);
     margin: min(60px, 4.16vw) 0 0;
+    position: relative;
+    z-index: 3;
     .casestudy-item {
       position: relative;
       background-color: #fff;
@@ -299,6 +311,78 @@ export default {
       border-radius: min(150px, 10.41vw);
       &.active {
         background-color: #3676B6;
+      }
+    }
+  }
+  .caseStudy-bg__wrapper {
+    position: absolute;
+    width: 1px;
+    height: 1%;
+    transform: translate3d(0, var(--scroll-offset), 0);
+    transition: transform 0.8s ease-out;
+    z-index: 2;
+    &__contents1 {
+      width: fit-content;
+      transform: scale(0.1);
+      margin-right: 0;
+      margin-left: auto;
+      transition: transform 0.8s ease-in-out;
+      position: relative;
+      @include mixins.max-screen(768px) {
+        margin-top: 10vw;
+      }
+      .caseStudy_pt1 {
+        width: min(139px, 37.06vw);
+        display: block;
+        transition: transform 0.8s ease-in-out;
+        margin-right: 0;
+        margin-left: auto;
+        @include mixins.max-screen(768px) {
+          width: 18.13vw;
+          max-width: auto;
+        }
+      }
+      &.inview {
+        transform: scale(1);
+      }
+    }
+    &__contents2 {
+      width: fit-content;
+      margin-right: auto;
+      margin-left: 0;
+      transition: transform 0.8s ease-in-out;
+      position: relative;
+
+      .caseStudy_pt2 {
+        width: min(217px, 57.86vw);
+        transition: transform 0.8s ease-in-out;
+        position: relative;
+        transform: scale(0.1);
+
+        @include mixins.max-screen(768px) {
+          width: 21.33vw;
+          max-width: auto;
+        }
+      }
+      &.inview {
+        .caseStudy_pt2 {
+          transform: scale(1);
+        }
+      }
+    }
+    &.top {
+      top: 0%;
+      right: 10%;
+      @include mixins.max-screen(768px) {
+        top: 15%;
+        right: 14%;
+      }
+    }
+    &.bottom {
+      bottom: 35%;
+      left: -3%;
+      @include mixins.max-screen(768px) {
+        bottom: 10%;
       }
     }
   }
