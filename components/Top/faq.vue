@@ -76,6 +76,7 @@ onMounted(async () => {
       z-index: 2;
       display: block;
       transition: color 0.3s ease-in-out;
+      color: #fff;
       svg {
         position: absolute;
         top: 50%;
