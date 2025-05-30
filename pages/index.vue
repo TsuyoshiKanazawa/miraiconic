@@ -2,7 +2,7 @@
   <div>
     <TopFv id="top" />
     <TopScroll id="about" />
-    <TopCasestudy id="casestudy" />
+    <TopCasestudy2 id="casestudy" />
     <TopFaq id="faq" />
     <TopNews id="news" />
   </div>

@@ -50,15 +50,11 @@
           <div class="features-wrap-container">
             <div class="features-item">
               <h2 class="features-title">Features</h2>
-              <p class="features-item-text1">ミライコニックは、</p>
-              <p class="features-item-text2">本気で制作する人が、本気で教えるチームです。</p>
-              <p class="features-item-text3">技術力も、伝える力も、現場に向き合い、</p>
-              <p class="features-item-text4">お客様に寄り添います。</p>
-              <p class="features-item-text5">私たちが届けたいのは、</p>
-              <p class="features-item-text6">“実務で本当に使えること”。</p>
-              <p class="features-item-text7">BIMを、難しいままで終わらせない。</p>
-              <p class="features-item-text8">業界のDXを一歩ずつ確実に進める</p>
-              <p class="features-item-text9">伴走者であり続けます。</p>
+              <p class="features-item-text1">ミライコニックは、<br>本気で制作する人が、本気で教えるチームです。</p>
+              <p class="features-item-text2">技術力も、伝える力も、現場に向き合い、<br>お客様に寄り添います。</p>
+              <p class="features-item-text3">私たちが届けたいのは、<br>“実務で本当に使えること”。</p>
+              <p class="features-item-text4">BIMを、難しいままで終わらせない。</p>
+              <p class="features-item-text5">業界のDXを一歩ずつ確実に進める<br>伴走者であり続けます。</p>
             </div>
             <FormsButtonWhite class="features-button" name="More" link="/about" />
           </div>
@@ -98,17 +94,13 @@ onMounted(() => {
   const featuresItemText3 = document.querySelector('.features-item-text3')
   const featuresItemText4 = document.querySelector('.features-item-text4')
   const featuresItemText5 = document.querySelector('.features-item-text5')
-  const featuresItemText6 = document.querySelector('.features-item-text6')
-  const featuresItemText7 = document.querySelector('.features-item-text7')
-  const featuresItemText8 = document.querySelector('.features-item-text8')
-  const featuresItemText9 = document.querySelector('.features-item-text9')
   const featuresButton = document.querySelector('.features-button')
   const featuresPt1 = document.querySelector('.features-pt1')
   const featuresPt2 = document.querySelector('.features-pt2')
 
   const sectionCount  = 3
   const scrollAmount  = (sectionCount - 1) * 100   // =200
-  const mappedAmount  = scrollAmount * 4           // =800
+  const mappedAmount  = scrollAmount * 6           // =1200
 
   // 初期状態をセット
   gsap.set(about, { yPercent: 300 })
@@ -117,7 +109,7 @@ onMounted(() => {
 
   gsap.set(sec2, { yPercent: 100 })
   gsap.set(serviceItem1, { yPercent: 400 })
-  gsap.set(serviceCross, { yPercent: 700 })
+  gsap.set(serviceCross, { opacity: 0 })
   gsap.set(serviceItem2, { yPercent: 300 })
 
   gsap.set(sec3, { yPercent: 175 })
@@ -126,10 +118,6 @@ onMounted(() => {
   gsap.set(featuresItemText3, { yPercent: 50, opacity: 0 })
   gsap.set(featuresItemText4, { yPercent: 50, opacity: 0 })
   gsap.set(featuresItemText5, { yPercent: 50, opacity: 0 })
-  gsap.set(featuresItemText6, { yPercent: 50, opacity: 0 })
-  gsap.set(featuresItemText7, { yPercent: 50, opacity: 0 })
-  gsap.set(featuresItemText8, { yPercent: 50, opacity: 0 })
-  gsap.set(featuresItemText9, { yPercent: 50, opacity: 0 })
   gsap.set(featuresButton, { yPercent: 50, opacity: 0 })
   gsap.set(featuresPt1, { yPercent: 500 })
   gsap.set(featuresPt2, { yPercent: 500 })
@@ -143,29 +131,28 @@ onMounted(() => {
       end: `+=${mappedAmount}%`,
       scrub: true,
       pin: true,
-      pinSpacing: false
+      pinSpacing: false,
+      invalidateOnRefresh: true  
     }
   })
 
   // 1) Aboutテキストを下→中にスライドアップ
   tl .addLabel('aboutIn') // 同時進行用ラベル
-    .to(about,     { yPercent: 0, duration: 1 }, 'aboutIn')
-    .to(leftMask,  { left:     0, duration: 1 }, 'aboutIn')
-    .to(rightMask, { right:    0, duration: 1 }, 'aboutIn')
-
+    .to(about, { yPercent: 0, duration: 1 }, 'aboutIn')
+    .to(leftMask, { left: 0, duration: 1 }, 'aboutIn')
+    .to(rightMask, { right: 0, duration: 1 }, 'aboutIn')
     .to({}, { duration: 0.3 }) // マージン
 
   // 2) Service セクションを下→中にスライドイン
   tl .addLabel('serviceIn')
-    .to(about,     { yPercent: -220, duration: 1 }, 'serviceIn')
-    .to(sec2, { yPercent: 0, ease: 'none' }, 'serviceIn')
-    .to({},     { duration: 1 }, 'serviceIn')
+    .to(about, { yPercent: -180, duration: 1 }, 'serviceIn')
+    .to(sec2, { yPercent: 0, duration: 1 }, 'serviceIn')
   
   // 3) Service セクションのアイテムを下→中にスライドイン
   tl .to(serviceItem1, { yPercent: 0, duration: 1, opacity: 1 })
-  tl .to(serviceCross, { yPercent: 0, duration: 1, opacity: 1 })
   tl .to(serviceItem2, { yPercent: 0, duration: 1, opacity: 1 })
-  tl .to({}, { duration: 0.5 })// マージン
+  tl .to(serviceCross, { duration: 0.5, opacity: 1 })
+  tl .to({}, { duration: 0.2 })// マージン
 
   // 4) Features セクションを下→中にスライドイン
   tl .to(sec3, { yPercent: 0, duration: 1.7 })
@@ -174,12 +161,9 @@ onMounted(() => {
     .to(featuresItemText2, { yPercent: 0, duration: 0.2, opacity: 1 })
     .to(featuresItemText3, { yPercent: 0, duration: 0.2, opacity: 1 })
     .to(featuresItemText4, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresItemText5, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresItemText6, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresItemText7, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresItemText8, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresItemText9, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresButton, { yPercent: 0, duration: 1, opacity: 1 })
+    .addLabel('featuresEnd')
+    .to(featuresItemText5, { yPercent: 0, duration: 0.2, opacity: 1 }, 'featuresEnd')
+    .to(featuresButton, { yPercent: 0, duration: 0.2, opacity: 1 }, 'featuresEnd')
     .to(featuresPt1, { yPercent: 0, duration: 1.8 }, 'featuresStart')
     .to(featuresPt2, { yPercent: 0, duration: 1.8 }, 'featuresStart')
 
@@ -189,6 +173,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .scroll-wrap {
   position: relative;
+  z-index: 1;
 }
 
 /* ピン固定されるセクション群 */
@@ -379,6 +364,6 @@ onMounted(() => {
 
 /* spacer で (セクション数ー1)×100vh のスクロール領域を確保 */
 .spacer {
-  height: 800vh; /* SECTION2・3 のために 2*100vh */
+  height: 1200vh; /* SECTION2・3 のために 2*100vh */
 }
 </style>

@@ -236,6 +236,7 @@ export default {
   methods: {
     handleScroll() {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      //console.log(currentScroll);
       if (currentScroll < 150) {
         // スクロール位置が100px未満なら常に表示
         this.hide = false;
@@ -276,7 +277,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100px;
-  z-index: 110;
+  z-index: 11000;
   padding: 2.5% 5% 0 5%;
   @include mixins.max-screen(768px) {
     height: 60px;

@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-wrap">
-    <div class="faq" v-observe="'inview'">
+    <div class="faq">
       <h2 class="faq-title">
         FAQ
         <svg width="90" height="10" viewBox="0 0 90 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,23 @@ gsap.registerPlugin(ScrollTrigger)
 
 onMounted(async () => {
   await nextTick()
+  const items = document.querySelectorAll('.faq-background')
 
+  gsap.set(items, { xPercent: -100 })
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: items,
+      start: 'top bottom',
+      end:   `bottom top`,
+      scrub: true,
+      markers: false,
+    }
+  })
+
+  tl.to(items, {
+    xPercent: 0,
+    duration: 2,
+  })
 })
 </script>
 
@@ -104,18 +120,9 @@ onMounted(async () => {
       height: min(200px, 13.88vw);
       background-color: #3676B6;
       z-index: 1;
-      transform: translateX(-100%);
-      transition: transform 1s ease-in-out;
-    }
-    &.inview {
-      .faq-background {
-        transform: translateX(0);
-      }
     }
   }
 }
-
-
 </style>
 
 
