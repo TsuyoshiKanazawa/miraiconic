@@ -127,9 +127,21 @@ const slideCount = 3
 
 // ロック中のスクロール位置を保持
 let lockedScrollY = 0
+let isLocking = false
 // スクロール位置をロックするハンドラ
-const lockBodyScroll = () => {
+const lockWheel = (e) => {
   window.scrollTo(0, lockedScrollY)
+  e.preventDefault()
+  e.stopPropagation();
+}
+
+// ─── スクロールを固定し続けるループ関数 ───
+const lockLoop = () => {
+  if (!isLocking) return
+  // 毎フレーム、強制的にスクロール位置を戻す
+  window.scrollTo(0, lockedScrollY)
+  // 次フレームも呼び出し
+  requestAnimationFrame(lockLoop)
 }
 
 const splideOptions = {
@@ -137,13 +149,14 @@ const splideOptions = {
   speed: 750,
   easing: 'ease-in-out',
   perPage: 1,
+  drag: false,
   width: '100%',
   autoWidth: true,
   arrows: false,
   pagination: true,
   gap: 'min(40px, 2.77vw)',
   direction: 'ltr',
-  focus      : 'center',    // ← ここで中央フォーカスを指定
+  focus      : 'center',
   trimSpace  : false, 
   snap: true,
   wheel: false,
@@ -156,6 +169,7 @@ const splideOptions = {
 let trigger
 onMounted(() => {
   nextTick(() => {
+    let prevIdx = 0;
     trigger = ScrollTrigger.create({
       trigger: wrap.value,
       start:  'top top',
@@ -164,15 +178,17 @@ onMounted(() => {
       scrub:  true,
       snap: {
         snapTo:   1 / (slideCount - 1),
-        duration: 0.1,
+        duration: 0.001,
         inertia:  false,
       },
       invalidateOnRefresh: true,
-      markers: true,
+      markers: false,
       onUpdate: self => {
-        const idx = Math.round(self.progress * (slideCount - 1))
-        const splide = splideRef.value.splide
-        if (splide.index !== idx) splide.go(idx)
+        const idx = Math.round(self.progress * (slideCount - 1));
+        if (idx !== prevIdx) {
+          prevIdx = idx;
+          splideInst.go(idx);  // インデックスが変化したときのみ go()
+        }
       },
     })
 
@@ -180,14 +196,24 @@ onMounted(() => {
 
     // ─── move/moved でスクロール位置を固定 ───
     splideInst.on('move', () => {
-      // 現在位置を保持して…
+      // 1. 現在のスクロール位置をキャプチャ
       lockedScrollY = window.scrollY
-      // scroll イベントを監視し、必ず元に戻す
-      window.addEventListener('scroll', lockBodyScroll, { passive: false })
+      // 2. フラグを立てて lockLoop を開始
+      isLocking = true
+      requestAnimationFrame(lockLoop)
+      // 3. wheel/touchmove もキャプチャフェーズでキャンセル
+      window.addEventListener('wheel', lockWheel, { passive: false, capture: true })
+      window.addEventListener('touchmove', lockWheel, { passive: false, capture: true })
     })
+
     splideInst.on('moved', () => {
-      // アニメ完了したら監視解除
-      window.removeEventListener('scroll', lockBodyScroll)
+      // 1. 少し待ってからループを止める
+      setTimeout(() => {
+        isLocking = false
+      }, 0)
+      // 2. wheel/touchmove の監視を解除
+      window.removeEventListener('wheel', lockWheel, { capture: true })
+      window.removeEventListener('touchmove', lockWheel, { capture: true })
     })
     // ────────────────────────────────
   })

@@ -100,7 +100,7 @@ onMounted(() => {
 
   const sectionCount  = 3
   const scrollAmount  = (sectionCount - 1) * 100   // =200
-  const mappedAmount  = scrollAmount * 6           // =1200
+  const mappedAmount  = scrollAmount * 7           // =1400
 
   // 初期状態をセット
   gsap.set(about, { yPercent: 300 })
@@ -157,13 +157,13 @@ onMounted(() => {
   // 4) Features セクションを下→中にスライドイン
   tl .to(sec3, { yPercent: 0, duration: 1.7 })
     .addLabel('featuresStart')
-    .to(featuresItemText1, { yPercent: 0, duration: 0.2, opacity: 1 }, 'featuresStart')
-    .to(featuresItemText2, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresItemText3, { yPercent: 0, duration: 0.2, opacity: 1 })
-    .to(featuresItemText4, { yPercent: 0, duration: 0.2, opacity: 1 })
+    .to(featuresItemText1, { yPercent: 0, duration: 0.8, opacity: 1 }, 'featuresStart')
+    .to(featuresItemText2, { yPercent: 0, duration: 0.8, opacity: 1 })
+    .to(featuresItemText3, { yPercent: 0, duration: 0.8, opacity: 1 })
+    .to(featuresItemText4, { yPercent: 0, duration: 0.8, opacity: 1 })
     .addLabel('featuresEnd')
-    .to(featuresItemText5, { yPercent: 0, duration: 0.2, opacity: 1 }, 'featuresEnd')
-    .to(featuresButton, { yPercent: 0, duration: 0.2, opacity: 1 }, 'featuresEnd')
+    .to(featuresItemText5, { yPercent: 0, duration: 0.8, opacity: 1 }, 'featuresEnd')
+    .to(featuresButton, { yPercent: 0, duration: 0.8, opacity: 1 }, 'featuresEnd')
     .to(featuresPt1, { yPercent: 0, duration: 1.8 }, 'featuresStart')
     .to(featuresPt2, { yPercent: 0, duration: 1.8 }, 'featuresStart')
 
@@ -364,6 +364,6 @@ onMounted(() => {
 
 /* spacer で (セクション数ー1)×100vh のスクロール領域を確保 */
 .spacer {
-  height: 1200vh; /* SECTION2・3 のために 2*100vh */
+  height: 1400vh; /* SECTION2・3 のために 2*100vh */
 }
 </style>

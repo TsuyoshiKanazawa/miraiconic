@@ -1,5 +1,5 @@
 <template>
-  <section class="fv">
+  <section class="fv" id="fv">
     <div class="fv__text__wrapper">
       <div class="mask">
         <img src="/img/fv-text1.svg" alt="fv_title" class="fv__text1">
