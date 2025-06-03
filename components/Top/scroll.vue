@@ -51,10 +51,9 @@
             <div class="features-item">
               <h2 class="features-title">Features</h2>
               <p class="features-item-text1">ミライコニックは、<br>本気で制作する人が、本気で教えるチームです。</p>
-              <p class="features-item-text2">技術力も、伝える力も、現場に向き合い、<br>お客様に寄り添います。</p>
-              <p class="features-item-text3">私たちが届けたいのは、<br>“実務で本当に使えること”。</p>
-              <p class="features-item-text4">BIMを、難しいままで終わらせない。</p>
-              <p class="features-item-text5">業界のDXを一歩ずつ確実に進める<br>伴走者であり続けます。</p>
+              <p class="features-item-text2">私たちが目指すのは、<br>“実務に根づくBIM”。</p>
+              <p class="features-item-text3">技術力と伝える力、その両輪で現場に向き合い、<br>お客様に寄り添います。</p>
+              <p class="features-item-text4">ただ新しいだけのDXではなく、<br>変革の足元を照らし続けます。</p>
             </div>
             <FormsButtonWhite class="features-button" name="More" link="/about" />
           </div>
@@ -93,7 +92,6 @@ onMounted(() => {
   const featuresItemText2 = document.querySelector('.features-item-text2')
   const featuresItemText3 = document.querySelector('.features-item-text3')
   const featuresItemText4 = document.querySelector('.features-item-text4')
-  const featuresItemText5 = document.querySelector('.features-item-text5')
   const featuresButton = document.querySelector('.features-button')
   const featuresPt1 = document.querySelector('.features-pt1')
   const featuresPt2 = document.querySelector('.features-pt2')
@@ -117,7 +115,6 @@ onMounted(() => {
   gsap.set(featuresItemText2, { yPercent: 50, opacity: 0 })
   gsap.set(featuresItemText3, { yPercent: 50, opacity: 0 })
   gsap.set(featuresItemText4, { yPercent: 50, opacity: 0 })
-  gsap.set(featuresItemText5, { yPercent: 50, opacity: 0 })
   gsap.set(featuresButton, { yPercent: 50, opacity: 0 })
   gsap.set(featuresPt1, { yPercent: 500 })
   gsap.set(featuresPt2, { yPercent: 500 })
@@ -160,9 +157,8 @@ onMounted(() => {
     .to(featuresItemText1, { yPercent: 0, duration: 0.8, opacity: 1 }, 'featuresStart')
     .to(featuresItemText2, { yPercent: 0, duration: 0.8, opacity: 1 })
     .to(featuresItemText3, { yPercent: 0, duration: 0.8, opacity: 1 })
-    .to(featuresItemText4, { yPercent: 0, duration: 0.8, opacity: 1 })
     .addLabel('featuresEnd')
-    .to(featuresItemText5, { yPercent: 0, duration: 0.8, opacity: 1 }, 'featuresEnd')
+    .to(featuresItemText4, { yPercent: 0, duration: 0.8, opacity: 1 }, 'featuresEnd')
     .to(featuresButton, { yPercent: 0, duration: 0.8, opacity: 1 }, 'featuresEnd')
     .to(featuresPt1, { yPercent: 0, duration: 1.8 }, 'featuresStart')
     .to(featuresPt2, { yPercent: 0, duration: 1.8 }, 'featuresStart')

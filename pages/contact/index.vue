@@ -4,7 +4,7 @@
     <p class="contact__th">弊社ウェブサイトをご覧いただき、<br class="sp-only">誠にありがとうございます。</p>
     <p class="contact__text">下記お問い合わせフォームより、<br class="sp-only">必要事項をご記入ください。<br>
 お問い合わせ内容によっては、返信にお時間を<br class="sp-only">いただく場合や、対応が難しい場合が<br class="sp-only">ございますので、予めご了承くださいませ。<br>
-なお、よくあるご質問については、<br class="sp-only">Q＆A に掲載しておりますので、<br class="sp-only">こちらもご参照ください。</p>
+なお、よくあるご質問については、<br class="sp-only"><a href="/">FAQ</a> に掲載しておりますので、<br class="sp-only">こちらもご参照ください。</p>
     <div class="contact__background">
       <div class="contact__background__container">
         <div class="contact__background__container__required">※必須項目</div>
@@ -154,6 +154,10 @@ export default {
       font-size: min(14px, 3.73vw);
       line-height: 1.8;
       margin-top: min(20px, 5.33vw);
+    }
+    a {
+      color: #252526;
+      text-decoration: underline;
     }
   }
   .contact__background {

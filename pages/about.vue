@@ -15,13 +15,13 @@
         </div>
         <p class="about__text fade-enter-from" v-observe="'inview'">
           株式会社ミライコニックは、<br>
-          BIMによる建設プロジェクトの革新を<br class="sp-only">トータルにサポートいたします。<br>
-          実務経験豊富なスタッフが、<br class="sp-only">高品質なBIMモデルの構築および、<br>
-          初心者から上級者までの教育を包括的に<br class="sp-only">提供しています。<br>
-          私たちは日々進化する技術を<br class="sp-only">いち早く取り入れるだけでなく、<br class="sp-only">その伝達方法にも工夫を凝らし、<br>
-          DX推進を人々の心躍る体験と共に<br class="sp-only">実現することで、<br class="sp-only">建設業界の発展に寄与してまいります。<br>
-          最新のテクノロジーと豊富な経験に基づく<br class="sp-only">エンパシー（共感性）を融合させることで、<br>
-          お客様に最適なBIMエクスペリエンスを<br class="sp-only">お届けすることをお約束いたします。
+          BIMによる建設プロジェクトの革新を、<br class="sp-only">トータルにサポートいたします。<br>
+          実務経験豊富なスタッフが、<br class="sp-only">高品質なBIMモデルの構築と、<br>
+          初心者から上級者までを対象とした<br class="sp-only">教育支援を包括的にご提供しています。<br>
+          私たちは、日々進化する技術を<br class="sp-only">いち早く取り入れるだけでなく、<br>
+          その伝達方法にも工夫を凝らし、<br class="sp-only">DX推進を“心躍る体験”として<br class="sp-only">届けてまいります。<br>
+          最新のテクノロジーと、<br class="sp-only">豊富な現場経験に裏打ちされた<br class="sp-only">共感力を融合し、<br>
+          お客様一人ひとりに最適な<br class="sp-only">BIMエクスペリエンスをお届けすることを<br class="sp-only">お約束いたします。
         </p>
         <img src="/img/about/aboutPic.png" alt="Yamaguchi's photo" class="about__img1">
         <div class="about__img__text">
@@ -57,8 +57,8 @@
               ひとつ先、<br class="sp-only">その先の未来を見据える
             </h3>
             <p class="about__container__mission__contents__item__text" v-observe="'inview'">
-              私たちは、目の前の課題解決にとどまらず、<br>
-              常にその延長線上にある未来を<br class="sp-only">見据えた選択を行えるよう、<br class="sp-only">情報収集やアイデア創出に努めています。​
+              私たちは、目の前の課題解決だけでなく、<br class="sp-only">常にその延長線上にある未来のために、<br>
+              情報を集め、考え、選び抜く姿勢を<br class="sp-only">大切にしています。
             </p>
           </div>
           <div class="about__container__mission__contents__item">

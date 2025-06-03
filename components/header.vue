@@ -66,24 +66,24 @@
       <div class="menu-pc">
         <ul class="menu__item">
           <li class="news">
-            <nuxt-link to="/news">
+            <a href="/news">
               News
-            </nuxt-link>
+            </a>
           </li>
           <li class="about">
-            <nuxt-link to="/about">
+            <a href="/about">
               About
-            </nuxt-link>
+            </a>
           </li>
           <li class="service">
-            <nuxt-link to="/service">
+            <a href="/service">
               Service
-            </nuxt-link>
+            </a>
           </li>
           <li class="contact">
-            <nuxt-link to="/contact">
+            <a href="/contact">
               Contact
-            </nuxt-link>
+            </a>
           </li>
         </ul>
       </div>
@@ -171,33 +171,33 @@
       <div class="menu__inner">
         <ul class="menu__item">
           <li>
-            <nuxt-link to="/" v-smooth-scroll @click="openMenu">
+            <a href="/" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;TOP
-            </nuxt-link>
+            </a>
             <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="/news" v-smooth-scroll @click="openMenu">
+            <a href="/news" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;News
-            </nuxt-link>
+            </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="/about" v-smooth-scroll @click="openMenu">
+            <a href="/about" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;About
-            </nuxt-link>
+            </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="/service" v-smooth-scroll @click="openMenu">
+            <a href="/service" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Service
-            </nuxt-link>
+            </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <nuxt-link to="/contact" v-smooth-scroll @click="openMenu">
+            <a href="/contact" v-smooth-scroll @click="openMenu">
               /&nbsp;&nbsp;Contact
-            </nuxt-link>
+            </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
         </ul>

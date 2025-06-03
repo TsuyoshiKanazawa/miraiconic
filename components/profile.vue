@@ -54,7 +54,7 @@
         </svg>
         <div class="profile__container__item__text">
           <h4>資本金</h4>
-          <p>300万</p>
+          <p>300万円</p>
         </div>
       </div>
       <div class="profile__container__item" v-observe="'inview'">
