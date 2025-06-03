@@ -39,6 +39,7 @@
           </div>
         </Form>
       </div>
+      
       <div v-if="errorMessages.length" class="error-summary">
         <p v-for="(msg, idx) in errorMessages" :key="idx">{{ msg }}</p>
       </div>
@@ -54,11 +55,9 @@
 </template>
 
 <script>
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
+
 export default {
-  mounted() {
-    const contactItem = useContactItem().value
-    console.log(contactItem)
-  },
   data() {
     return {
       errors: {
@@ -75,6 +74,12 @@ export default {
   computed: {
     errorMessages() {
       return Object.values(this.errors).filter(msg => msg)
+    },
+  },
+  mounted() {
+    const smoother = ScrollSmoother.get()
+    if (smoother) {
+      smoother.kill()   // これで慣性スクロールを即オフにする
     }
   },
   methods: {
@@ -176,7 +181,7 @@ export default {
       &__required {
         font-size: min(16px, 1.11vw);
         font-weight: 500;
-        color: #FF0000;
+        color: #FF0066;
         font-weight: 700;
         text-align: center;
         @include mixins.max-screen(768px) {
@@ -198,7 +203,7 @@ export default {
             line-height: 2.5;
           }
           span {
-            color: #FF0000;
+            color: #FF0066;
             font-weight: 700;
           }
         }
@@ -300,7 +305,7 @@ export default {
       border-radius: 4px;
       p {
         list-style: none;
-        color: #e53935 !important;
+        color: #FF0066 !important;
         font-size: min(18px, 1.25vw);
         line-height: 1.4;
         text-align: center;

@@ -61,6 +61,7 @@
 
 <script>
 import emailjs from 'emailjs-com'
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
 
 export default {
   mounted() {
@@ -114,6 +115,10 @@ export default {
     },
     back() {
       this.$router.push('/contact');
+      const smoother = ScrollSmoother.get()
+      if (smoother) {
+        smoother.kill()   // これで慣性スクロールを即オフにする
+      }
     }
   }
 }
@@ -162,7 +167,7 @@ export default {
       &__required {
         font-size: min(16px, 1.11vw);
         font-weight: 500;
-        color: #FF0000;
+        color: #FF0066;
         font-weight: 700;
         text-align: center;
       }
@@ -181,7 +186,7 @@ export default {
             line-height: 2.5;
           }
           span {
-            color: #FF0000;
+            color: #FF0066;
             font-weight: 700;
           }
         }
