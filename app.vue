@@ -1,6 +1,6 @@
-<!-- app.vue -->
 <template>
-  <div v-if="isExcludedPage">
+  <!-- モバイル幅のときは通常レイアウト -->
+  <div v-if="isExcludedPage || isMobile">
     <Header />
     <main>
       <NuxtPage />
@@ -8,13 +8,13 @@
     <Footer />
     <FormsLoading v-if="useLoading().value" />
   </div>
+
+  <!-- 慣性スクロール -->
   <div v-else class="scroll-wrap">
     <Header />
     <div class="scroll-content">
       <main>
-        <div>
-          <NuxtPage />
-        </div>
+        <NuxtPage />
       </main>
       <Footer />
       <FormsLoading v-if="useLoading().value" />
@@ -25,12 +25,8 @@
 <script setup>
 import { onMounted, onBeforeUnmount, nextTick, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
-
-// ScrollTrigger／ScrollSmoother を登録
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 let smoother
 
@@ -40,33 +36,23 @@ const updateIsMobile = () => {
   isMobile.value = window.innerWidth < 768
 }
 
+// 除外ページ判定
 const route = useRoute()
-
-// 除外したいパスのリスト
 const excludedPaths = ['/contact', '/contact/check', '/contact/thanks']
+const isExcludedPage = computed(() => excludedPaths.includes(route.path))
 
-// 現在のルートが除外パスかを判定
-const isExcludedPage = computed(() => {
-  return excludedPaths.includes(route.path)
-})
-
-/**
- * ScrollSmoother を必要に応じて初期化 or 破棄する
- */
+// 慣性スクロールの初期化／破棄
 const refreshSmoother = async () => {
-  // まず既存インスタンスを kill
   const prev = ScrollSmoother.get()
-  if (prev) {
-    prev.kill()
-  }
+  if (prev) prev.kill()
 
-  // 除外ページなら new しない
-  if (isExcludedPage.value) {
+  // モバイル or 除外ページ なら skip
+  if (isMobile.value || isExcludedPage.value) {
     smoother = null
     return
   }
 
-  // 除外じゃなければ再作成
+  // それ以外は再作成
   await nextTick()
   smoother = ScrollSmoother.create({
     wrapper: '.scroll-wrap',
@@ -79,24 +65,22 @@ const refreshSmoother = async () => {
 }
 
 onMounted(async () => {
-  await refreshSmoother()
   updateIsMobile()
-  window.addEventListener('resize', updateIsMobile)
+  await refreshSmoother()
+
+  window.addEventListener('resize', async () => {
+    updateIsMobile()
+    await refreshSmoother()
+  })
 })
 
-// ルートが変わるたびに re-init
-watch(
-  () => route.path,
-  async () => {
-    await refreshSmoother()
-  }
-)
+// ルート変更で再初期化
+watch(() => route.path, async () => {
+  await refreshSmoother()
+})
 
 onBeforeUnmount(() => {
-  if (smoother) {
-    smoother.kill()
-    smoother = null
-  }
+  if (smoother) smoother.kill()
   window.removeEventListener('resize', updateIsMobile)
 })
 </script>

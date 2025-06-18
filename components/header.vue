@@ -171,31 +171,31 @@
       <div class="menu__inner">
         <ul class="menu__item">
           <li>
-            <a href="/" v-smooth-scroll @click="openMenu">
+            <a href="/" @click="openMenu">
               /&nbsp;&nbsp;TOP
             </a>
             <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <a href="/news" v-smooth-scroll @click="openMenu">
+            <a href="/news" @click="openMenu">
               /&nbsp;&nbsp;News
             </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <a href="/about" v-smooth-scroll @click="openMenu">
+            <a href="/about" @click="openMenu">
               /&nbsp;&nbsp;About
             </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <a href="/service" v-smooth-scroll @click="openMenu">
+            <a href="/service" @click="openMenu">
               /&nbsp;&nbsp;Service
             </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
           </li>
           <li>
-            <a href="/contact" v-smooth-scroll @click="openMenu">
+            <a href="/contact" @click="openMenu">
               /&nbsp;&nbsp;Contact
             </a>
             <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
@@ -225,6 +225,7 @@ export default {
       isWindows: navigator.userAgent.indexOf('Windows') !== -1, // Windowsかどうかを判別する変数
       hide: false,
       lastScroll: 0,
+      scrollThreshold: 10,
     };
   },
   mounted() {
@@ -236,17 +237,22 @@ export default {
   methods: {
     handleScroll() {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      //console.log(currentScroll);
+      const delta = currentScroll - this.lastScroll;
+
+      // まだトップ付近なら常に表示
       if (currentScroll < 150) {
-        // スクロール位置が100px未満なら常に表示
         this.hide = false;
-      } else if (currentScroll > this.lastScroll) {
-        // 100px以上かつ下方向にスクロール中なら隠す
+
+      // ↓ にスクロール量がしきい値を超えたらヘッダーを隠す
+      } else if (delta > this.scrollThreshold) {
         this.hide = true;
-      } else {
-        // 100px以上かつ上方向にスクロール中なら表示
+
+      // ↑ にスクロール量がしきい値を超えたらヘッダーを出す
+      } else if (delta < -this.scrollThreshold) {
         this.hide = false;
       }
+
+      // 次回の比較用に今のスクロール位置を保存
       this.lastScroll = currentScroll;
     },
     openMenu () {

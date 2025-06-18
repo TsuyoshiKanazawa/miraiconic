@@ -51,7 +51,9 @@ export default defineNuxtConfig({
       ]
     }
   },
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/gsap.client.js', mode: 'client' },
+  ],
   css: [
     '@/assets/scss/reset.scss',
     '@/assets/scss/main.scss'

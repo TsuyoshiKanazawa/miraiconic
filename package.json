@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@splidejs/vue-splide": "^0.6.12",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "date-fns": "^4.1.0",

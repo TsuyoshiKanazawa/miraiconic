@@ -3,11 +3,12 @@
     <div class="news-list">
       <h2 class="news-header">
         News
-        <svg width="90" height="10" viewBox="0 0 90 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg v-if="!useIsMobile().value" width="90" height="10" viewBox="0 0 90 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="5" y="3" width="80" height="4" fill="#252526"/>
           <circle cx="85" cy="5" r="5" fill="#252526"/>
           <circle cx="5" cy="5" r="5" fill="#252526"/>
         </svg>
+        <img v-if="useIsMobile().value" class="news-line-bottom" src="/img/top/titleLineSp.svg" alt="" />
       </h2>
       <p class="news-header-sub">最新情報</p>
       <div
@@ -25,6 +26,7 @@
         <h3 class="news-title">{{ item.title }}</h3>
         <NuxtLink
           class="news-link"
+          :class="{ 'is-mac': !isWindows }"
           :to="`/news/${item._id}`"
           v-if="item.mainText !== ''"
         >
@@ -32,6 +34,7 @@
         </NuxtLink>
         <a
           class="news-link"
+          :class="{ 'is-mac': !isWindows }"
           :href="item.url"
           target="_blank"
           v-if="item.url !== '' && item.mainText === ''"
@@ -110,6 +113,11 @@ export default defineComponent({
       pageKey,
     }
   },
+  data() {
+    return {
+      isWindows: navigator.userAgent.indexOf('Windows') !== -1,
+    }
+  },
   methods: {
     goToNews(id) {
       console.log(id)
@@ -125,7 +133,7 @@ export default defineComponent({
   padding: min(80px, 5.55vw) 0;
   position: relative;
   @include mixins.max-screen(768px) {
-    padding-bottom: 20vw;
+    padding: 1vw 0 20vw;
   }
 
   .news-list {
@@ -153,6 +161,9 @@ export default defineComponent({
       width: fit-content;
       margin: 0 auto;
       z-index: 2;
+      @include mixins.max-screen(768px) {
+        font-size: 16vw;
+      }
       svg {
         position: absolute;
         bottom: -5%;
@@ -166,6 +177,9 @@ export default defineComponent({
       font-weight: 700;
       color: #252526;
       margin: min(20px, 1.38vw) 0 min(40px, 2.77vw);
+      @include mixins.max-screen(768px) {
+        font-size: 4.26vw;
+      }
     }
     .news-item {
       position: relative;
@@ -229,6 +243,11 @@ export default defineComponent({
           background-color: #fff;
           color: #3676B6;
         }
+        &.is-mac {
+          @include mixins.max-screen(768px) {
+            line-height: 1.3;
+          }
+        }
       }
       .news-line-top {
         position: absolute;
@@ -284,7 +303,7 @@ export default defineComponent({
       transition: transform 0.8s ease-in-out;
       position: relative;
       @include mixins.max-screen(768px) {
-        margin-top: 10vw;
+        margin-top: 100vw;
       }
       .news_pt1 {
         width: min(157px, 10.90vw);

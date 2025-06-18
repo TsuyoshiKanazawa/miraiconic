@@ -49,9 +49,6 @@ export default {
     };
   },
   computed: {
-    parallaxOffset() {
-      return this.scrollY / this.parallaxSpeed;
-    },
     isPrivacy() {
       return this.$route.name === 'privacy';
     },

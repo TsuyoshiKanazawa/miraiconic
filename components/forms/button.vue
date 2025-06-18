@@ -1,6 +1,6 @@
 <template>
   <div class="button">
-    <a :href="link" class="button__inner">
+    <a :href="link" class="button__inner" :class="{ 'is-windows': isWindows }">
       {{ name }}
     </a>
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,6 +23,14 @@ export default {
       default: '',
     },
   },
+  data() {
+    return {
+      isWindows: navigator.userAgent.indexOf('Windows') !== -1,
+    }
+  },
+  mounted() {
+    console.log(this.isWindows);
+  },
 }
 </script>
 
@@ -42,10 +50,10 @@ export default {
   border: 2px solid #3676B6;
   margin: 0 auto;
   @include mixins.max-screen(768px) {
-    width: 80vw;
+    width: 69.33vw;
     height: 10.66vw;
     border-radius: 16vw;
-    font-size: 5.33vw;
+    font-size: 6.93vw;
     margin: 10vw auto 2vw;
     box-shadow: 1.06vw 1.06vw 0 0 #252526;
   }
@@ -63,8 +71,11 @@ export default {
     font-family: 'DinCondensedBold', sans-serif;
     font-weight: normal;
     @include mixins.max-screen(768px) {
-      font-size: 5.33vw;
-      line-height: 1.8;
+      font-size: 6.93vw;
+      line-height: 1.7;
+      &.is-windows {
+        line-height: 10.66vw;
+      }
     }
   }
   svg {

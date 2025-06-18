@@ -43,9 +43,6 @@ export default {
     };
   },
   computed: {
-    parallaxOffset() {
-      return this.scrollY / this.parallaxSpeed;
-    },
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);

@@ -34,7 +34,7 @@ export default {
 <style lang="scss" scoped>
 .button {
   background-color: #fff;
-  color: #3676B6 !important;
+  color: #85C1DE !important;
   border-radius: 5px;
   width: min(500px, 34.72vw);
   height: min(60px, 4.16vw);
@@ -64,7 +64,7 @@ export default {
     letter-spacing: 0.01em;
     position: relative;
     z-index: 10000;
-    color: #3676B6 !important;
+    color: #85C1DE !important;
     font-family: 'DinCondensedBold', sans-serif;
     font-weight: normal;
     @include mixins.max-screen(768px) {
@@ -83,10 +83,10 @@ export default {
     width: min(36px, 2.4vw);
     height: min(36px, 2.4vw);
     path {
-      fill: #3676B6;
+      fill: #85C1DE;
     }
     circle {
-      stroke: #3676B6;
+      stroke: #85C1DE;
     }
     @include mixins.max-screen(768px) {
       width: 7.46vw;
@@ -97,7 +97,7 @@ export default {
   }
   @include mixins.min-screen(769px) {
     &:hover {
-      background-color: #3676B6;
+      background-color: #85C1DE;
       .button__inner {
         color: #fff !important;
       }

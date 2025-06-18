@@ -1,9 +1,14 @@
 <template>
   <div>
     <TopFv id="top" />
-    <TopScroll id="about" />
-    <TopCasestudy2 id="casestudy" />
-    <TopFaq id="faq" />
+    <TopScroll id="about" v-if="!useIsMobile().value" />
+    <TopSpAbout id="about" v-if="useIsMobile().value" />
+    <TopSpService id="service" v-if="useIsMobile().value" />
+    <TopSpFeatures id="features" v-if="useIsMobile().value" />
+    <TopCasestudy2 id="casestudy" v-if="!useIsMobile().value" />
+    <TopSpCasestudy id="casestudy" v-if="useIsMobile().value" />
+    <TopFaq id="faq" v-if="!useIsMobile().value" />
+    <TopSpFaq id="faq" v-if="useIsMobile().value" />
     <TopNews id="news" />
   </div>
 </template>
