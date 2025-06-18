@@ -219,9 +219,11 @@ onMounted(() => {
     h2 {
       color: #3676B6;
       font-size: min(5.55vw, 80px);
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
-      letter-spacing: 0.01em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
     }
     p {
       color: #252526;
@@ -230,9 +232,11 @@ onMounted(() => {
       font-size: min(6.25vw, 90px);
       line-height: 1;
       font-weight: 700;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
-      letter-spacing: 0.02em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      //letter-spacing: 0.02em;
+      letter-spacing: 0.001em;
       margin-top: min(2.08vw, 30px);
     }
     .about-text-ja {
@@ -259,9 +263,11 @@ onMounted(() => {
     .service-title {
       h2 {
         font-size: min(11.11vw, 160px);
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
-        letter-spacing: 0.03em;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        //letter-spacing: 0.03em;
+        letter-spacing: 0.001em;
       }
       p {
         font-size: min(1.94vw, 28px);
@@ -279,9 +285,11 @@ onMounted(() => {
         text-align: center;
         h3 {
           font-size: min(8.33vw, 120px);
-          font-family: 'DinCondensedBold', sans-serif;
-          font-weight: normal;
-          letter-spacing: 0.03em;
+          font-family: "Barlow Condensed", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          //letter-spacing: 0.03em;
+          letter-spacing: 0.001em;
         }
         h4 {
           font-size: min(2.91vw, 42px);
@@ -330,9 +338,11 @@ onMounted(() => {
         }
         h2 {
           font-size: min(11.11vw, 160px);
-          font-family: 'DinCondensedBold', sans-serif;
-          font-weight: normal;
-          letter-spacing: 0.03em;
+          font-family: "Barlow Condensed", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          //letter-spacing: 0.03em;
+          letter-spacing: 0.001em;
           width: fit-content;
           position: absolute;
           top: 23%;

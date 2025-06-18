@@ -109,11 +109,13 @@ export default {
       }
       .about__title__wrapper {
         .about__title {
-          font-family: 'DinCondensedBold', sans-serif;
+          font-family: "Barlow Condensed", sans-serif;
+          font-weight: 600;
+          font-style: normal;
           font-size: min(3.47vw, 50px);
-          font-weight: normal;
           color: #252526;
-          letter-spacing: 0.01em;
+          //letter-spacing: 0.01em;
+          letter-spacing: 0.001em;
           display: block;
           transform: translateY(100%);
           transition: transform 0.8s ease-in-out;

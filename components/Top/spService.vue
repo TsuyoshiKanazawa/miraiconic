@@ -41,9 +41,11 @@
     padding: 0 8vw;
     .service-title-text {
       font-size: 26.66vw;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
-      letter-spacing: 0.03em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      //letter-spacing: 0.03em;
+      letter-spacing: 0.001em;
       opacity: 0;
       transform: translateY(10vw);
       transition: all 0.5s ease-in-out;
@@ -71,9 +73,11 @@
       text-align: center;
       h3 {
         font-size: 21.33vw;
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
-        letter-spacing: 0.03em;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        //letter-spacing: 0.03em;
+        letter-spacing: 0.001em;
         opacity: 0;
         transform: translateY(10vw);
         transition: all 0.5s ease-in-out;

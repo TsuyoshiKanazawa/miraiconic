@@ -48,10 +48,12 @@ export default {
     padding: 10vw 8vw 20vw;
     position: relative;
     &-title {
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
       font-size: 26.66vw;
-      letter-spacing: 0.03em;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
       position: relative;
       z-index: 2;
       opacity: 0;

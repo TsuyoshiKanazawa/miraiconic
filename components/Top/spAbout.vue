@@ -87,9 +87,11 @@ onMounted(async () => {
       .about-inner-text-title {
         font-size: 10.66vw;
         color: #3676B6;
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
-        letter-spacing: 0.01em;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        //letter-spacing: 0.01em;
+        letter-spacing: 0.001em;
         opacity: 0;
         transform: translateY(10vw);
         transition: transform 0.5s ease-in-out;
@@ -101,9 +103,11 @@ onMounted(async () => {
       .about-inner-text-text {
         font-size: 15.46vw;
         color: #252526;
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
-        letter-spacing: 0.02em;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        //letter-spacing: 0.02em;
+        letter-spacing: 0.001em;
         line-height: 1;
         margin-top: 1.5vw;
         opacity: 0;

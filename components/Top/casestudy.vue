@@ -210,9 +210,11 @@ export default {
     position: relative;
     border-radius: min(120px, 37.01vw);
     text-align: center;
-    font-family: 'DinCondensedBold', sans-serif;
-    font-weight: normal;
-    letter-spacing: 0.01em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    //letter-spacing: 0.01em;
+    letter-spacing: 0.001em;
     font-size: min(80px, 5.55vw);
     width: fit-content;
     margin: 0 auto;

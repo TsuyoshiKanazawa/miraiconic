@@ -4,7 +4,7 @@
     <div class="news-list">
       <div
         v-for="item in paginatedItems"
-        :key="item._id"
+        :key="item.id"
         class="news-item"
       >
         <svg v-if="!useIsMobile().value" class="news-line-top" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,8 +17,8 @@
         <h3 class="news-title">{{ item.title }}</h3>
         <NuxtLink
           class="news-link"
-          :to="`/news/${item._id}`"
-          v-if="item.mainText !== ''"
+          :to="`/news/${item.id}`"
+          v-if="item.mainText"
         >
           GO
         </NuxtLink>
@@ -26,7 +26,7 @@
           class="news-link"
           :href="item.url"
           target="_blank"
-          v-if="item.url !== '' && item.mainText === ''"
+          v-if="item.url && !item.mainText"
         >
           GO
         </a>
@@ -92,6 +92,7 @@ export default defineComponent({
   mixins: [scrollParallaxMixin],
   async setup() {
     const newsItems = await useFetchNewsItem();
+    console.log(newsItems)
 
     const pageSize = ref(10)
     const currentPage = ref(1)
@@ -208,10 +209,12 @@ export default defineComponent({
       }
       .news-date {
         display: block;
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
         font-size: min(30px, 2.08vw);
-        letter-spacing: 0.01em;
+        //letter-spacing: 0.01em;
+        letter-spacing: 0.001em;
         line-height: 1.5;
         @include mixins.max-screen(768px) {
           font-size: 3.73vw;
@@ -223,12 +226,14 @@ export default defineComponent({
         border-radius: min(60px, 4.16vw);
         width: min(120px, 8.33vw);
         height: min(40px, 2.77vw);
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
         font-size: min(32px, 2.22vw);
-        letter-spacing: 0.01em;
+        //letter-spacing: 0.01em;
+        letter-spacing: 0.001em;
         text-align: center;
-        line-height: min(40px, 2.77vw);
+        line-height: min(36px, 2.5vw);
         border: 2px solid #3676B6;
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         @include mixins.max-screen(768px) {
@@ -291,10 +296,12 @@ export default defineComponent({
         margin-top: 10vw;
       }
       button {
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
         font-size: min(34px, 2.36vw);
-        letter-spacing: 0.01em;
+        //letter-spacing: 0.01em;
+        letter-spacing: 0.001em;
         background-color: transparent;
         @include mixins.max-screen(768px) {
           font-size: 6.93vw;

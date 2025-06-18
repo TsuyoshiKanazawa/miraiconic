@@ -1,6 +1,6 @@
 <template>
   <div class="button">
-    <a :href="link" class="button__inner" :class="{ 'is-windows': isWindows }">
+    <a :href="link" class="button__inner">
       {{ name }}
     </a>
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,14 +23,6 @@ export default {
       default: '',
     },
   },
-  data() {
-    return {
-      isWindows: navigator.userAgent.indexOf('Windows') !== -1,
-    }
-  },
-  mounted() {
-    console.log(this.isWindows);
-  },
 }
 </script>
 
@@ -38,7 +30,6 @@ export default {
 .button {
   background-color: #3676B6;
   color: #fff !important;
-  border-radius: 5px;
   width: min(500px, 34.72vw);
   height: min(60px, 4.16vw);
   border-radius: min(60px, 4.16vw);
@@ -59,23 +50,22 @@ export default {
   }
   .button__inner {
     font-size: min(40px, 2.77vw);
-    line-height: min(60px, 4.16vw);
+    line-height: min(56px, 3.88vw);
     font-weight: 700;
     display: block;
     width: 100%;
     text-align: center;
-    letter-spacing: 0.01em;
+    //letter-spacing: 0.01em;
+    letter-spacing: 0.001em;
     position: relative;
     z-index: 10000;
     color: #fff !important;
-    font-family: 'DinCondensedBold', sans-serif;
-    font-weight: normal;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     @include mixins.max-screen(768px) {
       font-size: 6.93vw;
-      line-height: 1.7;
-      &.is-windows {
-        line-height: 10.66vw;
-      }
+      line-height: 1.3;
     }
   }
   svg {

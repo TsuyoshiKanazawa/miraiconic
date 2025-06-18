@@ -63,11 +63,11 @@ export default {
   computed: {
     // 有効なIDを持つ記事だけ
     validItems() {
-      return this.newsItems.filter(item => item.mainText !== '')
+      return this.newsItems.filter(item => item.mainText)
     },
     // 現在の記事が validItems の何番目か
     currentIndex() {
-      return this.validItems.findIndex(item => item._id === this.newsItem?._id)
+      return this.validItems.findIndex(item => item.id === this.newsItem?.id)
     },
     // ひとつ前のアイテム
     prevItem() {
@@ -90,25 +90,25 @@ export default {
   },
   watch: {
     // ルートの id が変わったら再表示
-    '$route.params._id': 'updateCurrent'
+    '$route.params.id': 'updateCurrent'
   },
   methods: {
     // currentIndex を更新
     updateCurrent() {
       const id = this.$route.params.id
       console.log(this.$route.params);
-      this.newsItem = this.newsItems.find(item => item._id === id) || null
+      this.newsItem = this.newsItems.find(item => item.id === id) || null
     },
     // 「前の記事」ボタンクリック
     back() {
       if (this.prevItem) {
-        this.$router.push(`/news/${this.prevItem._id}`)
+        this.$router.push(`/news/${this.prevItem.id}`)
       }
     },
     // 「次の記事」ボタンクリック
     next() {
       if (this.nextItem) {
-        this.$router.push(`/news/${this.nextItem._id}`)
+        this.$router.push(`/news/${this.nextItem.id}`)
       }
     }
   }
@@ -145,10 +145,12 @@ export default {
       .detail-date {
         color: #252526;
         margin-right: min(20px, 1.38vw);
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
         font-size: min(30px, 2.08vw);
-        letter-spacing: 0.01em;
+        //letter-spacing: 0.01em;
+        letter-spacing: 0.001em;
         @include mixins.max-screen(768px) {
           font-size: 5.33vw;
         }

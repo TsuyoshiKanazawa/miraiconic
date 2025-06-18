@@ -149,13 +149,16 @@ export default {
   position: relative;
   overflow: hidden;
   .casestudy-title {
-    font-family: 'DinCondensedBold', sans-serif;
-    font-weight: normal;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 16vw;
-    letter-spacing: 0.03em;
+    //letter-spacing: 0.01em;
+    letter-spacing: 0.001em;
     text-align: center;
     position: relative;
     z-index: 2;
+    color: #252526;
   }
   .caseStudy-line {
     display: block;

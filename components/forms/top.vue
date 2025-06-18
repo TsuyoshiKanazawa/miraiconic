@@ -109,10 +109,12 @@ export default {
     }
     h1 {
       font-size: 2.5vw;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
       font-size: 6.94vw;
-      letter-spacing: 0.01em;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
       color: #252526;
       @include mixins.max-screen(768px) {
         font-size: 16vw;
@@ -142,10 +144,12 @@ export default {
     }
     h1 {
       font-size: 2.5vw;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
       font-size: 6.94vw;
-      letter-spacing: 0.01em;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
       color: #252526;
       @include mixins.max-screen(768px) {
         font-size: 13.33vw;

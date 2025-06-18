@@ -7,6 +7,8 @@ export default defineNuxtConfig({
       },
       spaceUid: process.env.NEWT_SPACE_UID,
       cdnApiToken: process.env.NEWT_CDN_API_TOKEN,
+      microcmsServiceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+      microcmsApiKey: process.env.MICROCMS_API_KEY,
       siteUrl: 'https://miraconi.com',
       emailjs: {
         serviceID: 'service_w2py6g6',
@@ -52,7 +54,7 @@ export default defineNuxtConfig({
     }
   },
   plugins: [
-    { src: '~/plugins/gsap.client.js', mode: 'client' },
+    { src: '~/plugins/gsap.client.js', mode: 'client' }
   ],
   css: [
     '@/assets/scss/reset.scss',

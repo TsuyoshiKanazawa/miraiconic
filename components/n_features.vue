@@ -141,9 +141,11 @@ export default {
   &__title {
     font-size: min(5.55vw, 80px);
     text-align: center;
-    letter-spacing: 0.01em;
-    font-family: 'DinCondensedBold', sans-serif;
-    font-weight: normal;
+    //letter-spacing: 0.01em;
+    letter-spacing: 0.001em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     transform: translateY(100%);
     transition: transform 0.8s ease-in-out;
     &.inview {

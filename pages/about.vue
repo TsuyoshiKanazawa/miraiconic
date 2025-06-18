@@ -163,8 +163,9 @@ export default {
         font-size: min(5.55vw, 80px);
         text-align: center;
         letter-spacing: 0.01em;
-        font-family: 'DinCondensedBold', sans-serif;
-        font-weight: normal;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
         transform: translateY(100%);
         transition: transform 0.8s ease-in-out;
         &.inview {
@@ -337,8 +338,9 @@ export default {
       font-size: min(5.55vw, 80px);
       text-align: center;
       letter-spacing: 0.01em;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
       transform: translateY(100%);
       transition: transform 0.8s ease-in-out;
       &.inview {

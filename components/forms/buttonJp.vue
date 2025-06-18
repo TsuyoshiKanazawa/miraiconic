@@ -30,7 +30,6 @@ export default {
 .button {
   background-color: #3676B6;
   color: #fff !important;
-  border-radius: 5px;
   width: min(500px, 34.72vw);
   height: min(60px, 4.16vw);
   border-radius: min(60px, 4.16vw);
@@ -51,7 +50,7 @@ export default {
   }
   .button__inner {
     font-size: min(26px, 1.80vw);
-    line-height: min(60px, 4.16vw);
+    line-height: min(56px, 3.88vw);
     font-weight: 700;
     display: block;
     width: 100%;

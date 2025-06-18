@@ -38,7 +38,7 @@ const updateIsMobile = () => {
 
 // 除外ページ判定
 const route = useRoute()
-const excludedPaths = ['/contact', '/contact/check', '/contact/thanks']
+const excludedPaths = ['/contact', '/contact/check', '/contact/thanks', '/contact/', '/contact/check/', '/contact/thanks/']
 const isExcludedPage = computed(() => excludedPaths.includes(route.path))
 
 // 慣性スクロールの初期化／破棄

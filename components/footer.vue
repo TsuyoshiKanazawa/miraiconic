@@ -182,9 +182,11 @@ export default {
     }
     &__item {
       font-size: min(20px, 1.38vw);
-      letter-spacing: 0.01em;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
       color: #252526;
       @include mixins.max-screen(768px) {
         font-size: 4.8vw;
@@ -201,9 +203,10 @@ export default {
         li {
           a {
             font-size: min(20px, 1.38vw);
-            letter-spacing: 0.01em;
-            font-family: 'DinCondensedBold', sans-serif;
-            font-weight: normal;
+            //letter-spacing: 0.01em;
+            letter-spacing: 0.001em;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 600;
             margin: min(0.55vw, 8px) 0;
             color: #252526;
             transition: color 0.2s ease-in-out;
@@ -248,10 +251,11 @@ export default {
     }
     p {
       color: #fff;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
       font-size: min(70px, 4.86vw);
-      letter-spacing: 0.01em;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
       line-height: min(30px, 2.08vw);
       @include mixins.max-screen(768px) {
         font-size: 13.33vw;
@@ -311,10 +315,11 @@ export default {
     background-color: #3676B6;
     p {
       color: #fff;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
       font-size: 20px;
-      letter-spacing: 0.01em;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
       line-height: 30px;
     }
 

@@ -222,7 +222,6 @@ export default {
   data() {
     return {
       isOpen: false,
-      isWindows: navigator.userAgent.indexOf('Windows') !== -1, // Windowsかどうかを判別する変数
       hide: false,
       lastScroll: 0,
       scrollThreshold: 10,
@@ -336,10 +335,12 @@ export default {
             width: auto;
             height: auto;
             a {
-              font-family: 'DinCondensedBold', sans-serif;
-              font-weight: normal;
+              font-family: "Barlow Condensed", sans-serif;
+              font-weight: 600;
+              font-style: normal;
               font-size: min(30px, 2.08vw);
-              letter-spacing: 0.01em;
+              //letter-spacing: 0.01em;
+              letter-spacing: 0.001em;
               line-height: min(80px, 5.55vw);
               transition: color 0.2s ease-in-out;
               color: #252526;
@@ -491,15 +492,17 @@ export default {
           width: fit-content;
           padding: 0 10px;
           a {
-            font-family: 'DinCondensedBold', sans-serif;
-            font-weight: normal;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 600;
+            font-style: normal;
             font-size: 7.42vh;
             color: #252526;
             text-decoration: none;
             transition: color 0.2s ease-in-out;
             position: relative;
             z-index: 1;
-            letter-spacing: 0.02em;
+            //letter-spacing: 0.02em;
+            letter-spacing: 0.001em;
             white-space: pre-wrap;
             line-height: 1.2;
             @include mixins.max-screen(768px) {
@@ -520,9 +523,6 @@ export default {
             }
             &.Medium {
               transition: width 0.3s ease-in-out;
-            }
-            &.is-windows {
-              top: 0;
             }
           }
           @include mixins.min-screen(769px) {
@@ -574,8 +574,11 @@ export default {
         font-size: 4.26vw;
       }
       p {
-        letter-spacing: 0.01em;
-        font-family: 'DinCondensedBold', sans-serif;
+        //letter-spacing: 0.01em;
+        letter-spacing: 0.001em;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-style: normal;
       }
     }
   }

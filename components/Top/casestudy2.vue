@@ -178,7 +178,7 @@ onMounted(() => {
       scrub:  true,
       snap: {
         snapTo:   1 / (slideCount - 1),
-        duration: 0.001,
+        duration: 0.75,
         inertia:  false,
       },
       invalidateOnRefresh: true,
@@ -209,7 +209,8 @@ onMounted(() => {
     splideInst.on('moved', () => {
       // 1. 少し待ってからループを止める
       setTimeout(() => {
-        isLocking = false
+        isLocking = false;
+        requestAnimationFrame(lockLoop);
       }, 0)
       // 2. wheel/touchmove の監視を解除
       window.removeEventListener('wheel', lockWheel, { capture: true })
@@ -251,9 +252,11 @@ export default {
     position: relative;
     border-radius: min(120px, 37.01vw);
     text-align: center;
-    font-family: 'DinCondensedBold', sans-serif;
-    font-weight: normal;
-    letter-spacing: 0.01em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    //letter-spacing: 0.01em;
+    letter-spacing: 0.001em;
     font-size: min(80px, 5.55vw);
     width: fit-content;
     margin: 0 auto;

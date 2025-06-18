@@ -31,9 +31,11 @@
     .faq-title {
       font-size: 16vw;
       text-align: center;
-      font-family: 'DinCondensedBold', sans-serif;
-      font-weight: normal;
-      letter-spacing: 0.01em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
     }
     .faq-line {
       display: block;
