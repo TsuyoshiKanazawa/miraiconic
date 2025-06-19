@@ -8,7 +8,7 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleParallaxScroll);
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('scroll', this.handleParallaxScroll);
   },
   methods: {
