@@ -92,7 +92,7 @@ export default defineComponent({
   mixins: [scrollParallaxMixin],
   async setup() {
     const newsItems = await useFetchNewsItem();
-    console.log(newsItems)
+    //console.log(newsItems)
 
     const pageSize = ref(10)
     const currentPage = ref(1)

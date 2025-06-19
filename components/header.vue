@@ -174,31 +174,31 @@
             <a href="/" @click="openMenu">
               /&nbsp;&nbsp;TOP
             </a>
-            <div class="menu__item__line short" :class="{ 'is-windows': isWindows }"></div>
+            <div class="menu__item__line short"></div>
           </li>
           <li>
             <a href="/news" @click="openMenu">
               /&nbsp;&nbsp;News
             </a>
-            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+            <div class="menu__item__line Medium"></div>
           </li>
           <li>
             <a href="/about" @click="openMenu">
               /&nbsp;&nbsp;About
             </a>
-            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+            <div class="menu__item__line Medium"></div>
           </li>
           <li>
             <a href="/service" @click="openMenu">
               /&nbsp;&nbsp;Service
             </a>
-            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+            <div class="menu__item__line Medium"></div>
           </li>
           <li>
             <a href="/contact" @click="openMenu">
               /&nbsp;&nbsp;Contact
             </a>
-            <div class="menu__item__line Medium" :class="{ 'is-windows': isWindows }"></div>
+            <div class="menu__item__line Medium"></div>
           </li>
         </ul>
       </div>
