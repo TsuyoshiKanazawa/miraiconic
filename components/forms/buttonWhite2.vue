@@ -23,11 +23,6 @@ export default {
       default: '',
     },
   },
-  data() {
-    return {
-      isWindows: navigator.userAgent.indexOf('Windows') !== -1,
-    }
-  },
 }
 </script>
 

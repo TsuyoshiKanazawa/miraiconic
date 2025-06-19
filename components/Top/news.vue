@@ -26,7 +26,6 @@
         <h3 class="news-title">{{ item.title }}</h3>
         <NuxtLink
           class="news-link"
-          :class="{ 'is-mac': !isWindows }"
           :to="`/news/${item.id}`"
           v-if="item.mainText"
         >
@@ -34,7 +33,6 @@
         </NuxtLink>
         <a
           class="news-link"
-          :class="{ 'is-mac': !isWindows }"
           :href="item.url"
           target="_blank"
           v-if="item.url && !item.mainText"
@@ -69,7 +67,7 @@ export default defineComponent({
   mixins: [scrollParallaxMixin],
   async setup() {
     const newsItems = await useFetchNewsItem();
-    console.log(newsItems)
+    //console.log(newsItems)
 
     const pageSize = ref(3)
     const currentPage = ref(1)
@@ -106,7 +104,7 @@ export default defineComponent({
       if (typeof page === 'number') currentPage.value = page
     }
 
-    console.log(useNewsItem().value)
+    //console.log(useNewsItem().value)
     return {
       paginatedItems,
       currentPage,
