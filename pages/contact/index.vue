@@ -31,7 +31,7 @@
           </div>
           <div class="contact__background__container__form">
             <label for="phoneNumber">電話番号</label>
-            <input type="tel" id="phoneNumber" placeholder="080-1234-5678" inputmode="numeric" attern="[0-9\-]*" @input="onInputPhoneNumber" v-model="useContactItem().value.phoneNumber">
+            <input type="tel" id="phoneNumber" placeholder="080-1234-5678" inputmode="numeric" pattern="[0-9\-]*" @input="onInputPhoneNumber" v-model="useContactItem().value.phoneNumber">
           </div>
           <div class="contact__background__container__form">
             <label for="message">お問い合わせ内容<span >※</span></label>
