@@ -91,7 +91,7 @@
           <img src="/img/about/about-pt3.svg" alt="aboutBg3" class="about_pt3">
         </div>
       </div>
-      <div class="about__bg__wrapper">
+      <div class="about__bg__wrapper pt4">
         <div class="about__bg__wrapper__contents4" v-observe="'inview'">
           <img src="/img/about/about-pt4.svg" alt="aboutBg4" class="about_pt4">
         </div>
@@ -450,7 +450,7 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      width: 0;
+      width: 100%;
       height: 100%;
       transform: translate3d(0, var(--scroll-offset), 0);
       transition: transform 0.8s ease-out;
