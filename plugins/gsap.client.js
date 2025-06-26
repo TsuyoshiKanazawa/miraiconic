@@ -1,10 +1,10 @@
 import { defineNuxtPlugin } from '#app'
-import { gsap } from 'gsap'
-import { ScrollTrigger, ScrollSmoother } from 'gsap/all'
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin(async () => {
   // クライアント＆デスクトップ幅のみ
   if (process.client && window.innerWidth >= 768) {
+    const { gsap } = await import('gsap')
+    const { ScrollTrigger, ScrollSmoother } = await import('gsap/all')
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
   }
 })

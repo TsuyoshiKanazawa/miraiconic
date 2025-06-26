@@ -50,7 +50,7 @@ export default {
   },
   computed: {
     isPrivacy() {
-      return this.$route.name === 'privacy';
+      return this.$route.name === 'privacypolicy';
     },
   },
   mounted() {

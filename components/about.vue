@@ -1,11 +1,11 @@
 <template>
   <section class="about">
-    <img src="/img/about/aboutBg1.jpg" alt="aboutBg1" class="about_bg1">
+    <img loading="lazy" src="/img/about/aboutBg1.jpg" alt="aboutBg1" class="about_bg1">
     <div class="about__container" v-observe="'inview'">
       <div class="about__container__contents">
         <div class="about__line__wrapper mask">
-          <img v-if="!useIsMobile().value" src="/img/about/aboutLine.svg" alt="line" class="about__contents__line">
-          <img v-if="useIsMobile().value" src="/img/about/aboutLine-sp.png" alt="line" class="about__contents__line">
+          <img loading="lazy" v-if="!useIsMobile().value" src="/img/about/aboutLine.svg" alt="line" class="about__contents__line">
+          <img loading="lazy" v-if="useIsMobile().value" src="/img/about/aboutLine-sp.png" alt="line" class="about__contents__line">
         </div>
         <h3 class="about__title__sub" v-observe="'inview'">
           つなぐ、ミライへの<br>BIMエクスペリエンス
@@ -18,12 +18,12 @@
       </div>
       <div class="about__bg__wrapper top" style="z-index: 11;" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
         <div class="about__bg__wrapper__contents1" v-observe="'inview'">
-          <img src="/img/about/about-pt1.svg" alt="aboutBg3" class="about_pt1">
+          <img loading="lazy" src="/img/about/about-pt1.svg" alt="aboutBg3" class="about_pt1">
         </div>
       </div>
       <div class="about__bg__wrapper" style="z-index: 0;">
         <div class="about__bg__wrapper__contents2" v-observe="'inview'">
-          <img src="/img/about/about-pt2.svg" alt="aboutBg3" class="about_pt2">
+          <img loading="lazy" src="/img/about/about-pt2.svg" alt="aboutBg3" class="about_pt2">
         </div>
       </div>
     </div>

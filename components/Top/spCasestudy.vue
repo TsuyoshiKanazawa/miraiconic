@@ -3,7 +3,7 @@
     <h2 class="casestudy-title">
       Case Study
     </h2>
-    <img src="/img/top/titleLineSp.svg" alt="caseStudy" class="caseStudy-line">
+    <img loading="lazy" src="/img/top/titleLineSp.svg" alt="caseStudy" class="caseStudy-line">
     <Splide 
       class="casestudy-item-wrap"
       :options="splideOptions"
@@ -95,12 +95,12 @@
     </Splide>
     <div class="casestudy__bg__wrapper1" style="z-index: 1;">
       <div class="casestudy__bg__wrapper__contents1">
-        <img src="/img/top/caseStudy-pt1.svg" alt="feature_bg" class="casestudy__container__pt1" v-observe="'inview'">
+        <img loading="lazy" src="/img/top/caseStudy-pt1.svg" alt="feature_bg" class="casestudy__container__pt1" v-observe="'inview'">
       </div>
     </div>
     <div class="casestudy__bg__wrapper2" style="z-index: 1;">
       <div class="casestudy__bg__wrapper__contents2">
-        <img src="/img/top/caseStudy-pt2.svg" alt="feature_bg" class="casestudy__container__pt2" v-observe="'inview'">
+        <img loading="lazy" src="/img/top/caseStudy-pt2.svg" alt="feature_bg" class="casestudy__container__pt2" v-observe="'inview'">
       </div>
     </div>
   </div>

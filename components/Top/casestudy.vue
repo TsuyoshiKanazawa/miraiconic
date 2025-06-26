@@ -101,12 +101,12 @@
       </Splide>
       <div class="caseStudy-bg__wrapper top" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
         <div class="caseStudy-bg__wrapper__contents1" v-observe="'inview'">
-          <img src="/img/top/caseStudy-pt1.svg" alt="caseStudyBg1" class="caseStudy_pt1">
+          <img loading="lazy" src="/img/top/caseStudy-pt1.svg" alt="caseStudyBg1" class="caseStudy_pt1">
         </div>
       </div>
       <div class="caseStudy-bg__wrapper bottom" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
         <div class="caseStudy-bg__wrapper__contents2" v-observe="'inview'">
-          <img src="/img/top/caseStudy-pt2.svg" alt="caseStudyBg2" class="caseStudy_pt2">
+          <img loading="lazy" src="/img/top/caseStudy-pt2.svg" alt="caseStudyBg2" class="caseStudy_pt2">
         </div>
       </div>
     </div>

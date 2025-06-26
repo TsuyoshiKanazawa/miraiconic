@@ -5,8 +5,8 @@
       <div class="mask">
         <h3 class="features__title" v-observe="'inview'">Features</h3>
       </div>
-      <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-      <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+      <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+      <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="features__title__sub" v-observe="'inview'">ミライコニックの特徴</h3>
       </div>-->
@@ -22,7 +22,7 @@
           <div class="features__container__experience__container">
             <div class="features__container__experience__container__item">
               <div class="features__container__experience__container__item__container">
-                <img src="/img/features/experience1.jpg" alt="experience" class="features__container__experience__container__item__container__img" v-observe="'inview'">
+                <img loading="lazy" src="/img/features/experience1.jpg" alt="experience" class="features__container__experience__container__item__container__img" v-observe="'inview'">
                 <h4 class="features__container__experience__container__item__container__title" v-observe="'inview'">
                   【制作のシーン】
                 </h4>
@@ -37,7 +37,7 @@
             </svg>
             <div class="features__container__experience__container__item margin">
               <div class="features__container__experience__container__item__container">
-                <img src="/img/features/experience2.jpg" alt="experience" class="features__container__experience__container__item__container__img" v-observe="'inview'">
+                <img loading="lazy" src="/img/features/experience2.jpg" alt="experience" class="features__container__experience__container__item__container__img" v-observe="'inview'">
                 <h4 class="features__container__experience__container__item__container__title" v-observe="'inview'">
                   【教育のシーン】
                 </h4>
@@ -67,7 +67,7 @@
           <div class="features__container__responsive__container">
             <div class="features__container__responsive__container__item">
               <div class="features__container__responsive__container__item__container">
-                <img src="/img/features/responsive1.jpg" alt="responsive" class="features__container__responsive__container__item__container__img" v-observe="'inview'">
+                <img loading="lazy" src="/img/features/responsive1.jpg" alt="responsive" class="features__container__responsive__container__item__container__img" v-observe="'inview'">
                 <h4 class="features__container__responsive__container__item__container__title" v-observe="'inview'">
                   【建築設計】
                 </h4>
@@ -84,7 +84,7 @@
             </svg>
             <div class="features__container__responsive__container__item">
               <div class="features__container__responsive__container__item__container">
-                <img src="/img/features/responsive2.jpg" alt="responsive" class="features__container__responsive__container__item__container__img" v-observe="'inview'">
+                <img loading="lazy" src="/img/features/responsive2.jpg" alt="responsive" class="features__container__responsive__container__item__container__img" v-observe="'inview'">
                 <h4 class="features__container__responsive__container__item__container__title" v-observe="'inview'">
                   【インテリア設計】
                 </h4>
@@ -107,17 +107,17 @@
       <FormsButton name="Service" link="/service" class="FormsButton" />
       <div class="features__bg__wrapper1" style="z-index: 1;">
         <div class="features__bg__wrapper__contents1">
-          <img src="/img/service/service-pt1.svg" alt="features-pt3" class="features__container__pt1" v-observe="'inview'">
+          <img loading="lazy" src="/img/service/service-pt1.svg" alt="features-pt3" class="features__container__pt1" v-observe="'inview'">
         </div>
       </div>
       <div class="features__bg__wrapper2" style="z-index: 1;">
         <div class="features__bg__wrapper__contents2">
-          <img src="/img/service/service-pt2.svg" alt="features-pt2" class="features__container__pt2" v-observe="'inview'">
+          <img loading="lazy" src="/img/service/service-pt2.svg" alt="features-pt2" class="features__container__pt2" v-observe="'inview'">
         </div>
       </div>
       <div class="features__bg__wrapper3" style="z-index: 1;">
         <div class="features__bg__wrapper__contents3">
-          <img src="/img/about/about-pt2.svg" alt="features-pt3" class="features__container__pt3" v-observe="'inview'">
+          <img loading="lazy" src="/img/about/about-pt2.svg" alt="features-pt3" class="features__container__pt3" v-observe="'inview'">
         </div>
       </div>
     </div>

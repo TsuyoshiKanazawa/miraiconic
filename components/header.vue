@@ -89,10 +89,10 @@
       </div>
       <div class="sns">
         <a href="https://www.instagram.com/miraiconic/" target="_blank">
-          <img src="/img/insta.png" alt="Instagram">
+          <img loading="lazy" src="/img/insta.png" alt="Instagram">
         </a>
         <a href="https://x.com/MIRAICONIC" target="_blank">
-          <img src="/img/x.png" alt="X">
+          <img loading="lazy" src="/img/x.png" alt="X">
         </a>
       </div>
     </div>
@@ -204,10 +204,10 @@
       </div>
       <div class="sns__inner">
         <a href="https://www.instagram.com/miraiconic/" target="_blank">
-          <img src="/img/insta.png" alt="instagram">
+          <img loading="lazy" src="/img/insta.png" alt="instagram">
         </a>
         <a href="https://x.com/MIRAICONIC" target="_blank">
-          <img src="/img/x.png" alt="x">
+          <img loading="lazy" src="/img/x.png" alt="x">
         </a>
       </div>
       <div class="copyright">

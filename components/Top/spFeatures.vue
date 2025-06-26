@@ -1,6 +1,6 @@
 <template>
   <div class="features">
-    <img src="/img/top/scrollConnectionSp.jpg" alt="features" class="connection">
+    <img loading="lazy" src="/img/top/scrollConnectionSp.jpg" alt="features" class="connection">
     <div class="features-wrap">
       <div class="features-wrap-title" v-observe="'inview'">
         Features
@@ -12,12 +12,12 @@
       <FormsButtonWhite2 name="More" link="/about" />
       <div class="feature__bg__wrapper1" style="z-index: 1;">
         <div class="feature__bg__wrapper__contents1">
-          <img src="/img/top/topFeatures-pt1.svg" alt="feature_bg" class="feature__container__pt1" v-observe="'inview'">
+          <img loading="lazy" src="/img/top/topFeatures-pt1.svg" alt="feature_bg" class="feature__container__pt1" v-observe="'inview'">
         </div>
       </div>
       <div class="feature__bg__wrapper2" style="z-index: 1;">
         <div class="feature__bg__wrapper__contents2" v-observe="'inview'">
-          <img src="/img/top/topFeatures-pt2.svg" alt="feature_bg" class="feature__container__pt2">
+          <img loading="lazy" src="/img/top/topFeatures-pt2.svg" alt="feature_bg" class="feature__container__pt2">
         </div>
       </div>
     </div>

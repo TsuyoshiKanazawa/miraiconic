@@ -16,7 +16,7 @@
         </div>
         <div class="service__container__bimProduction__contents">
           <div class="service__container__bimProduction__contents__text" v-observe="'inview'">
-            <img class="service__container__bimProduction__contents__text__image" src="/img/service/bimProduction.jpg" alt="BIM PRODUCTION">
+            <img loading="lazy" class="service__container__bimProduction__contents__text__image" src="/img/service/bimProduction.jpg" alt="BIM PRODUCTION">
             <h3>制作受託サービス</h3>
             <p>意匠·構造·設備(MEP)の各分野において、企画から施工·維持管理まで、<br class="pc-only">
               あらゆるフェーズに対応したBIMモデルの受託制作を行っています。<br>
@@ -50,7 +50,7 @@
         </div>
         <div class="service__container__bimSupport__contents">
           <div class="service__container__bimSupport__contents__text" v-observe="'inview'">
-            <img class="service__container__bimSupport__contents__text__image" src="/img/service/bimSupport.jpg" alt="BIM PRODUCTION">
+            <img loading="lazy" class="service__container__bimSupport__contents__text__image" src="/img/service/bimSupport.jpg" alt="BIM PRODUCTION">
             <h3>推進・教育サービス</h3>
             <p>企業や個人のお客様に向けて、<br class="pc-only">
               BIM活用の推進(導入·定着)および教育サービスをご提供しています。<br>
@@ -97,8 +97,8 @@
           <div class="mask">
             <h3 class="service__container__features__title__text" v-observe="'inview'">Features</h3>
           </div>
-          <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-          <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+          <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+          <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
           <div class="mask">
             <h3 class="service__container__features__title__text__sub" v-observe="'inview'">ミライコニックの特徴</h3>
           </div>
@@ -114,7 +114,7 @@
         </div>
         <div class="service__container__features__contents" v-if="!useIsMobile().value">
           <div class="service__container__features__contents__item right" v-observe="'inview'">
-            <img src="/img/service/features1.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image">
+            <img loading="lazy" src="/img/service/features1.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image">
             <div class="service__container__features__contents__item__text">
               <div class="service__container__features__contents__item__text__title">
                 <h3>実務経験豊富な​<br>
@@ -134,7 +134,7 @@
           <div class="service__container__features__contents__item left" v-observe="'inview'">
             <div class="service__container__features__contents__item__line" />
             <div class="service__container__features__contents__item__text">
-              <img src="/img/service/features2.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image" v-if="useIsMobile().value">
+              <img loading="lazy" src="/img/service/features2.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image" v-if="useIsMobile().value">
               <div class="service__container__features__contents__item__text__title">
                 <h3>制作も教育も、​<br>
                   BIM活用をワンストップで支援​​​</h3>
@@ -148,10 +148,10 @@
                 安心して導入・運用いただけるサポート体制を整えています。​
               </div>
             </div>
-            <img src="/img/service/features2.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image" v-if="!useIsMobile().value">
+            <img loading="lazy" src="/img/service/features2.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image" v-if="!useIsMobile().value">
           </div>
           <div class="service__container__features__contents__item right" v-observe="'inview'">
-            <img src="/img/service/features3.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image">
+            <img loading="lazy" src="/img/service/features3.jpg" alt="bim specialist" class="service__container__features__contents__item__text__image">
             <div class="service__container__features__contents__item__text">
               <div class="service__container__features__contents__item__text__title">
                 <h3>建築からインテリア、​<br>
@@ -172,7 +172,7 @@
         <div class="service__container__features__contentsSp" v-else>
           <div class="service__container__features__contentsSp__item right">
             <div class="service__container__features__contentsSp__item__text">
-              <img src="/img/service/features1.jpg" alt="bim specialist" class="service__container__features__contentsSp__item__text__image" v-observe="'inview'">
+              <img loading="lazy" src="/img/service/features1.jpg" alt="bim specialist" class="service__container__features__contentsSp__item__text__image" v-observe="'inview'">
               <div class="service__container__features__contentsSp__item__text__title" v-observe="'inview'">
                 <h3>実務経験豊富な​<br>
                   BIMスペシャリストが対応​</h3>
@@ -189,7 +189,7 @@
           <div class="service__container__features__contentsSp__item left">
             <div class="service__container__features__contentsSp__item__line" />
             <div class="service__container__features__contentsSp__item__text">
-              <img src="/img/service/features2.jpg" alt="bim specialist" class="service__container__features__contentsSp__item__text__image" v-observe="'inview'">
+              <img loading="lazy" src="/img/service/features2.jpg" alt="bim specialist" class="service__container__features__contentsSp__item__text__image" v-observe="'inview'">
               <div class="service__container__features__contentsSp__item__text__title" v-observe="'inview'">
                 <h3>制作も教育も、​<br>
                   BIM活用をワンストップで支援</h3>
@@ -205,7 +205,7 @@
           </div>
           <div class="service__container__features__contentsSp__item right">
             <div class="service__container__features__contentsSp__item__text">
-              <img src="/img/service/features3.jpg" alt="bim specialist" class="service__container__features__contentsSp__item__text__image" v-observe="'inview'">
+              <img loading="lazy" src="/img/service/features3.jpg" alt="bim specialist" class="service__container__features__contentsSp__item__text__image" v-observe="'inview'">
               <div class="service__container__features__contentsSp__item__text__title" v-observe="'inview'">
                 <h3>建築からインテリア、​<br>
                   多様な業種やフェーズに対応</h3>
@@ -227,8 +227,8 @@
           <div class="mask">
             <h3 class="service__container__member__title__text" v-observe="'inview'">Member</h3>
           </div>
-          <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-          <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+          <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+          <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
           <div class="mask">
             <h3 class="service__container__member__title__text__sub" v-observe="'inview'">ミライコニックのメンバー</h3>
           </div>
@@ -245,7 +245,7 @@
                 <p class="service__container__member__contents__item__top__name__license">BIM利用技術者検定 1級</p>
               </div>
               <div class="service__container__member__contents__item__top__image">
-                <img src="/img/service/hiramoto.png" alt="member">
+                <img loading="lazy" src="/img/service/hiramoto.png" alt="member">
               </div>
             </div>
             <div class="service__container__member__contents__item__bottom">
@@ -280,7 +280,7 @@
                 <p class="service__container__member__contents__item__top__name__license">BIM利用技術者検定 1級、<br>Revitユーザー資格試験合格</p>
               </div>
               <div class="service__container__member__contents__item__top__image">
-                <img src="/img/service/aketa.png" alt="member">
+                <img loading="lazy" src="/img/service/aketa.png" alt="member">
               </div>
             </div>
             <div class="service__container__member__contents__item__bottom">
@@ -315,7 +315,7 @@
                 <p class="service__container__member__contents__item__top__name__license">BIM利用技術者検定 2級、<br>Revitユーザー資格試験合格</p>
               </div>
               <div class="service__container__member__contents__item__top__image">
-                <img src="/img/service/koyama.png" alt="member">
+                <img loading="lazy" src="/img/service/koyama.png" alt="member">
               </div>
             </div>
             <div class="service__container__member__contents__item__bottom">
@@ -350,7 +350,7 @@
                 <p class="service__container__member__contents__item__top__name__license">BIM利用技術者検定 2級、<br>建築CAD検定 2級​</p>
               </div>
               <div class="service__container__member__contents__item__top__image">
-                <img src="/img/service/higashi.png" alt="member">
+                <img loading="lazy" src="/img/service/higashi.png" alt="member">
               </div>
             </div>
             <div class="service__container__member__contents__item__bottom">
@@ -381,8 +381,8 @@
           <div class="mask">
             <h3 class="service__container__casestudy__title__text" v-observe="'inview'">Case study</h3>
           </div>
-          <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-          <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+          <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+          <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
           <div class="mask">
             <h3 class="service__container__casestudy__title__text__sub" v-observe="'inview'">提供事例</h3>
           </div>
@@ -687,22 +687,22 @@
       <Qa />
       <div class="service__container__bimProduction__bg1" style="z-index: 0;">
         <div class="service__container__bimProduction__bg__contents">
-          <img src="/img/service/service-pt1.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt1" v-observe="'inview'">
+          <img loading="lazy" src="/img/service/service-pt1.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt1" v-observe="'inview'">
         </div>
       </div>
       <div class="service__container__bimProduction__bg2" style="z-index: 0;">
         <div class="service__container__bimProduction__bg__contents">
-          <img src="/img/service/service-pt2.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt2" v-observe="'inview'">
+          <img loading="lazy" src="/img/service/service-pt2.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt2" v-observe="'inview'">
         </div>
       </div>
       <div class="service__container__bimProduction__bg3" style="z-index: 0;">
         <div class="service__container__bimProduction__bg__contents">
-          <img src="/img/service/service-pt3.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt3" v-observe="'inview'">
+          <img loading="lazy" src="/img/service/service-pt3.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt3" v-observe="'inview'">
         </div>
       </div>
       <div class="service__container__bimProduction__bg4" style="z-index: 0;" v-if="!useIsMobile().value">
         <div class="service__container__bimProduction__bg__contents">
-          <img src="/img/service/service-pt1.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt4" v-observe="'inview'">
+          <img loading="lazy" src="/img/service/service-pt1.svg" alt="service_bg" class="service__container__bimProduction__bg__contents__pt4" v-observe="'inview'">
         </div>
       </div>
     </div>
