@@ -88,12 +88,12 @@
       </div>
       <div class="about__bg__wrapper pt3">
         <div class="about__bg__wrapper__contents3" v-observe="'inview'">
-          <img loading="lazy" src="/img/about/about-pt3.svg" alt="aboutBg3" class="about_pt3">
+          <img src="/img/about/about-pt3.svg" alt="aboutBg3" class="about_pt3">
         </div>
       </div>
       <div class="about__bg__wrapper pt4">
         <div class="about__bg__wrapper__contents4" v-observe="'inview'">
-          <img loading="lazy" src="/img/about/about-pt4.svg" alt="aboutBg4" class="about_pt4">
+          <img src="/img/about/about-pt4.svg" alt="aboutBg4" class="about_pt4">
         </div>
       </div>
     </div>
@@ -450,16 +450,16 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: fit-content;
       height: 100%;
       transform: translate3d(0, var(--scroll-offset), 0);
       transition: transform 0.8s ease-out;
       z-index: 10;
       &.pt3 {
         left: auto;
-        right: 12%;
+        right: 0%;
         @include mixins.max-screen(768px) {
-          right: 18%;
+          right: -8%;
         }
       }
       &__contents3 {
