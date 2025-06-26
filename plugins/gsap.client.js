@@ -1,4 +1,3 @@
-// plugins/gsap.client.ts
 import { defineNuxtPlugin } from '#app'
 import { gsap } from 'gsap'
 import { ScrollTrigger, ScrollSmoother } from 'gsap/all'

@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-wrap" ref="wrap">
+  <div class="casestudy-wrap" ref="wrap">
     <div class="casestudy">
       <h2 class="casestudy-title">
         Case Study
@@ -9,8 +9,12 @@
           <circle cx="5" cy="5" r="5" fill="#252526"/>
         </svg>
       </h2>
-      <div class="casestudy-item-wrap">
-        <div class="casestudy-item section--1">
+      <Splide 
+        class="casestudy-item-wrap"
+        :options="splideOptions"
+        ref="splideRef"
+      >
+        <SplideSlide class="casestudy-item section--1">
           <div class="casestudy-item-title">
             <p>某大手空間デザイン企業様</p>
             <h3>業務直結型BIMカリキュラムで人材育成</h3>
@@ -37,8 +41,8 @@
                 教育の定着を見据えた運用体制の構築にも貢献</p>
             </div>
           </div>
-        </div>
-        <div class="casestudy-item section--2">
+        </SplideSlide>
+        <SplideSlide class="casestudy-item section--2">
           <div class="casestudy-item-title">
             <p>某大手空間デザイン企業様</p>
             <h3>業務直結型BIMカリキュラムで人材育成</h3>
@@ -65,8 +69,8 @@
                 教育の定着を見据えた運用体制の構築にも貢献</p>
             </div>
           </div>
-        </div>
-        <div class="casestudy-item section--3">
+        </SplideSlide>
+        <SplideSlide class="casestudy-item section--3">
           <div class="casestudy-item-title">
             <p>某大手空間デザイン企業様</p>
             <h3>業務直結型BIMカリキュラムで人材育成</h3>
@@ -93,13 +97,8 @@
                 教育の定着を見据えた運用体制の構築にも貢献</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="casestudy-progress">
-        <div class="progress" :class="{'active': progress === 1}"></div>
-        <div class="progress" :class="{'active': progress === 2}"></div>
-        <div class="progress" :class="{'active': progress === 3}"></div>
-      </div>
+        </SplideSlide>
+      </Splide>
       <div class="caseStudy-bg__wrapper top" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
         <div class="caseStudy-bg__wrapper__contents1" v-observe="'inview'">
           <img src="/img/top/caseStudy-pt1.svg" alt="caseStudyBg1" class="caseStudy_pt1">
@@ -111,75 +110,119 @@
         </div>
       </div>
     </div>
-    
-    <!-- ここの高さ分だけスクロールが生まれる（セクション数−1）×100vh -->
-    <div class="spacer"></div>  
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
+import '@splidejs/vue-splide/css/core'
+
 gsap.registerPlugin(ScrollTrigger)
+const wrap = ref(null)
+const splideRef = ref(null)
+const slideCount = 3
 
-const wrap     = ref(null)
-const progress = ref(1)
+// ロック中のスクロール位置を保持
+let lockedScrollY = 0
+let isLocking = false
+// スクロール位置をロックするハンドラ
+const lockWheel = (e) => {
+  window.scrollTo(0, lockedScrollY)
+  e.preventDefault()
+  e.stopPropagation();
+}
 
-onMounted(async () => {
-  await nextTick()
-  const el        = wrap.value
-  const itemWrap  = el.querySelector('.casestudy-item-wrap')
-  const items     = el.querySelectorAll('.casestudy-item')
-  const count     = items.length
-  if (!itemWrap || count === 0) return
+// ─── スクロールを固定し続けるループ関数 ───
+const lockLoop = () => {
+  if (!isLocking) return
+  // 毎フレーム、強制的にスクロール位置を戻す
+  window.scrollTo(0, lockedScrollY)
+  // 次フレームも呼び出し
+  requestAnimationFrame(lockLoop)
+}
 
-  // ビューポート幅・アイテム幅・間隔
-  const wrapWidth = el.clientWidth
-  const itemWidth = items[0].getBoundingClientRect().width
-  const gapValue  = parseFloat(getComputedStyle(itemWrap).gap) || 0
+const splideOptions = {
+  type: 'slide',
+  speed: 750,
+  easing: 'ease-in-out',
+  perPage: 1,
+  drag: false,
+  width: '100%',
+  autoWidth: true,
+  arrows: false,
+  pagination: true,
+  gap: 'min(40px, 2.77vw)',
+  direction: 'ltr',
+  focus      : 'center',
+  trimSpace  : false, 
+  snap: true,
+  wheel: false,
+  classes: {
+    pagination: 'pagination',
+    page: 'page',
+  },
+}
 
-  // ステップ＆全スクロール距離
-  const step     = itemWidth + gapValue
-  const distance = step * (count - 1)
+let trigger
+onMounted(() => {
+  nextTick(() => {
+    let prevIdx = 0;
+    const splideInst = splideRef.value.splide;
+    lockedScrollY = wrap.value.offsetTop
 
-  // アイテム幅の半分だけ前倒ししたいオフセット
-  const halfOffset = itemWidth / 2
+    trigger = ScrollTrigger.create({
+      trigger: wrap.value,
+      start:  'top top',
+      end:    () => `+=${window.innerHeight * (slideCount - 2)}`,
+      pin:    true,
+      scrub:  true,
+      snap: {
+        snapTo:   1 / (slideCount - 1),
+        duration: 0.75,
+        inertia:  false,
+      },
+      invalidateOnRefresh: true,
+      markers: false,
+      onUpdate: self => {
+        const idx = Math.round(self.progress * (slideCount - 1));
+        if (idx !== prevIdx) {
+          prevIdx = idx;
+          splideInst.go(idx);  // インデックスが変化したときのみ go()
+        }
+      },
+    })
 
-  // 初期 x（１枚目中央）
-  const startX = (wrapWidth - itemWidth) / 2
-  // 最終 x（最後のアイテム中央）
-  const endX   = startX - distance
+    // ─── move/moved でスクロール位置を固定 ───
+    splideInst.on('move', () => {
+      // 1. 現在のスクロール位置をキャプチャ
+      lockedScrollY = window.scrollY;
+      // 2. フラグを立てて lockLoop を開始
+      isLocking = true;
+      requestAnimationFrame(lockLoop);
+      // 3. wheel/touchmove もキャプチャフェーズでキャンセル
+      window.addEventListener('wheel', lockWheel, { passive: false, capture: true });
+      window.addEventListener('touchmove', lockWheel, { passive: false, capture: true });
+    })
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: el,
-      start: 'top top',
-      end:   `+=${distance}`,
-      scrub: 0.1,
-      pin:   true,
-      onUpdate(self) {
-        // 今どれだけスクロールしたか（px）
-        const curPx = self.progress * distance
-        // 半アイテム分前倒し：次のアイテムになるタイミングを早める
-        const shifted = curPx + halfOffset
-
-        // 0〜(count-1) の範囲に丸めて、1ベースの index に
-        let idx = Math.floor(shifted / step) + 1
-        idx = Math.min(count, Math.max(1, idx))
-
-        progress.value = idx
-      }
-    }
+    splideInst.on('moved', () => {
+      // 1. 少し待ってからループを止める
+      setTimeout(() => {
+        isLocking = false;
+        requestAnimationFrame(lockLoop);
+      }, 100)
+      // 2. wheel/touchmove の監視を解除
+      window.removeEventListener('wheel', lockWheel, { capture: true });
+      window.removeEventListener('touchmove', lockWheel, { capture: true });
+    })
+    // ────────────────────────────────
   })
+})
 
-  // 実際の横移動アニメーション
-  tl.fromTo(
-    itemWrap,
-    { x: startX },
-    { x: endX,   ease: 'none', duration: 1 },
-    0
-  )
+onBeforeUnmount(() => {
+  trigger && trigger.kill()
 })
 </script>
 
@@ -191,7 +234,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.scroll-wrap {
+.casestudy-wrap {
   position: relative;
   height: 100vh;
   //overflow: hidden;
@@ -226,10 +269,6 @@ export default {
     }
   }
   .casestudy-item-wrap {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: min(40px, 2.77vw);
     margin: min(60px, 4.16vw) 0 0;
     position: relative;
     z-index: 3;
@@ -266,6 +305,7 @@ export default {
           text-align: center;
           line-height: min(32px, 2.22vw);
           border-radius: min(150px, 10.41vw);
+          color: #808080;
           &.dark {
             color: #fff;
             background-color: #3676B6;
@@ -389,11 +429,28 @@ export default {
     }
   }
 }
-
-/* spacer で (セクション数ー1)×100vh のスクロール領域を確保 */
-.spacer {
-  height: 400vh; /* SECTION2・3 のために 2*100vh */
-}
 </style>
 
+<style lang="scss" scoped>
+:deep(.pagination) {
+  display: flex;
+  justify-content: center;
+  gap: min(10px, 0.69vw);
+  margin: min(40px, 2.77vw) 0 0;
+  /* z-index を上げたいならここで */
+  z-index: 10;
+  list-style: none;
+}
+
+:deep(.page) {
+  width: min(100px, 6.94vw);
+  height: min(5px, 0.34vw);
+  background-color: #A0A0A0;
+  border-radius: min(150px, 10.41vw);
+}
+
+:deep(.page.is-active) {
+  background-color: #3676B6;
+}
+</style>
 

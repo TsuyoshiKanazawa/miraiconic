@@ -316,7 +316,7 @@ export default {
     p {
       color: #fff;
       font-family: "Barlow Condensed", sans-serif;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 20px;
       //letter-spacing: 0.01em;
       letter-spacing: 0.001em;

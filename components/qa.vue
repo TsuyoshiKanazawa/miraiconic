@@ -25,31 +25,6 @@
             <rect width="30" height="30" rx="10" fill="#252526"/>
           </svg>
           <h4 class="qa__container__item__question__title">
-            対応するアプリケーションを教えてください
-          </h4>
-        </div>
-        <div class="qa__container__item__answer">
-          <p class="qa__container__item__answer__text">
-            当社は、Revit、Navisworks、Twinmotion、Enscape、Lumion、AutoCAD、JwCAD、Vectorworksに対応しております。その他のソフトウェアについてもご相談ください。
-          </p>
-        </div>
-      </div>
-      <div class="qa__container__item" v-observe="'inview'">
-        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
-          <circle cx="3" cy="3" r="3" fill="#252526"/>
-          <circle cx="1117" cy="3" r="3" fill="#252526"/>
-        </svg>
-        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
-          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
-          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
-        </svg>
-        <div class="qa__container__item__question">
-          <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="30" height="30" rx="10" fill="#252526"/>
-          </svg>
-          <h4 class="qa__container__item__question__title">
             遠隔でもモデリングを依頼することは可能ですか？
           </h4>
         </div>
@@ -106,6 +81,31 @@
         <div class="qa__container__item__answer">
           <p class="qa__container__item__answer__text">
             丁寧なヒアリングを通じて最適な段取りを行い、初期導入において最適なコストを見極め、<br class="pc-only">イチからサポートいたします。<br>過去案件のトレース、トライアル案件実施、テンプレートやファミリの準備まで幅広く対応しております。​
+          </p>
+        </div>
+      </div>
+      <div class="qa__container__item" v-observe="'inview'">
+        <svg v-if="!useIsMobile().value" class="qa__container__item__line" width="1120" height="6" viewBox="0 0 1120 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="2" width="1114" height="2" fill="#252526"/>
+          <circle cx="3" cy="3" r="3" fill="#252526"/>
+          <circle cx="1117" cy="3" r="3" fill="#252526"/>
+        </svg>
+        <svg v-if="useIsMobile().value" class="qa__container__item__line" width="329" height="5" viewBox="0 0 329 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="325" height="1" fill="#252526"/>
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#252526"/>
+          <circle cx="326.5" cy="2.5" r="2.5" fill="#252526"/>
+        </svg>
+        <div class="qa__container__item__question">
+          <svg class="qa__container__item__question__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="30" rx="10" fill="#252526"/>
+          </svg>
+          <h4 class="qa__container__item__question__title">
+            BIMを導入したものの、何か不便に感じる
+          </h4>
+        </div>
+        <div class="qa__container__item__answer">
+          <p class="qa__container__item__answer__text">
+            BIMの活用目的に対して、テンプレートやファミリ、パラメータが過不足のない最適なものとなっているかを診断し、再整備いたします。改善提案のみのチェックも承っております。
           </p>
         </div>
       </div>
@@ -198,12 +198,17 @@
     </div>
     <div class="qa__bg__wrapper1" style="z-index: 1;">
       <div class="qa__bg__wrapper__contents1">
-        <img src="/img/service/service-pt2.svg" alt="qa_bg" class="qa__container__pt1" v-observe="'inview'">
+        <img src="/img/qa/qa-pt1.svg" alt="qa_bg" class="qa__container__pt1" v-observe="'inview'">
       </div>
     </div>
     <div class="qa__bg__wrapper2" style="z-index: 1;">
       <div class="qa__bg__wrapper__contents2">
-        <img src="/img/service/service-pt1.svg" alt="qa_bg" class="qa__container__pt2" v-observe="'inview'">
+        <img src="/img/qa/qa-pt2.svg" alt="qa_bg" class="qa__container__pt2" v-observe="'inview'">
+      </div>
+    </div>
+    <div class="qa__bg__wrapper3" style="z-index: 1;">
+      <div class="qa__bg__wrapper__contents3">
+        <img src="/img/qa/qa-pt3.svg" alt="qa_bg" class="qa__container__pt3" v-observe="'inview'">
       </div>
     </div>
   </section>
@@ -219,10 +224,10 @@ export default {
 
 <style lang="scss" scoped>
 .qa {
-  padding-top: 5.55vw;
+  padding-top: min(3.47vw, 50px);
   padding-bottom: min(5.55vw, 80px);
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   background-color: #F2F2F2;
   @include mixins.max-screen(768px) {
     padding-top: 20vw;
@@ -362,10 +367,11 @@ export default {
       transition: transform 0.8s ease-out;
       will-change: transform;
       @include mixins.max-screen(768px) {
-        margin-left: -3vw;
+        margin-top: -40vw;
+        margin-left: -10vw;
       }
       .qa__container__pt1 {
-        width: min(14.65vw, 211px);
+        width: min(10.97vw, 158px);
         transform: scale(0);
         transition: transform 0.5s ease-in-out;
         @include mixins.max-screen(768px) {
@@ -383,24 +389,52 @@ export default {
     right: 0;
     height: 100%;
     .qa__bg__wrapper__contents2 {
-      margin-top: min(76.38vw, 1100px);
-      margin-right: max(-4.86vw, -70px);
+      transform: translate3d(0, var(--scroll-offset, 0px), 0);
+      transition: transform 0.8s ease-out;
+      will-change: transform;
+      @include mixins.max-screen(768px) {
+
+        margin-right: -17.4vw;
+      }
+      .qa__container__pt2 {
+        width: min(15.90vw, 229px);
+        transform: scale(0) translateX(50%);
+        transition: transform 0.5s ease-in-out;
+        &.inview {
+          transform: scale(1) translateX(50%);
+          @include mixins.max-screen(768px) {
+            transform: scale(1) translateX(0);
+          }
+        }
+        @include mixins.max-screen(768px) {
+          width: 34.93vw;
+        }
+      }
+    }
+  }
+  .qa__bg__wrapper3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    .qa__bg__wrapper__contents3 {
+      margin-top: min(69.44vw, 1000px);
       transform: translate3d(0, var(--scroll-offset, 0px), 0);
       transition: transform 0.8s ease-out;
       will-change: transform;
       @include mixins.max-screen(768px) {
         margin-top: 270vw;
-        margin-right: -17.4vw;
+        margin-right: -0vw;
       }
-      .qa__container__pt2 {
-        width: min(15.90vw, 229px);
+      .qa__container__pt3 {
+        width: min(43.05vw, 620px);
         transform: scale(0);
         transition: transform 0.5s ease-in-out;
         &.inview {
           transform: scale(1);
         }
         @include mixins.max-screen(768px) {
-          width: 34.93vw;
+          width: 100vw;
         }
       }
     }
