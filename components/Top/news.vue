@@ -8,7 +8,7 @@
           <circle cx="85" cy="5" r="5" fill="#252526"/>
           <circle cx="5" cy="5" r="5" fill="#252526"/>
         </svg>
-        <img v-if="useIsMobile().value" class="news-line-bottom" src="/img/top/titleLineSp.svg" alt="" />
+        <img loading="lazy" v-if="useIsMobile().value" class="news-line-bottom" src="/img/top/titleLineSp.svg" alt="" />
       </h2>
       <p class="news-header-sub">最新情報</p>
       <div
@@ -21,7 +21,7 @@
           <circle cx="3" cy="3" r="3" fill="#252526"/>
           <circle cx="1117" cy="3" r="3" fill="#252526"/>
         </svg>
-        <img v-if="useIsMobile().value" class="news-line-top" src="/img/news/newsLine.svg" alt="" />
+        <img loading="lazy" v-if="useIsMobile().value" class="news-line-top" src="/img/news/newsLine.svg" alt="" />
         <p class="news-date">{{ item.date }}</p>
         <h3 class="news-title">{{ item.title }}</h3>
         <NuxtLink
@@ -45,12 +45,12 @@
         <circle cx="3" cy="3" r="3" fill="#252526"/>
         <circle cx="1117" cy="3" r="3" fill="#252526"/>
       </svg>
-      <img v-if="useIsMobile().value" class="news-line-bottom" src="/img/news/newsLine.svg" alt="" />
+      <img loading="lazy" v-if="useIsMobile().value" class="news-line-bottom" src="/img/news/newsLine.svg" alt="" />
       <FormsButton class="news-button" name="News List" link="/news" />
     </div>
     <div class="news-bg__wrapper top" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
       <div class="news-bg__wrapper__contents1" v-observe="'inview'">
-        <img src="/img/news/news-pt1.svg" alt="newsBg1" class="news_pt1">
+        <img loading="lazy" src="/img/news/news-pt1.svg" alt="newsBg1" class="news_pt1">
       </div>
     </div>
   </div>

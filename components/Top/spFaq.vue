@@ -5,10 +5,10 @@
       <h2 class="faq-title">
         FAQ
       </h2>
-      <img src="/img/top/titleLineSpWhite.svg" alt="faq" class="faq-line">
+      <img loading="lazy" src="/img/top/titleLineSpWhite.svg" alt="faq" class="faq-line">
       <a href="/about" class="faq-wrap">
         <p>よくあるご質問はこちら</p>
-        <img src="/img/top/faqArrow.svg" alt="faq" class="faq-arrow">
+        <img loading="lazy" src="/img/top/faqArrow.svg" alt="faq" class="faq-arrow">
       </a>   
     </div>
   </div>

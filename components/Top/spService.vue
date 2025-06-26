@@ -17,7 +17,7 @@
         <p v-observe="'inView'">意匠・構造・設備（MEP）の各分野における、企画から施工・維持管理までの<br>
           あらゆるフェーズに対応したBIMモデルの受託制作を行っています。</p>
       </div>
-      <img class="service-cross" src="/img/top/servicecross.svg" alt="service-cross" v-observe="'inView'">
+      <img loading="lazy" class="service-cross" src="/img/top/servicecross.svg" alt="service-cross" v-observe="'inView'">
       <div class="service-item">
         <h3 v-observe="'inView'">02</h3>
         <h4 v-observe="'inView'">推進・教育支援サービス​</h4>

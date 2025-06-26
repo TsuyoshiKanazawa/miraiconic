@@ -4,8 +4,8 @@
       <div class="mask">
         <h3 class="qa__title" v-observe="'inview'">Q&A</h3>
       </div>
-      <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-      <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+      <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+      <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="qa__title__sub" v-observe="'inview'">質問にお答えします</h3>
       </div>
@@ -198,17 +198,17 @@
     </div>
     <div class="qa__bg__wrapper1" style="z-index: 1;">
       <div class="qa__bg__wrapper__contents1">
-        <img src="/img/qa/qa-pt1.svg" alt="qa_bg" class="qa__container__pt1" v-observe="'inview'">
+        <img loading="lazy" src="/img/qa/qa-pt1.svg" alt="qa_bg" class="qa__container__pt1" v-observe="'inview'">
       </div>
     </div>
     <div class="qa__bg__wrapper2" style="z-index: 1;">
       <div class="qa__bg__wrapper__contents2">
-        <img src="/img/qa/qa-pt2.svg" alt="qa_bg" class="qa__container__pt2" v-observe="'inview'">
+        <img loading="lazy" src="/img/qa/qa-pt2.svg" alt="qa_bg" class="qa__container__pt2" v-observe="'inview'">
       </div>
     </div>
     <div class="qa__bg__wrapper3" style="z-index: 1;">
       <div class="qa__bg__wrapper__contents3">
-        <img src="/img/qa/qa-pt3.svg" alt="qa_bg" class="qa__container__pt3" v-observe="'inview'">
+        <img loading="lazy" src="/img/qa/qa-pt3.svg" alt="qa_bg" class="qa__container__pt3" v-observe="'inview'">
       </div>
     </div>
   </section>

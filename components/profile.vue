@@ -4,8 +4,8 @@
       <div class="mask">
         <h3 class="profile__title" v-observe="'inview'">Profile</h3>
       </div>
-      <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-      <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+      <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+      <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
       <div class="mask">
         <h3 class="profile__title__sub" v-observe="'inview'">会社情報</h3>
       </div>
@@ -108,7 +108,7 @@
     <!--
     <div class="profile__bg__wrapper1" style="z-index: 1;">
       <div class="profile__bg__wrapper__contents1">
-        <img src="/img/profile/profile-pt1.svg" alt="profile_bg" class="profile__container__pt1" v-observe="'inview'">
+        <img loading="lazy" src="/img/profile/profile-pt1.svg" alt="profile_bg" class="profile__container__pt1" v-observe="'inview'">
       </div>
     </div>-->
   </section>

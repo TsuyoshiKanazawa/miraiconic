@@ -45,7 +45,7 @@
         </div>
       </section>
       <section ref="sec3" class="section section--3">
-        <img src="/img/top/scrollConnection.jpg" alt="">
+        <img loading="lazy" src="/img/top/scrollConnection.jpg" alt="">
         <div class="features-wrap">
           <div class="features-wrap-container">
             <div class="features-item">
@@ -57,8 +57,8 @@
             </div>
             <FormsButtonWhite2 class="features-button" name="More" link="/about" />
           </div>
-          <img src="/img/top/topFeatures-pt1.svg" alt="background" class="features-pt1">
-          <img src="/img/top/topFeatures-pt2.svg" alt="background" class="features-pt2">
+          <img loading="lazy" src="/img/top/topFeatures-pt1.svg" alt="background" class="features-pt1">
+          <img loading="lazy" src="/img/top/topFeatures-pt2.svg" alt="background" class="features-pt2">
         </div>
       </section>
     </div>

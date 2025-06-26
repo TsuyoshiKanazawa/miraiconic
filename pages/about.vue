@@ -3,13 +3,13 @@
     <FormsTop title="ABOUT" subTitle="会社概要" />
     
     <div class="about__container" v-observe="'inview'">
-      <img src="/img/about/aboutBg1.jpg" alt="aboutBg1" class="about_bg1">
+      <img loading="lazy" src="/img/about/aboutBg1.jpg" alt="aboutBg1" class="about_bg1">
       <div class="about__container__message">
         <div class="mask">
           <h2 class="about__title" v-observe="'inview'">Message</h2>
         </div>
-        <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-        <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+        <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+        <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
         <div class="mask">
           <h2 class="about__title__sub" v-observe="'inview'">メッセージ</h2>
         </div>
@@ -23,7 +23,7 @@
           最新のテクノロジーと、<br class="sp-only">豊富な現場経験に裏打ちされた<br class="sp-only">共感力を融合し、<br>
           お客様一人ひとりに最適な<br class="sp-only">BIMエクスペリエンスをお届けすることを<br class="sp-only">お約束いたします。
         </p>
-        <img src="/img/about/aboutPic.png" alt="Yamaguchi's photo" class="about__img1">
+        <img loading="lazy" src="/img/about/aboutPic.png" alt="Yamaguchi's photo" class="about__img1">
         <div class="about__img__text">
           代表取締役
           <br>
@@ -32,12 +32,12 @@
       </div>
       <div class="about__bg__wrapper" style="z-index: 11;">
         <div class="about__bg__wrapper__contents1" v-observe="'inview'">
-          <img src="/img/about/about-pt1.svg" alt="aboutBg1" class="about_pt1">
+          <img loading="lazy" src="/img/about/about-pt1.svg" alt="aboutBg1" class="about_pt1">
         </div>
       </div>
       <div class="about__bg__wrapper" style="z-index: 0;">
         <div class="about__bg__wrapper__contents2" v-observe="'inview'">
-          <img src="/img/about/about-pt2.svg" alt="aboutBg2" class="about_pt2">
+          <img loading="lazy" src="/img/about/about-pt2.svg" alt="aboutBg2" class="about_pt2">
         </div>
       </div>
     </div>
@@ -46,8 +46,8 @@
         <div class="mask">
           <h2 class="about__title" v-observe="'inview'">Mission</h2>
         </div>
-        <img v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
-        <img v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
+        <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
+        <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">
         <div class="mask">
           <h2 class="about__title__sub" v-observe="'inview'">ミッション</h2>
         </div>
@@ -80,20 +80,20 @@
             </p>
           </div>
         </div>
-        <img v-if="!useIsMobile().value" src="/img/about/missionbg.jpg" alt="about-mission-bg" class="about__container__mission__bg">
-        <img v-else src="/img/about/missionbg-sp.jpg" alt="about-mission-bg" class="about__container__mission__bg">
+        <img loading="lazy" v-if="!useIsMobile().value" src="/img/about/missionbg.jpg" alt="about-mission-bg" class="about__container__mission__bg">
+        <img loading="lazy" v-else src="/img/about/missionbg-sp.jpg" alt="about-mission-bg" class="about__container__mission__bg">
       </div>
       <div class="about__container__profile">
         <Profile />
       </div>
       <div class="about__bg__wrapper pt3">
         <div class="about__bg__wrapper__contents3" v-observe="'inview'">
-          <img src="/img/about/about-pt3.svg" alt="aboutBg3" class="about_pt3">
+          <img loading="lazy" src="/img/about/about-pt3.svg" alt="aboutBg3" class="about_pt3">
         </div>
       </div>
       <div class="about__bg__wrapper pt4">
         <div class="about__bg__wrapper__contents4" v-observe="'inview'">
-          <img src="/img/about/about-pt4.svg" alt="aboutBg4" class="about_pt4">
+          <img loading="lazy" src="/img/about/about-pt4.svg" alt="aboutBg4" class="about_pt4">
         </div>
       </div>
     </div>
