@@ -1,8 +1,12 @@
 <template>
   <div class="casestudy">
-    <h2 class="casestudy-title">
-      Case Study
-    </h2>
+    <div class="casestudy-title" v-observe="'inview'">
+      <div class="mask">
+        <h2 class="casestudy-title__text">
+          Case Study
+        </h2>
+      </div>
+    </div>
     <img loading="lazy" src="/img/top/titleLineSp.svg" alt="caseStudy" class="caseStudy-line">
     <Splide 
       class="casestudy-item-wrap"
@@ -149,16 +153,25 @@ export default {
   position: relative;
   overflow: hidden;
   .casestudy-title {
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 16vw;
-    //letter-spacing: 0.01em;
-    letter-spacing: 0.001em;
     text-align: center;
     position: relative;
     z-index: 2;
     color: #252526;
+    .casestudy-title__text {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 16vw;
+      //letter-spacing: 0.01em;
+      letter-spacing: 0.001em;
+      transform: translateY(100%);
+      transition: transform 0.8s ease-in-out;
+    }
+    &.inview {
+      .casestudy-title__text {
+        transform: translateY(0);
+      }
+    }
   }
   .caseStudy-line {
     display: block;
@@ -204,6 +217,7 @@ export default {
           text-align: center;
           line-height: 6.93vw;
           border-radius: 40vw;
+          color: #808080;
           &.dark {
             color: #fff;
             background-color: #3676B6;

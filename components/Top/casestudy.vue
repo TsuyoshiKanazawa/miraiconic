@@ -1,14 +1,18 @@
 <template>
   <div class="casestudy-wrap" ref="wrap">
     <div class="casestudy">
-      <h2 class="casestudy-title">
-        Case Study
+      <div class="casestudy-title" v-observe="'inview'">
+        <div class="mask">
+          <h2 class="casestudy-title__text">
+            Case Study
+          </h2>
+        </div>
         <svg width="90" height="10" viewBox="0 0 90 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="5" y="3" width="80" height="4" fill="#252526"/>
           <circle cx="85" cy="5" r="5" fill="#252526"/>
           <circle cx="5" cy="5" r="5" fill="#252526"/>
         </svg>
-      </h2>
+      </div>
       <Splide 
         class="casestudy-item-wrap"
         :options="splideOptions"
@@ -251,16 +255,23 @@ export default {
   padding: min(80px, 5.55vw) 0;
   .casestudy-title {
     position: relative;
-    border-radius: min(120px, 37.01vw);
-    text-align: center;
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    //letter-spacing: 0.01em;
-    letter-spacing: 0.001em;
-    font-size: min(80px, 5.55vw);
     width: fit-content;
     margin: 0 auto;
+    .casestudy-title__text {
+      font-size: min(80px, 5.55vw);
+      text-align: center;
+      letter-spacing: 0.001em;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      transform: translateY(100%);
+      transition: transform 0.8s ease-in-out;
+    }
+    &.inview {
+      .casestudy-title__text {
+        transform: translateY(0);
+      }
+    }
     svg {
       position: absolute;
       bottom: -5%;
