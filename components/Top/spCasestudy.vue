@@ -231,7 +231,7 @@ export default {
         background-color: #F2F2F2;
         border-radius: 2.66vw;
         margin-top: 5vw;
-        height: 105vw;
+        height: 110vw;
         &-text {
           padding: 3vw 0vw;
           h4 {
