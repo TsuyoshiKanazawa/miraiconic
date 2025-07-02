@@ -49,35 +49,36 @@
         <SplideSlide class="casestudy-item section--2">
           <div class="casestudy-item-title">
             <p>某大手空間デザイン企業様</p>
-            <h3>業務直結型BIMカリキュラムで人材育成</h3>
+            <h3>多店舗展開に向けたBIMテンプレート設計とモデル制作</h3>
           </div>
           <div class="casestudy-item-tag">
-            <p class="tag">制作</p>
+            <p class="tag dark">制作</p>
             <p class="tag dark">推進</p>
             <p class="tag">教育</p>
           </div>
           <div class="casestudy-item-contents">
             <div class="casestudy-item-contents-text">
               <h4>課題　：</h4>
-              <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+              <p>多店舗展開を見据えたBIM活用において、<br>
+                設計の効率化と情報の一元化が課題となっていた。</p>
             </div>
             <div class="casestudy-item-contents-text">
               <h4>提供支援内容　：</h4>
-              <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                BIM教育講座の教材をゼロから制作<br>
-                講師として社内トレーニングも実施</p>
+              <p>複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
+                ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
+                効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
             </div>
             <div class="casestudy-item-contents-text">
               <h4>成果　：</h4>
-              <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                教育の定着を見据えた運用体制の構築にも貢献</p>
+              <p>CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
+                内での設計ルール共有と品質の均一化を実現</p>
             </div>
           </div>
         </SplideSlide>
         <SplideSlide class="casestudy-item section--3">
           <div class="casestudy-item-title">
-            <p>某大手空間デザイン企業様</p>
-            <h3>業務直結型BIMカリキュラムで人材育成</h3>
+            <p>某大手不動産ディベロッパー様</p>
+            <h3>共同住宅の意匠・構造・設備(MEP)のBIMモデリング</h3>
           </div>
           <div class="casestudy-item-tag">
             <p class="tag dark">制作</p>
@@ -87,18 +88,19 @@
           <div class="casestudy-item-contents">
             <div class="casestudy-item-contents-text">
               <h4>課題　：</h4>
-              <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+              <p>複数の設計領域にわたる共同住宅のBIM化において、<br>
+                意匠・構造・設備(MEP)を統合的に扱える制作が求められていた。</p>
             </div>
             <div class="casestudy-item-contents-text">
               <h4>提供支援内容　：</h4>
-              <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                BIM教育講座の教材をゼロから制作<br>
-                講師として社内トレーニングも実施</p>
+              <p>意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
+                各設計フェーズでの整合性確保と情報可視化をサポート<br>
+                複数設計領域を一貫して統合することで、設計の効率化を支援</p>
             </div>
             <div class="casestudy-item-contents-text">
               <h4>成果　：</h4>
-              <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                教育の定着を見据えた運用体制の構築にも貢献</p>
+              <p>分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
+                以降の設計・施工フェーズでのBIM活用基盤を提供</p>
             </div>
           </div>
         </SplideSlide>
@@ -155,10 +157,12 @@ const splideOptions = {
   perPage: 1,
   drag: false,
   width: '100%',
-  autoWidth: true,
+  autoWidth: false,
+  fixedWidth: '1220px',
   arrows: false,
   pagination: true,
-  gap: 'min(40px, 2.77vw)',
+  //gap: 'min(40px, 2.77vw)',
+  gap: '40px',
   direction: 'ltr',
   focus      : 'center',
   trimSpace  : false, 
@@ -252,13 +256,15 @@ export default {
   width: 100vw;
   height: 100%;
   color: #252526;
-  padding: min(80px, 5.55vw) 0;
+  //padding: min(80px, 5.55vw) 0;
+  padding: 80px 0;
   .casestudy-title {
     position: relative;
     width: fit-content;
     margin: 0 auto;
     .casestudy-title__text {
-      font-size: min(80px, 5.55vw);
+      //font-size: min(80px, 5.55vw);
+      font-size: 80px;
       text-align: center;
       letter-spacing: 0.001em;
       font-family: "Barlow Condensed", sans-serif;
@@ -280,43 +286,57 @@ export default {
     }
   }
   .casestudy-item-wrap {
-    margin: min(60px, 4.16vw) 0 0;
+    //margin: min(60px, 4.16vw) 0 0;
+    margin: 60px 0 0;
     position: relative;
     z-index: 3;
     .casestudy-item {
       position: relative;
       background-color: #fff;
-      width: min(1220px, 83.33vw);
-      height: min(533px, 37.01vw);
-      border-radius: min(120px, 8.33vw);
-      padding: min(40px, 2.77vw);
+      //width: min(1220px, 83.33vw);
+      width: 1220px;
+      //height: min(533px, 37.01vw);
+      height: 533px;
+      //border-radius: min(120px, 8.33vw);
+      border-radius: 60px;
+      //padding: min(40px, 2.77vw);
+      padding: 40px;
       .casestudy-item-title {
         position: relative;
         text-align: center;
         p {
-          font-size: min(18px, 1.25vw);
+          //font-size: min(18px, 1.25vw);
+          font-size: 14px;
           font-weight: 500;
         }
         h3 {
-          font-size: min(36px, 2.5vw);
+          //font-size: min(36px, 2.5vw);
+          font-size: 32px;
           font-weight: 700;
         }
       }
       .casestudy-item-tag {
         display: flex;
         justify-content: center;
-        gap: min(10px, 0.69vw);
-        padding: min(20px, 1.38vw) 0;
+        //gap: min(10px, 0.69vw);
+        gap: 10px;
+        //padding: min(20px, 1.38vw) 0;
+        padding: 20px 0;
         .tag {
-          font-size: min(20px, 1.38vw);
+          font-size: 20px;
+          //font-size: min(20px, 1.38vw);
           font-weight: 500;
-          width: min(160px, 11.11vw);
-          height: min(32px, 2.22vw);
+          //width: min(160px, 11.11vw);
+          width: 160px;
+          //height: min(32px, 2.22vw);
+          height: 32px;
           background-color: #DCF4FF;
           text-align: center;
-          line-height: min(32px, 2.22vw);
-          border-radius: min(150px, 10.41vw);
-          color: #808080;
+          //line-height: min(32px, 2.22vw);
+          line-height: 32px;
+          //border-radius: min(150px, 10.41vw);
+          border-radius: 150px;
+          color: white;
           &.dark {
             color: #fff;
             background-color: #3676B6;
@@ -325,27 +345,38 @@ export default {
       }
       .casestudy-item-contents {
         background-color: #F2F2F2;
-        width: min(1040px, 72.22vw);
-        height: min(282px, 19.58vw);
-        border-radius: min(10px, 0.69vw);
-        margin: min(10px, 0.69vw) auto 0;
-        padding: min(40px, 2.77vw) 0;
+        //width: min(1040px, 72.22vw);
+        width: 1040px;
+        //height: min(282px, 19.58vw);
+        height: 282px;
+        //border-radius: min(10px, 0.69vw);
+        border-radius: 10px;
+        //margin: min(10px, 0.69vw) auto 0;
+        margin: 10px auto 0;
+        //padding: min(40px, 2.77vw) 0;
+        padding: 40px 0;
         .casestudy-item-contents-text {
           display: flex;
           justify-content: center;
-          gap: min(30px, 2.08vw);
-          margin-bottom: min(20px, 1.38vw);
+          //gap: min(30px, 2.08vw);
+          gap: 30px;
+          //margin-bottom: min(20px, 1.38vw);
+          margin-bottom: 20px;
           h4 {
-            font-size: min(20px, 1.38vw);
+            font-size: 16px;
+            //font-size: min(20px, 1.38vw);
             font-weight: 700;
             text-align: right;
             letter-spacing: 0.03em;
-            width: min(165px, 11.45vw);
+            //width: min(165px, 11.45vw);
+            width: 165px;
           }
           p {
-            font-size: min(18px, 1.25vw);
+            font-size: 14px;
+            //font-size: min(18px, 1.25vw);
             font-weight: 500;
-            width: min(772px, 53.61vw);
+            //width: min(772px, 53.61vw);
+            width: 772px;
             letter-spacing: 0.05em;
           }
         }

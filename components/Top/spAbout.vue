@@ -17,7 +17,7 @@
           革新をトータルにサポートいたします。
         </p>
       </div>
-      <FormsButton class="about-inner-button" name="About Us" link="/about" />
+      <FormsButton class="about-inner-button" name="About" link="/about" />
     </div>
     <div class="abouts-mask left" ref="leftMask"></div>
     <div class="abouts-mask right" ref="rightMask"></div>

@@ -9,7 +9,7 @@
           <circle cx="5" cy="5" r="5" fill="#252526"/>
         </svg>
       </h2>
-      <nuxt-link to="/service" class="faq-text">
+      <nuxt-link to="/service#faq" class="faq-text">
         よくあるご質問はこちら
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="white"/>

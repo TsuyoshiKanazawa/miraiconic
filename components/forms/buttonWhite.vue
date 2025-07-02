@@ -33,7 +33,8 @@ export default {
   width: min(500px, 34.72vw);
   height: min(60px, 4.16vw);
   border-radius: min(60px, 4.16vw);
-  box-shadow: min(4px, 0.27vw) min(4px, 0.27vw) 0 0 #252526;
+  //box-shadow: min(4px, 0.27vw) min(4px, 0.27vw) 0 0 #252526;
+  filter: drop-shadow(min(4px, 0.27vw) min(4px,0.27vw) 0px #252526);
   position: relative;
   z-index: 10000;
   cursor: pointer;
@@ -46,7 +47,8 @@ export default {
     border-radius: 16vw;
     font-size: 6.93vw;
     margin: 10vw auto 2vw;
-    box-shadow: 1.06vw 1.06vw 0 0 #252526;
+    //box-shadow: 1.06vw 1.33vw 0 0 #252526;
+    filter: drop-shadow(1.06vw 1.06vw 0px #252526);
   }
   .button__inner {
     font-size: min(40px, 2.77vw);

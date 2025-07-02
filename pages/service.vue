@@ -251,10 +251,11 @@
             <div class="service__container__member__contents__item__bottom">
               <div class="service__container__member__contents__item__bottom__free">
                 <h3 class="service__container__member__contents__item__bottom__free__title">
-                  ◎自由欄タイトルが入ります。
+                  ◎得意フィールド
                 </h3>
                 <p class="service__container__member__contents__item__bottom__free__text">
-                  自由欄の内容がここに入ります。自由欄の内容がここに入ります。自由欄の内容がここに入ります。
+                  実施設計BIM<br>
+                  BIM標準化構築​
                 </p>
               </div>
               <div class="service__container__member__contents__item__bottom__achieve">
@@ -286,10 +287,11 @@
             <div class="service__container__member__contents__item__bottom">
               <div class="service__container__member__contents__item__bottom__free">
                 <h3 class="service__container__member__contents__item__bottom__free__title">
-                  ◎自由欄タイトルが入ります。
+                  ◎得意フィールド
                 </h3>
                 <p class="service__container__member__contents__item__bottom__free__text">
-                  自由欄の内容がここに入ります。自由欄の内容がここに入ります。自由欄の内容がここに入ります。
+                  施工BIM<br>
+                  BIM標準化構築
                 </p>
               </div>
               <div class="service__container__member__contents__item__bottom__achieve">
@@ -321,10 +323,11 @@
             <div class="service__container__member__contents__item__bottom">
               <div class="service__container__member__contents__item__bottom__free">
                 <h3 class="service__container__member__contents__item__bottom__free__title">
-                  ◎自由欄タイトルが入ります。
+                  ◎得意フィールド
                 </h3>
                 <p class="service__container__member__contents__item__bottom__free__text">
-                  自由欄の内容がここに入ります。自由欄の内容がここに入ります。自由欄の内容がここに入ります。
+                  点群撮影・3Dスキャンデータ活用<br>
+                  Dynamo
                 </p>
               </div>
               <div class="service__container__member__contents__item__bottom__achieve">
@@ -356,10 +359,11 @@
             <div class="service__container__member__contents__item__bottom">
               <div class="service__container__member__contents__item__bottom__free">
                 <h3 class="service__container__member__contents__item__bottom__free__title">
-                  ◎自由欄タイトルが入ります。
+                  ◎得意フィールド
                 </h3>
                 <p class="service__container__member__contents__item__bottom__free__text">
-                  自由欄の内容がここに入ります。自由欄の内容がここに入ります。自由欄の内容がここに入ります。
+                  企画設計BIM<br>
+                  CG制作
                 </p>
               </div>
               <div class="service__container__member__contents__item__bottom__achieve">
@@ -397,7 +401,9 @@
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
               <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag">制作</p>
@@ -411,49 +417,54 @@
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
+                  ・BIM教育講座の教材をゼロから制作<br>
+                  ・講師として社内トレーニングも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・受講者の理解度が向上し、BIMの社内活用が加速<br>
+                  ・教育の定着を見据えた運用体制の構築にも貢献</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
               <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>多店舗展開に向けたBIMテンプレート設計とモデル制作</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
-              <p class="tag">制作</p>
+              <p class="tag dark">制作</p>
               <p class="tag dark">推進</p>
               <p class="tag">教育</p>
             </div>
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>多店舗展開を見据えたBIM活用において、<br>
+                  設計の効率化と情報の一元化が課題となっていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
+                  ・ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
+                  ・効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
+                  ・社内での設計ルール共有と品質の均一化を実現</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
-              <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <p>某大手不動産ディベロッパー様</p>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>共同住宅の意匠・構造・設備(MEP)のBIMモデリング</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag dark">制作</p>
@@ -463,25 +474,28 @@
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>複数の設計領域にわたる共同住宅のBIM化において、<br>
+                  意匠・構造・設備(MEP)を統合的に扱える制作が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
+                  ・各設計フェーズでの整合性確保と情報可視化をサポート<br>
+                  ・複数設計領域を一貫して統合することで、設計の効率化を支援</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
+                  ・以降の設計・施工フェーズでのBIM活用基盤を提供</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
               <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>OJTを通じたBIM定着支援</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag">制作</p>
@@ -491,46 +505,49 @@
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>社内にBIMを定着させるため、スクール形式の研修だけでなく、<br>実案件での実践的な指導が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・実際の社内プロジェクトに講師が伴走し、OJT形式で業務支援を実施<br>
+                  ・プロジェクト進行に即したスキル習得を支援し、実務の中で“学べる場”を提供<br>
+                  ・習熟度に応じたアドバイスや、プロジェクト後の振り返りサポートも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・受BIM実案件を通じたOJTにより、日常業務の中で学べる環境を実現<br>
+                  ・実務を通じたスキル伝達とその場での実演により、理解と定着をサポート</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
-              <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <p>某人材育成支援企業様</p>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>BIMリスキリング講座の<br>カリキュラム設計から講師をトータルサポート</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag">制作</p>
-              <p class="tag dark">推進</p>
-              <p class="tag">教育</p>
+              <p class="tag">推進</p>
+              <p class="tag dark">教育</p>
             </div>
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>BIM未経験者向けリスキリング講座の開講にあたり、<br>転職につながる実践スキル習得を見据えた教材と講師が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・ウェビナー形式のライブレッスン講座を設計<br>
+                  （プロジェクト編／ファミリ編／ビジュアライズ編／Revitユーザー資格対策）<br>
+                  ・各講座の教材コンテンツをゼロから制作<br>
+                  ・講師として登壇し、双方向型のウェビナー指導を実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・基礎から資格対策までをカバーし、実務に応用できるスキル習得を支援<br>
+                  ・段階的な学びで理解を深め、即戦力人材の育成に貢献</p>
               </div>
             </div>
           </SplideSlide>
@@ -545,7 +562,9 @@
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
               <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>業務直結型<br>BIMカリキュラムで人材育成</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag">制作</p>
@@ -559,49 +578,54 @@
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
+                  ・BIM教育講座の教材をゼロから制作<br>
+                  ・講師として社内トレーニングも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・受講者の理解度が向上し、BIMの社内活用が加速<br>
+                  ・教育の定着を見据えた運用体制の構築にも貢献</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
               <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>多店舗展開に向けた<br>BIMテンプレート設計とモデル制作</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
-              <p class="tag">制作</p>
+              <p class="tag dark">制作</p>
               <p class="tag dark">推進</p>
               <p class="tag">教育</p>
             </div>
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>多店舗展開を見据えたBIM活用において、<br>
+                  設計の効率化と情報の一元化が課題となっていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
+                  ・ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
+                  ・効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
+                  ・社内での設計ルール共有と品質の均一化を実現</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
-              <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <p>某大手不動産ディベロッパー様</p>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>共同住宅の意匠・構造・設備(MEP)の<br>BIMモデリング</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag dark">制作</p>
@@ -611,25 +635,28 @@
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>複数の設計領域にわたる共同住宅のBIM化において、<br>
+                  意匠・構造・設備(MEP)を統合的に扱える制作が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
+                  ・各設計フェーズでの整合性確保と情報可視化をサポート<br>
+                  ・複数設計領域を一貫して統合することで、設計の効率化を支援</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
+                  ・以降の設計・施工フェーズでのBIM活用基盤を提供</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
               <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>OJTを通じた<br>BIM定着支援</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag">制作</p>
@@ -639,46 +666,52 @@
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>社内にBIMを定着させるため、<br>
+                  スクール形式の研修だけでなく、実案件での実践的な指導が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・実際の社内プロジェクトに講師が伴走し、OJT形式で業務支援を実施<br>
+                  ・プロジェクト進行に即したスキル習得を支援し、実務の中で“学べる場”を提供<br>
+                  ・習熟度に応じたアドバイスや、プロジェクト後の振り返りサポートも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・BIM実案件を通じたOJTにより、日常業務の中で学べる環境を実現<br>
+                  ・実務を通じたスキル伝達とその場での実演により、理解と定着をサポート</p>
               </div>
             </div>
           </SplideSlide>
           <SplideSlide class="service__container__casestudy__splide__item">
             <div class="service__container__casestudy__splide__item-title">
-              <p>某大手空間デザイン企業様</p>
-              <h3>業務直結型BIMカリキュラムで人材育成</h3>
+              <p>某人材育成支援企業様</p>
+              <div class="service__container__casestudy__splide__item-title__text">
+                <h3>BIMリスキリング講座の<br>
+                  カリキュラム設計から<br>講師をトータルサポート</h3>
+              </div>
             </div>
             <div class="service__container__casestudy__splide__item-tag">
               <p class="tag">制作</p>
-              <p class="tag dark">推進</p>
-              <p class="tag">教育</p>
+              <p class="tag">推進</p>
+              <p class="tag dark">教育</p>
             </div>
             <div class="service__container__casestudy__splide__item-contents">
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>課題　：</h4>
-                <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+                <p>BIM未経験者向けリスキリング講座の開講にあたり、<br>
+                  転職につながる実践スキル習得を見据えた教材と講師が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>提供支援内容　：</h4>
-                <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  BIM教育講座の教材をゼロから制作<br>
-                  講師として社内トレーニングも実施</p>
+                <p>・ウェビナー形式のライブレッスン講座を設計
+                  （プロジェクト編／ファミリ編／ビジュアライズ編／Revitユーザー資格対策）<br>
+                  ・各講座の教材コンテンツをゼロから制作<br>
+                  ・講師として登壇し、双方向型のウェビナー指導を実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>・基礎から資格対策までをカバーし、実務に応用できるスキル習得を支援<br>
+                  ・段階的な学びで理解を深め、即戦力人材の育成に貢献</p>
               </div>
             </div>
           </SplideSlide>
@@ -1652,20 +1685,32 @@ export default {
           display: block;
           background-color: #fff;
           width: min(1220px, 83.33vw);
-          height: min(533px, 37.01vw);
-          border-radius: min(120px, 8.33vw);
+          height: min(570px, 39.58vw);
+          border-radius: min(60px, 4.16vw);
           padding: min(40px, 2.77vw);
           .service__container__casestudy__splide__item-title {
             position: relative;
             text-align: center;
             p {
-              font-size: min(18px, 1.25vw);
+              font-size: min(14px, 0.97vw);
               font-weight: 500;
             }
-            h3 {
-              font-size: min(36px, 2.5vw);
-              font-weight: 700;
+            &__text {
+              margin-top: min(10px, 0.69vw);
+              height: min(90px, 6.25vw);
+              position: relative;
+              h3 {
+                font-size: min(32px, 2.22vw);
+                font-weight: 700;
+                height: auto;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
             }
+
           }
           .service__container__casestudy__splide__item-tag {
             display: flex;
@@ -1681,7 +1726,7 @@ export default {
               text-align: center;
               line-height: min(32px, 2.22vw);
               border-radius: min(150px, 10.41vw);
-              color: #808080;
+              color: white;
               &.dark {
                 color: #fff;
                 background-color: #3676B6;
@@ -1701,14 +1746,15 @@ export default {
               gap: min(30px, 2.08vw);
               margin-bottom: min(20px, 1.38vw);
               h4 {
-                font-size: min(20px, 1.38vw);
+                font-size: min(16px, 1.11vw);
                 font-weight: 700;
                 text-align: right;
                 letter-spacing: 0.03em;
                 width: min(165px, 11.45vw);
+                height: min(32px, 2.22vw);
               }
               p {
-                font-size: min(18px, 1.25vw);
+                font-size: min(14px, 0.97vw);
                 font-weight: 500;
                 width: min(772px, 53.61vw);
                 letter-spacing: 0.05em;
@@ -1732,7 +1778,7 @@ export default {
           position: relative;
           display: block;
           background-color: #fff;
-          width: 94.66vw;
+          width: 92vw;
           //height: 190.39vw;
           height: auto;
           border-radius: 10.66vw;
@@ -1741,15 +1787,26 @@ export default {
             position: relative;
             text-align: center;
             p {
-              font-size: 4.26vw;
+              font-size: 2.66vw;
               margin-top: 8vw;
               font-weight: 500;
             }
-            h3 {
-              font-size: 6.4vw;
-              font-weight: 700;
-              margin-top: 2.13vw;
+            &__text {
+              height: 20.26vw;
+              position: relative;
+              h3 {
+                font-size: 4.26vw;
+                font-weight: 700;
+                margin-top: 2.13vw;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: auto;
+              }
             }
+
           }
           .service__container__casestudy__splide__item-tag {
             display: flex;
@@ -1758,15 +1815,15 @@ export default {
             padding: min(20px, 1.38vw) 0;
             margin-top: 4.26vw;
             .tag {
-              font-size: 4.26vw;
+              font-size: 3.26vw;
               font-weight: 500;
-              width: 24vw;
-              height: 6.93vw;
+              width: 20vw;
+              height: 5.93vw;
               background-color: #DCF4FF;
               text-align: center;
-              line-height: 6.93vw;
+              line-height: 5.93vw;
               border-radius: 10.66vw;
-              color: #808080;
+              color: white;
 
               &.dark {
                 color: #fff;
@@ -1777,15 +1834,18 @@ export default {
           .service__container__casestudy__splide__item-contents {
             background-color: #F2F2F2;
             width: 86.66vw;
-            height: 128vw;
+            //height: 128vw;
             border-radius: 2.66vw;
-            margin: 8vw auto 0;
+            margin: 4vw auto 0;
             padding: 5.33vw;
+            height: 120vw;
             .service__container__casestudy__splide__item-contents-text {
               display: block;
               margin-bottom: min(20px, 1.38vw);
+              
+              padding: 1vw 0;
               h4 {
-                font-size: 4.8vw;
+                font-size: 3.8vw;
                 font-weight: 700;
                 text-align: left;
                 letter-spacing: 0.03em;
@@ -1793,7 +1853,7 @@ export default {
                 margin-top: 2.33vw;
               }
               p {
-                font-size: 4.26vw;
+                font-size: 3.26vw;
                 font-weight: 500;
                 line-height: 1.6;
                 width: auto;
@@ -1838,8 +1898,9 @@ export default {
     .service__container__bimProduction__bg2 {
       position: absolute;
       top: 24%;
-      left: -6%;
+      left: -0%;
       height: 100%;
+      transform: translateX(-30%);
       .service__container__bimProduction__bg__contents {
         margin-left: min(2.77vw, 40px);
         transform: translate3d(0, var(--scroll-offset, 0px), 0);
@@ -1853,7 +1914,7 @@ export default {
           transform: scale(0);
           transition: transform 0.5s ease-in-out;
           @include mixins.max-screen(768px) {
-            width: 36.26vw;
+            width: 30.26vw;
           }
           &.inview {
             transform: scale(1);

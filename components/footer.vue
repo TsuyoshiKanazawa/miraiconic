@@ -99,16 +99,10 @@
     </div>
     <a class="footer__contact" href="/contact">
       <p>Contact</p>
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="white"/>
-        <circle cx="18" cy="18" r="17.5" stroke="white"/>
-      </svg>
+      <img src="/img/contact-arrow.svg" alt="arrow">
     </a>
     <div class="arrow__up" @click="scrollToTop">
-      <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="35" cy="35" r="34" stroke="#3676B6" stroke-width="2"/>
-      <path d="M46.2476 45C47.0219 45 47.5024 44.1579 47.1085 43.4913L35.8609 24.457C35.4739 23.8019 34.5261 23.8019 34.1391 24.457L22.8915 43.4913C22.4976 44.1579 22.9781 45 23.7524 45L46.2476 45Z" stroke="#3676B6" stroke-width="2"/>
-      </svg>
+      <img src="/img/up-arrow.svg" alt="arrow">
     </div>
     <div class="footer__copyright">
       <p>
@@ -262,7 +256,7 @@ export default {
         line-height: 16.53vw;
       }
     }
-    svg {
+    img {
       width: min(47px, 3.26vw);
       height: min(47px, 3.26vw);
       margin-left: min(1.38vw, 20px);
@@ -296,7 +290,7 @@ export default {
       top: 10vw;
       right: 6vw;
     }
-    svg {
+    img {
       width: min(70px, 4.86vw);
       height: min(70px, 4.86vw);
       @include mixins.max-screen(768px) {

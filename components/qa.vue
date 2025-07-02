@@ -1,8 +1,8 @@
 <template>
-  <section class="qa">
+  <section class="qa" id="faq">
     <div class="qa__container">
       <div class="mask">
-        <h3 class="qa__title" v-observe="'inview'">Q&A</h3>
+        <h3 class="qa__title" v-observe="'inview'">FAQ</h3>
       </div>
       <img loading="lazy" v-if="!useIsMobile().value" src="/img/titleLine.svg" alt="line" class="title_line">
       <img loading="lazy" v-else src="/img/titleLine-sp.svg" alt="line" class="title_line">

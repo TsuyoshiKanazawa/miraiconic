@@ -6,7 +6,7 @@
         FAQ
       </h2>
       <img loading="lazy" src="/img/top/titleLineSpWhite.svg" alt="faq" class="faq-line">
-      <a href="/about" class="faq-wrap">
+      <a href="/service#faq" class="faq-wrap">
         <p>よくあるご質問はこちら</p>
         <img loading="lazy" src="/img/top/faqArrow.svg" alt="faq" class="faq-arrow">
       </a>   

@@ -98,7 +98,7 @@ export default defineNuxtConfig({
         priority: 0.8
       },
       {
-        loc: '/privacy',
+        loc: '/privacypolicy',
         changefreq: 'daily',
         priority: 0.8
       }

@@ -29,49 +29,50 @@
           </div>
           <div class="casestudy-item-contents-text">
             <h4>提供支援内容：</h4>
-            <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-              BIM教育講座の教材をゼロから制作<br>
-              講師として社内トレーニングも実施</p>
+            <p>・お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
+              ・BIM教育講座の教材をゼロから制作<br>
+              ・講師として社内トレーニングも実施</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>成果：</h4>
-            <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-              教育の定着を見据えた運用体制の構築にも貢献</p>
+            <p>・受講者の理解度が向上し、BIMの社内活用が加速<br>
+              ・教育の定着を見据えた運用体制の構築にも貢献</p>
           </div>
         </div>
       </SplideSlide>
       <SplideSlide class="casestudy-item">
         <div class="casestudy-item-title">
           <p>某大手空間デザイン企業様</p>
-          <h3>業務直結型BIMカリキュラムで人材育成</h3>
+          <h3>多店舗展開に向けた<br>BIMテンプレート設計とモデル制作</h3>
         </div>
         <div class="casestudy-item-tag">
-          <p class="tag">制作</p>
+          <p class="tag dark">制作</p>
           <p class="tag dark">推進</p>
           <p class="tag">教育</p>
         </div>
         <div class="casestudy-item-contents">
           <div class="casestudy-item-contents-text">
             <h4>課題　：</h4>
-            <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+            <p>多店舗展開を見据えたBIM活用において、<br>
+              設計の効率化と情報の一元化が課題となっていた。</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>提供支援内容　：</h4>
-            <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-              BIM教育講座の教材をゼロから制作<br>
-              講師として社内トレーニングも実施</p>
+            <p>・複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
+              ・ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
+              ・効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>成果　：</h4>
-            <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-              教育の定着を見据えた運用体制の構築にも貢献</p>
+            <p>・CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
+              ・社内での設計ルール共有と品質の均一化を実現</p>
           </div>
         </div>
       </SplideSlide>
       <SplideSlide class="casestudy-item">
         <div class="casestudy-item-title">
-          <p>某大手空間デザイン企業様</p>
-          <h3>業務直結型BIMカリキュラムで人材育成</h3>
+          <p>某大手不動産ディベロッパー様</p>
+          <h3>共同住宅の意匠・構造・設備(MEP)の<br>BIMモデリング</h3>
         </div>
         <div class="casestudy-item-tag">
           <p class="tag dark">制作</p>
@@ -81,18 +82,19 @@
         <div class="casestudy-item-contents">
           <div class="casestudy-item-contents-text">
             <h4>課題　：</h4>
-            <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
+            <p>複数の設計領域にわたる共同住宅のBIM化において、<br>
+              意匠・構造・設備(MEP)を統合的に扱える制作が求められていた。</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>提供支援内容　：</h4>
-            <p>お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-              BIM教育講座の教材をゼロから制作<br>
-              講師として社内トレーニングも実施</p>
+            <p>・意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
+              ・各設計フェーズでの整合性確保と情報可視化をサポート<br>
+              ・複数設計領域を一貫して統合することで、設計の効率化を支援</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>成果　：</h4>
-            <p>受講者の理解度が向上し、BIMの社内活用が加速<br>
-              教育の定着を見据えた運用体制の構築にも貢献</p>
+            <p>・分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
+              ・以降の設計・施工フェーズでのBIM活用基盤を提供</p>
           </div>
         </div>
       </SplideSlide>
@@ -190,14 +192,14 @@ export default {
       &-title {
         font-size: 4.26vw;
         text-align: center;
-        padding: 7vw 0;
+        padding: 7vw 0 3vw;
         p {
-          font-size: 4.8vw;
+          font-size: 2.66vw;
           letter-spacing: 0.05em;
           font-weight: 400;
         }
         h3 {
-          font-size: 6.4vw;
+          font-size: 4.26vw;
           letter-spacing: 0.03em;
           margin-top: 1.5vw;
           font-weight: 700;
@@ -209,15 +211,15 @@ export default {
         gap: 1.33vw;
         padding: 0 4vw;
         .tag {
-          font-size: 4.26vw;
+          font-size:  3.26vw;
           font-weight: 500;
-          width: 24vw;
-          height: 6.93vw;
+          width: 20vw;
+          height: 5.93vw;
           background-color: #DCF4FF;
           text-align: center;
-          line-height: 6.93vw;
+          line-height: 5.93vw;
           border-radius: 40vw;
-          color: #808080;
+          color: white;
           &.dark {
             color: #fff;
             background-color: #3676B6;
@@ -228,16 +230,17 @@ export default {
         padding: 4vw 4vw;
         background-color: #F2F2F2;
         border-radius: 2.66vw;
-        margin-top: 10vw;
+        margin-top: 5vw;
+        height: 105vw;
         &-text {
           padding: 3vw 0vw;
           h4 {
-            font-size: 4.8vw;
+            font-size: 3.8vw;
             font-weight: 700;
             letter-spacing: 0.03em;
           }
           p {
-            font-size: 4.26vw;
+            font-size: 3.26vw;
             letter-spacing: 0.05em;
           }
         }
