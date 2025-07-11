@@ -2,14 +2,14 @@
   <div class="service">
     <FormsTop title="SERVICE" subTitle="事業概要" />
     <div class="service__container">
-      <div class="service__container__title">
+      <section class="service__container__title">
         <h2 v-observe="'inview'">BIM活用の制作受託から<br>
           推進・教育支援までを<br class="sp-only">トータルサポート​</h2>
         <p v-observe="'inview'">BIM（Building Information Modeling）の<br class="sp-only">豊富な実務経験を持つスタッフが、<br>
           高品質なBIMモデルの構築 および <br class="sp-only">初級者～上級者まで幅広いレベルに対応した<br class="sp-only">教育プログラムをご提供します。​</p>
         <div class="service__container__title__border"></div>
-      </div>
-      <div class="service__container__bimProduction">
+      </section>
+      <section class="service__container__bimProduction">
         <div class="service__container__bimProduction__title">
           <h2 v-observe="'inview'">BIM PRODUCTION</h2>
           <hr />
@@ -42,8 +42,8 @@
           ● 手描き・2D図面からの3D化支援<br>
           ● 従来のCAD図面制作　など
         </div>
-      </div>
-      <div class="service__container__bimSupport">
+      </section>
+      <section class="service__container__bimSupport">
         <div class="service__container__bimSupport__title">
           <h2 v-observe="'inview'">BIM SUPPORT</h2>
           <hr />
@@ -75,8 +75,8 @@
           ●資格取得支援を含む、<br>BIM人材育成戦略のサポート<br>
           ●BIMコーディネーター支援　など​
         </div>
-      </div>
-      <div class="service__container__application" v-observe="'inview'">
+      </section>
+      <section class="service__container__application" v-observe="'inview'">
         <h2 class="service__container__application__title">対応可能アプリケーション</h2>
         <div class="service__container__application__list">
           <p class="service__container__application__list__item">Revit</p>
@@ -91,8 +91,8 @@
         <p class="service__container__application__text">
           その他のアプリケーション（ソフトウェア）に<br class="sp-only">ついてもご相談ください
         </p>
-      </div>
-      <div class="service__container__features">
+      </section>
+      <section class="service__container__features" id="features">
         <div class="service__container__features__title">
           <div class="mask">
             <h3 class="service__container__features__title__text" v-observe="'inview'">Features</h3>
@@ -221,8 +221,8 @@
             <div class="service__container__features__contentsSp__item__line" />
           </div>
         </div>
-      </div>
-      <div class="service__container__member">
+      </section>
+      <section class="service__container__member" id="member">
         <div class="service__container__member__title">
           <div class="mask">
             <h3 class="service__container__member__title__text" v-observe="'inview'">Member</h3>
@@ -379,8 +379,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="service__container__casestudy">
+      </section>
+      <section class="service__container__casestudy" id="casestudy">
         <div class="service__container__casestudy__title">
           <div class="mask">
             <h3 class="service__container__casestudy__title__text" v-observe="'inview'">Case study</h3>
@@ -716,7 +716,7 @@
             </div>
           </SplideSlide>
         </Splide>
-      </div>
+      </section>
       <Qa />
       <div class="service__container__bimProduction__bg1" style="z-index: 0;">
         <div class="service__container__bimProduction__bg__contents">

@@ -240,7 +240,6 @@ export default {
       border-top-left-radius: 2.66vw;
       border-bottom-left-radius: 2.66vw;
       padding-left: 5vw;
-      padding-top: 1vw;
       box-shadow: 1.06vw 1.06vw 0 0 #252526;
     }
     p {

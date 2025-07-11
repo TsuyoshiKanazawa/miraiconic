@@ -55,7 +55,7 @@
               <p class="features-item-text3">技術力と伝える力、その両輪で現場に向き合い、<br>お客様に寄り添います。</p>
               <p class="features-item-text4">ただ新しいだけのDXではなく、<br>変革の足元を照らし続けます。</p>
             </div>
-            <FormsButtonWhite2 class="features-button" name="More" link="/about" />
+            <FormsButtonWhite2 class="features-button" name="More" link="/service#features" />
           </div>
           <img loading="lazy" src="/img/top/topFeatures-pt1.svg" alt="background" class="features-pt1">
           <img loading="lazy" src="/img/top/topFeatures-pt2.svg" alt="background" class="features-pt2">

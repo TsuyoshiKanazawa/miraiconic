@@ -9,7 +9,7 @@
       <p class="features-wrap-item" v-observe="'inview'">私たちが目指すのは、<br>“実務に根づくBIM”。</p>
       <p class="features-wrap-item" v-observe="'inview'">技術力と伝える力、その両輪で現場に向き合い、<br>お客様に寄り添います。</p>
       <p class="features-wrap-item" v-observe="'inview'">ただ新しいだけのDXではなく、<br>変革の足元を照らし続けます。</p>
-      <FormsButtonWhite2 name="More" link="/about" />
+      <FormsButtonWhite2 name="More" link="/service#features" />
       <div class="feature__bg__wrapper1" style="z-index: 1;">
         <div class="feature__bg__wrapper__contents1">
           <img loading="lazy" src="/img/top/topFeatures-pt1.svg" alt="feature_bg" class="feature__container__pt1" v-observe="'inview'">
