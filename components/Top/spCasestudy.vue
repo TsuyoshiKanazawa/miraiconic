@@ -124,7 +124,7 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide'
 import '@splidejs/vue-splide/css'
 
 const splideOptions = {
-  type: 'loop',
+  type: 'slide',
   speed: 750,
   perPage: 1,
   drag: 'free',

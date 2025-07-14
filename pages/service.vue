@@ -778,7 +778,7 @@ export default {
         arrowHeight: 40,
       },
       splideOptionsSp: {
-        type: 'loop',
+        type: 'slide',
         speed: 750,
         perPage: 1,
         drag: 'free',

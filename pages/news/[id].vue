@@ -22,19 +22,13 @@
     </div>
     <div class="news-detail-buttons">
       <button class="back-button back" @click="back" :disabled="!prevItem">
-        <svg class="back-button-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.4855 10.9087C23.152 10.5088 24 10.9889 24 11.7662V26.2338C24 27.0111 23.152 27.4912 22.4855 27.0913L10.4292 19.8575C9.78182 19.4691 9.78182 18.5309 10.4292 18.1425L22.4855 10.9087Z" fill="white"/>
-          <circle cx="18" cy="18" r="17.5" transform="matrix(-1 0 0 1 36 0)" stroke="white"/>
-        </svg>
+        <img src="/img/news/news-arrow-leftW.svg" alt="arrow" class="back-button-svg">
         前の記事
       </button>
       <a class="back-button ichiran" href="/news">一覧へ戻る</a>
       <button class="back-button" @click="next" :disabled="!nextItem">
         次の記事
-        <svg class="next-button-svg next" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="white"/>
-          <circle cx="18" cy="18" r="17.5" stroke="white"/>
-        </svg>
+        <img src="/img/news/news-arrow-rightW.svg" alt="arrow" class="next-button-svg">
       </button>
     </div>
     <div class="news-bg__wrapper top" :style="{ transform: 'translateY(' + parallaxOffset + 'px)' }">
@@ -254,9 +248,10 @@ export default {
         }
       }
 
-      svg {
+      img {
         position: absolute;
         transform: translateY(-50%);
+        width: min(36px, 2.5vw);
         @include mixins.max-screen(768px) {
           width: 7.46vw;
         }
@@ -409,6 +404,16 @@ export default {
       @include mixins.max-screen(768px) {
         width: 90%;
       }
+    }
+  }
+  ul {
+    li {
+      margin-left: 1.5em;
+    }
+  }
+  ol {
+    li {
+      margin-left: 1.5em;
     }
   }
 }

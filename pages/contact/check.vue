@@ -280,20 +280,23 @@ export default {
       font-size: min(22px, 1.52vw);
       border-radius: min(60px, 4.16vw);
       box-shadow: min(4px, 0.27vw) min(4px, 0.27vw) 0 0 #252526;
+      //filter: drop-shadow(min(4px, 0.27vw) min(4px,0.27vw) 0px #252526);
       margin: 2vw auto 1vw;
       display: block;
       transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
       border: 2px solid #3676B6;
       position: relative;
       font-weight: 500;
+      will-change: box-shadow;
       @include mixins.max-screen(768px) {
-        width: 100%;
+        width: 99%;
         height: 10.66vw;
         border-radius: 16vw;
         font-size: 5.33vw;
         margin: 5vw auto 2vw;
         border: 0.53vw solid #3676B6;
         box-shadow: 1.06vw 1.06vw 0 0 #252526;
+        //filter: drop-shadow(1.06vw 1.06vw 0px #252526);
       }
       img {
         position: absolute;

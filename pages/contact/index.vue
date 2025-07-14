@@ -45,10 +45,7 @@
       </div>
       <button class="contact__background__button" @click="confirm">
         確認画面に進む
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="white"/>
-          <circle cx="18" cy="18" r="17.5" stroke="white"/>
-        </svg>
+        <img src="/img/contact/contact-arrow.svg" alt="arrow" class="contact__background__button__arrow">
       </button>
     </div>
   </div>
@@ -255,7 +252,8 @@ export default {
       color: #fff;
       font-size: min(22px, 1.52vw);
       border-radius: min(60px, 4.16vw);
-      box-shadow: min(4px, 0.27vw) min(4px, 0.27vw) 0 0 #252526;
+      //box-shadow: min(4px, 0.27vw) min(4px, 0.27vw) 0 0 #252526;
+      filter: drop-shadow(min(4px, 0.27vw) min(4px,0.27vw) 0px #252526);
       margin: 4vw auto 1vw;
       display: block;
       transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
@@ -263,14 +261,15 @@ export default {
       position: relative;
       font-weight: 500;
       @include mixins.max-screen(768px) {
-        width: 100%;
+        width: 99%;
         height: 10.66vw;
         border-radius: 16vw;
         font-size: 5.33vw;
         margin: 10vw auto 2vw;
-        
+        //box-shadow: 1.06vw 1.33vw 0 0 #252526;
+        filter: drop-shadow(1.06vw 1.06vw 0px #252526);
       }
-      svg {
+      img {
         position: absolute;
         top: 50%;
         right: min(12px, 0.83vw);
@@ -287,7 +286,7 @@ export default {
         &:hover {
           background-color: #fff;
           color: #3676B6;
-          svg {
+          img {
             path {
               fill: #3676B6;
             }

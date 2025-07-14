@@ -3,10 +3,7 @@
     <nuxt-link :to="link" class="button__inner">
       {{ name }}
     </nuxt-link>
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="white"/>
-      <circle cx="18" cy="18" r="17.5" stroke="white"/>
-    </svg>
+    <img src="/img/buttonIcon.svg" alt="arrow" class="button__icon">
   </div>
 </template>
 
@@ -72,23 +69,18 @@ export default {
       line-height: 1.3;
     }
   }
-  svg {
+  img {
     position: absolute;
     top: 20%;
     right: min(12px, 0.83vw);
     width: min(36px, 2.4vw);
     height: min(36px, 2.4vw);
-    path {
-      fill: #85C1DE;
-    }
-    circle {
-      stroke: #85C1DE;
-    }
+    filter: brightness(0) saturate(100%) invert(83%) sepia(69%) saturate(3776%) hue-rotate(167deg) brightness(96%) contrast(79%);
     @include mixins.max-screen(768px) {
       width: 7.46vw;
       height: 7.46vw;
       right: 1vw;
-      top: 14%;
+      top: 12%;
     }
 
   }
@@ -98,13 +90,8 @@ export default {
       .button__inner {
         color: #fff !important;
       }
-      svg {
-        path {
-          fill: #fff;
-        }
-        circle {
-          stroke: #fff;
-        }
+      img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(17%) saturate(2641%) hue-rotate(347deg) brightness(120%) contrast(108%);
       }
     }
   }

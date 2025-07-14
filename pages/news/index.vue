@@ -42,10 +42,7 @@
       <div class="pagination">
         <button class="pagination-button" @click="prevPage" :disabled="currentPage === 1">
           <!-- 前へ -->
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.4855 10.9087C23.152 10.5088 24 10.9889 24 11.7662V26.2338C24 27.0111 23.152 27.4912 22.4855 27.0913L10.4292 19.8575C9.78182 19.4691 9.78182 18.5309 10.4292 18.1425L22.4855 10.9087Z" fill="#252526"/>
-            <circle cx="18" cy="18" r="17.5" transform="matrix(-1 0 0 1 36 0)" stroke="#252526"/>
-          </svg>
+          <img src="/img/news/news-arrow-left.svg" alt="arrow">
         </button>
         <button
           v-for="page in pagesToShow"
@@ -62,10 +59,7 @@
         </button>
         <button class="pagination-button" @click="nextPage" :disabled="currentPage === totalPages">
           <!-- 次へ -->
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="#252526"/>
-            <circle cx="18" cy="18" r="17.5" stroke="#252526"/>
-          </svg>
+          <img src="/img/news/news-arrow-right.svg" alt="arrow">
         </button>
       </div>
     </div>
@@ -245,7 +239,7 @@ export default defineComponent({
           height: 6.66vw;
           border-radius: 16vw;
           font-size: 5.86vw;
-          line-height: 6.13vw;
+          line-height: 5.5vw;
           border: 0.53vw solid #3676B6;
         }
         &:hover {
@@ -321,14 +315,14 @@ export default defineComponent({
         }
       }
       .pagination-button {
-        svg {
+        img {
           @include mixins.max-screen(768px) {
             width: 8vw;
             height: 8vw;
           }
         }
         &:disabled {
-          svg {
+          img {
             opacity: 0.5;
           }
         }
