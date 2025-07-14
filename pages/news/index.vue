@@ -245,7 +245,8 @@ export default defineComponent({
           height: 6.66vw;
           border-radius: 16vw;
           font-size: 5.86vw;
-          line-height: 6.66vw;
+          line-height: 6.13vw;
+          border: 0.53vw solid #3676B6;
         }
         &:hover {
           background-color: #fff;

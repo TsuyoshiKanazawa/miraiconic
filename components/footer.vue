@@ -265,17 +265,14 @@ export default {
         margin-left: 4vw;
       }
     }
-    &:hover {
-      background-color: #fff;
-      p {
-        color: #3676B6;
-      }
-      svg {
-        path {
-          fill: #3676B6;
+    @include mixins.min-screen(769px) {
+      &:hover {
+        background-color: #fff;
+        p {
+          color: #3676B6;
         }
-        circle {
-          stroke: #3676B6;
+        img {
+          filter: brightness(0) saturate(100%) invert(40%) sepia(48%) saturate(727%) hue-rotate(168deg) brightness(96%) contrast(86%);
         }
       }
     }

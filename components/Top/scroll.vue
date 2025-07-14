@@ -262,18 +262,24 @@ onMounted(() => {
     margin: 0 0 min(3.47vw, 50px);
     .service-title {
       h2 {
-        font-size: min(11.11vw, 160px);
+        font-size: min(17.77vh, 160px);
         font-family: "Barlow Condensed", sans-serif;
         font-weight: 600;
         font-style: normal;
         //letter-spacing: 0.03em;
         letter-spacing: 0.001em;
+        @include mixins.max-screen(920px) {
+          font-size: 10.77vh;
+        }
       }
       p {
-        font-size: min(1.94vw, 28px);
+        font-size: min(3.11vh, 28px);
         font-weight: 500;
         letter-spacing: 0.03em;
         line-height: 1.8;
+        @include mixins.max-screen(920px) {
+          font-size: 1.77vh;
+        }
       }
     }
     .service-cross {
@@ -284,22 +290,31 @@ onMounted(() => {
       .service-item {
         text-align: center;
         h3 {
-          font-size: min(8.33vw, 120px);
+          font-size: min(13.33vh, 120px);
           font-family: "Barlow Condensed", sans-serif;
           font-weight: 600;
           font-style: normal;
           //letter-spacing: 0.03em;
           letter-spacing: 0.001em;
+          @include mixins.max-screen(920px) {
+            font-size: 10.77vh;
+          }
         }
         h4 {
-          font-size: min(2.91vw, 42px);
+          font-size: min(4.66vh, 42px);
           font-weight: 700;
           letter-spacing: 0.03em;
+          @include mixins.max-screen(920px) {
+            font-size: 1.77vh;
+          }
         }
         p {
-          font-size: min(1.11vw, 16px);
+          font-size: min(1.77vh, 16px);
           font-weight: 400;
           letter-spacing: 0.03em;
+          @include mixins.max-screen(920px) {
+            font-size: 1vh;
+          }
         }
       }
     }
@@ -331,13 +346,13 @@ onMounted(() => {
         padding: min(3.47vw, 50px) 0;
         z-index: 1;
         p {
-          font-size: min(1.94vw, 28px);
+          font-size: min(3.11vh, 28px);
           font-weight: 400;
           letter-spacing: 0.03em;
           line-height: 2.8;
         }
         h2 {
-          font-size: min(11.11vw, 160px);
+          font-size: min(17.77vh, 160px);
           font-family: "Barlow Condensed", sans-serif;
           font-weight: 600;
           font-style: normal;

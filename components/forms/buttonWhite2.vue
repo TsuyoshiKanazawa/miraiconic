@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .button {
+  will-change: filter;
   background-color: #fff;
   color: #85C1DE !important;
   border-radius: 5px;
@@ -73,9 +74,8 @@ export default {
   }
   svg {
     position: absolute;
-    top: 50%;
+    top: 20%;
     right: min(12px, 0.83vw);
-    transform: translateY(-50%);
     width: min(36px, 2.4vw);
     height: min(36px, 2.4vw);
     path {
@@ -88,6 +88,7 @@ export default {
       width: 7.46vw;
       height: 7.46vw;
       right: 1vw;
+      top: 14%;
     }
 
   }

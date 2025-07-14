@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .button {
+  will-change: filter;
   background-color: #3676B6;
   color: #fff !important;
   width: min(500px, 34.72vw);
@@ -74,15 +75,15 @@ export default {
   }
   svg {
     position: absolute;
-    top: 50%;
+    top: 20%;
     right: min(12px, 0.83vw);
-    transform: translateY(-50%);
     width: min(36px, 2.4vw);
     height: min(36px, 2.4vw);
     @include mixins.max-screen(768px) {
       width: 7.46vw;
       height: 7.46vw;
       right: 1vw;
+      top: 14%;
     }
 
   }

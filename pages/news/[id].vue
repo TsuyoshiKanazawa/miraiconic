@@ -28,7 +28,7 @@
         </svg>
         前の記事
       </button>
-      <NuxtLink class="back-button ichiran" to="/news">一覧へ戻る</NuxtLink>
+      <a class="back-button ichiran" href="/news">一覧へ戻る</a>
       <button class="back-button" @click="next" :disabled="!nextItem">
         次の記事
         <svg class="next-button-svg next" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

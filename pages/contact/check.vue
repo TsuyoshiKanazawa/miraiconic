@@ -43,17 +43,11 @@
       </div>
       <button class="contact__background__button back" @click="back">
         戻る
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.4855 10.9087C23.152 10.5088 24 10.9889 24 11.7662V26.2338C24 27.0111 23.152 27.4912 22.4855 27.0913L10.4292 19.8575C9.78182 19.4691 9.78182 18.5309 10.4292 18.1425L22.4855 10.9087Z" fill="white"/>
-          <circle cx="18" cy="18" r="17.5" transform="matrix(-1 0 0 1 36 0)" stroke="white"/>
-        </svg>
+        <img src="/img/contact/contact-arrow-left.svg" alt="back">
       </button>
       <button class="contact__background__button" @click="send" :disabled="!checkbox">
         送信
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.5145 10.9087C12.848 10.5088 12 10.9889 12 11.7662V26.2338C12 27.0111 12.848 27.4912 13.5145 27.0913L25.5708 19.8575C26.2182 19.4691 26.2182 18.5309 25.5708 18.1425L13.5145 10.9087Z" fill="white"/>
-          <circle cx="18" cy="18" r="17.5" stroke="white"/>
-        </svg>
+        <img src="/img/contact/contact-arrow.svg" alt="back">
       </button>
     </div>
   </div>
@@ -301,60 +295,44 @@ export default {
         border: 0.53vw solid #3676B6;
         box-shadow: 1.06vw 1.06vw 0 0 #252526;
       }
-      svg {
+      img {
         position: absolute;
-        top: 50%;
+        top: 20%;
         right: min(12px, 0.83vw);
-        transform: translateY(-50%);
         width: min(36px, 2.4vw);
         height: min(36px, 2.4vw);
         @include mixins.max-screen(768px) {
           width: 7.46vw;
           height: 7.46vw;
           right: 1vw;
+          top: 15%;
         }
       }
       &:hover {
         background-color: #fff;
         color: #3676B6;
-        svg {
-          path {
-            fill: #3676B6;
-          }
-          circle {
-            stroke: #3676B6;
-          }
+        img {
+          filter: brightness(0) saturate(100%) invert(42%) sepia(54%) saturate(576%) hue-rotate(168deg) brightness(92%) contrast(95%);
         }
       }
       &.back {
-        background-color: #fff;
-        color: #3676B6;
-        border: 2px solid #3676B6;
+        background-color: #A0A0A0;
+        color: #fff;
+        border: 2px solid #A0A0A0;
         @include mixins.max-screen(768px) {
-          border: 0.53vw solid #3676B6;
+          border: 0.53vw solid #A0A0A0;
         }
-        svg {
+        img {
           left: min(12px, 0.83vw);
           @include mixins.max-screen(768px) {
             left: 1vw;
           }
-          path {
-            fill: #3676B6;
-          }
-          circle {
-            stroke: #3676B6;
-          }
         }
         &:hover {
-          background-color: #3676B6;
-          color: #fff;
-          svg {
-            path {
-              fill: #fff;
-            }
-            circle {
-              stroke: #fff;
-            }
+          background-color: #fff;
+          color: #A0A0A0;
+          img {
+            filter: brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(95%) contrast(85%);
           }
         }
       }
@@ -366,13 +344,8 @@ export default {
         &:hover {
           background-color: #3676B6;
           color: #fff;
-          svg {
-            path {
-              fill: #fff;
-            }
-            circle {
-              stroke: #fff;
-            }
+          img {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(84%) saturate(7%) hue-rotate(201deg) brightness(102%) contrast(99%);
           }
         }
       }

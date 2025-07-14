@@ -15,7 +15,9 @@
       <SplideSlide class="casestudy-item">
         <div class="casestudy-item-title">
           <p>某大手空間デザイン企業様</p>
-          <h3>業務直結型<br>BIMカリキュラムで人材育成</h3>
+          <div class="casestudy-item-title__text">
+            <h3>業務直結型<br>BIMカリキュラムで人材育成</h3>
+          </div>
         </div>
         <div class="casestudy-item-tag">
           <p class="tag">制作</p>
@@ -28,22 +30,24 @@
             <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
           </div>
           <div class="casestudy-item-contents-text">
-            <h4>提供支援内容：</h4>
-            <p>・お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-              ・BIM教育講座の教材をゼロから制作<br>
-              ・講師として社内トレーニングも実施</p>
+            <h4>支援内容：</h4>
+            <p>● お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
+              ● BIM教育講座の教材をゼロから制作<br>
+              ● 講師として社内トレーニングも実施</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>成果：</h4>
-            <p>・受講者の理解度が向上し、BIMの社内活用が加速<br>
-              ・教育の定着を見据えた運用体制の構築にも貢献</p>
+            <p>● 受講者の理解度が向上し、BIMの社内活用が加速<br>
+              ● 教育の定着を見据えた運用体制の構築にも貢献</p>
           </div>
         </div>
       </SplideSlide>
       <SplideSlide class="casestudy-item">
         <div class="casestudy-item-title">
           <p>某大手空間デザイン企業様</p>
-          <h3>多店舗展開に向けた<br>BIMテンプレート設計とモデル制作</h3>
+          <div class="casestudy-item-title__text">
+            <h3>多店舗展開に向けた<br>BIMテンプレート設計とモデル制作</h3>
+          </div>
         </div>
         <div class="casestudy-item-tag">
           <p class="tag dark">制作</p>
@@ -57,22 +61,24 @@
               設計の効率化と情報の一元化が課題となっていた。</p>
           </div>
           <div class="casestudy-item-contents-text">
-            <h4>提供支援内容　：</h4>
-            <p>・複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
-              ・ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
-              ・効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
+            <h4>支援内容　：</h4>
+            <p>● 複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
+              ● ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
+              ● 効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>成果　：</h4>
-            <p>・CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
-              ・社内での設計ルール共有と品質の均一化を実現</p>
+            <p>● CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
+              ● 社内での設計ルール共有と品質の均一化を実現</p>
           </div>
         </div>
       </SplideSlide>
       <SplideSlide class="casestudy-item">
         <div class="casestudy-item-title">
           <p>某大手不動産ディベロッパー様</p>
-          <h3>共同住宅の意匠・構造・設備(MEP)の<br>BIMモデリング</h3>
+          <div class="casestudy-item-title__text">
+            <h3>共同住宅の意匠・構造・設備(MEP)の<br>BIMモデリング</h3>
+          </div>
         </div>
         <div class="casestudy-item-tag">
           <p class="tag dark">制作</p>
@@ -86,15 +92,15 @@
               意匠・構造・設備(MEP)を統合的に扱える制作が求められていた。</p>
           </div>
           <div class="casestudy-item-contents-text">
-            <h4>提供支援内容　：</h4>
-            <p>・意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
-              ・各設計フェーズでの整合性確保と情報可視化をサポート<br>
-              ・複数設計領域を一貫して統合することで、設計の効率化を支援</p>
+            <h4>支援内容　：</h4>
+            <p>● 意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
+              ● 各設計フェーズでの整合性確保と情報可視化をサポート<br>
+              ● 複数設計領域を一貫して統合することで、設計の効率化を支援</p>
           </div>
           <div class="casestudy-item-contents-text">
             <h4>成果　：</h4>
-            <p>・分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
-              ・以降の設計・施工フェーズでのBIM活用基盤を提供</p>
+            <p>● 分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
+              ● 以降の設計・施工フェーズでのBIM活用基盤を提供</p>
           </div>
         </div>
       </SplideSlide>
@@ -122,7 +128,7 @@ const splideOptions = {
   speed: 750,
   perPage: 1,
   drag: 'free',
-  autoplay: true,
+  autoplay: false,
   interval: 3000,
   pauseOnHover: true,
   pauseOnFocus: true,
@@ -198,11 +204,20 @@ export default {
           letter-spacing: 0.05em;
           font-weight: 400;
         }
-        h3 {
-          font-size: 4.26vw;
-          letter-spacing: 0.03em;
-          margin-top: 1.5vw;
-          font-weight: 700;
+        &__text {
+          height: 20.26vw;
+          position: relative;
+          h3 {
+            font-size: 4.26vw;
+            letter-spacing: 0.03em;
+            margin-top: 1.5vw;
+            font-weight: 700;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
         }
       }
       &-tag {

@@ -314,7 +314,7 @@
                   Emiri
                 </h2>
                 <p class="service__container__member__contents__item__top__name__experience">BIM実務歴6年</p>
-                <p class="service__container__member__contents__item__top__name__license">BIM利用技術者検定 2級、<br>Revitユーザー資格試験合格</p>
+                <p class="service__container__member__contents__item__top__name__license">(株)emoneru／CEO</p>
               </div>
               <div class="service__container__member__contents__item__top__image">
                 <img loading="lazy" src="/img/service/koyama.png" alt="member">
@@ -416,15 +416,15 @@
                 <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  ・BIM教育講座の教材をゼロから制作<br>
-                  ・講師として社内トレーニングも実施</p>
+                <h4>支援内容　：</h4>
+                <p>● お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
+                  ● BIM教育講座の教材をゼロから制作<br>
+                  ● 講師として社内トレーニングも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  ・教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>● 受講者の理解度が向上し、BIMの社内活用が加速<br>
+                  ● 教育の定着を見据えた運用体制の構築にも貢献</p>
               </div>
             </div>
           </SplideSlide>
@@ -447,15 +447,15 @@
                   設計の効率化と情報の一元化が課題となっていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
-                  ・ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
-                  ・効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
+                <h4>支援内容　：</h4>
+                <p>● 複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
+                  ● ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
+                  ● 効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
-                  ・社内での設計ルール共有と品質の均一化を実現</p>
+                <p>● CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
+                  ● 社内での設計ルール共有と品質の均一化を実現</p>
               </div>
             </div>
           </SplideSlide>
@@ -478,15 +478,15 @@
                   意匠・構造・設備(MEP)を統合的に扱える制作が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
-                  ・各設計フェーズでの整合性確保と情報可視化をサポート<br>
-                  ・複数設計領域を一貫して統合することで、設計の効率化を支援</p>
+                <h4>支援内容　：</h4>
+                <p>● 意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
+                  ● 各設計フェーズでの整合性確保と情報可視化をサポート<br>
+                  ● 複数設計領域を一貫して統合することで、設計の効率化を支援</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
-                  ・以降の設計・施工フェーズでのBIM活用基盤を提供</p>
+                <p>● 分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
+                  ● 以降の設計・施工フェーズでのBIM活用基盤を提供</p>
               </div>
             </div>
           </SplideSlide>
@@ -508,15 +508,15 @@
                 <p>社内にBIMを定着させるため、スクール形式の研修だけでなく、<br>実案件での実践的な指導が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・実際の社内プロジェクトに講師が伴走し、OJT形式で業務支援を実施<br>
-                  ・プロジェクト進行に即したスキル習得を支援し、実務の中で“学べる場”を提供<br>
-                  ・習熟度に応じたアドバイスや、プロジェクト後の振り返りサポートも実施</p>
+                <h4>支援内容　：</h4>
+                <p>● 実際の社内プロジェクトに講師が伴走し、OJT形式で業務支援を実施<br>
+                  ● プロジェクト進行に即したスキル習得を支援し、実務の中で“学べる場”を提供<br>
+                  ● 習熟度に応じたアドバイスや、プロジェクト後の振り返りサポートも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・受BIM実案件を通じたOJTにより、日常業務の中で学べる環境を実現<br>
-                  ・実務を通じたスキル伝達とその場での実演により、理解と定着をサポート</p>
+                <p>● BIM実案件を通じたOJTにより、日常業務の中で学べる環境を実現<br>
+                  ● 実務を通じたスキル伝達とその場での実演により、理解と定着をサポート</p>
               </div>
             </div>
           </SplideSlide>
@@ -538,16 +538,16 @@
                 <p>BIM未経験者向けリスキリング講座の開講にあたり、<br>転職につながる実践スキル習得を見据えた教材と講師が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・ウェビナー形式のライブレッスン講座を設計<br>
+                <h4>支援内容　：</h4>
+                <p>● ウェビナー形式のライブレッスン講座を設計<br>
                   （プロジェクト編／ファミリ編／ビジュアライズ編／Revitユーザー資格対策）<br>
-                  ・各講座の教材コンテンツをゼロから制作<br>
-                  ・講師として登壇し、双方向型のウェビナー指導を実施</p>
+                  ● 各講座の教材コンテンツをゼロから制作<br>
+                  ● 講師として登壇し、双方向型のウェビナー指導を実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・基礎から資格対策までをカバーし、実務に応用できるスキル習得を支援<br>
-                  ・段階的な学びで理解を深め、即戦力人材の育成に貢献</p>
+                <p>● 基礎から資格対策までをカバーし、実務に応用できるスキル習得を支援<br>
+                  ● 段階的な学びで理解を深め、即戦力人材の育成に貢献</p>
               </div>
             </div>
           </SplideSlide>
@@ -577,15 +577,15 @@
                 <p>社内でのBIM活用を推進するにあたり、実務と直結した教育体制の構築が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容：</h4>
-                <p>・お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
-                  ・BIM教育講座の教材をゼロから制作<br>
-                  ・講師として社内トレーニングも実施</p>
+                <h4>支援内容：</h4>
+                <p>● お客様の業務フローに合わせ、設計用途別にカリキュラムをカスタマイズ<br>
+                  ● BIM教育講座の教材をゼロから制作<br>
+                  ● 講師として社内トレーニングも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果：</h4>
-                <p>・受講者の理解度が向上し、BIMの社内活用が加速<br>
-                  ・教育の定着を見据えた運用体制の構築にも貢献</p>
+                <p>● 受講者の理解度が向上し、BIMの社内活用が加速<br>
+                  ● 教育の定着を見据えた運用体制の構築にも貢献</p>
               </div>
             </div>
           </SplideSlide>
@@ -608,15 +608,15 @@
                   設計の効率化と情報の一元化が課題となっていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
-                  ・ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
-                  ・効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
+                <h4>支援内容　：</h4>
+                <p>● 複数店舗に共通する要素を抽出し、Revitテンプレートとファミリの標準化を支援<br>
+                  ● ブランドの意匠性を保ちながら、再利用可能なBIM環境を整備<br>
+                  ● 効率的なBIM運用に向けた員数集計表を整備し、運用管理をサポート</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
-                  ・社内での設計ルール共有と品質の均一化を実現</p>
+                <p>● CADからBIMへの移行基盤を構築し、新規出店時のモデル構築をスムーズに<br>
+                  ● 社内での設計ルール共有と品質の均一化を実現</p>
               </div>
             </div>
           </SplideSlide>
@@ -639,15 +639,15 @@
                   意匠・構造・設備(MEP)を統合的に扱える制作が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
-                  ・各設計フェーズでの整合性確保と情報可視化をサポート<br>
-                  ・複数設計領域を一貫して統合することで、設計の効率化を支援</p>
+                <h4>支援内容　：</h4>
+                <p>● 意匠・構造・設備の設計情報をもとに、Revitを使用して統合BIMモデルを構築<br>
+                  ● 各設計フェーズでの整合性確保と情報可視化をサポート<br>
+                  ● 複数設計領域を一貫して統合することで、設計の効率化を支援</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
-                  ・以降の設計・施工フェーズでのBIM活用基盤を提供</p>
+                <p>● 分野をまたぐ設計の整合性を向上させ、プロジェクト全体の品質と効率化を実現<br>
+                  ● 以降の設計・施工フェーズでのBIM活用基盤を提供</p>
               </div>
             </div>
           </SplideSlide>
@@ -670,15 +670,15 @@
                   スクール形式の研修だけでなく、実案件での実践的な指導が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・実際の社内プロジェクトに講師が伴走し、OJT形式で業務支援を実施<br>
-                  ・プロジェクト進行に即したスキル習得を支援し、実務の中で“学べる場”を提供<br>
-                  ・習熟度に応じたアドバイスや、プロジェクト後の振り返りサポートも実施</p>
+                <h4>支援内容　：</h4>
+                <p>● 実際の社内プロジェクトに講師が伴走し、OJT形式で業務支援を実施<br>
+                  ● プロジェクト進行に即したスキル習得を支援し、実務の中で“学べる場”を提供<br>
+                  ● 習熟度に応じたアドバイスや、プロジェクト後の振り返りサポートも実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・BIM実案件を通じたOJTにより、日常業務の中で学べる環境を実現<br>
-                  ・実務を通じたスキル伝達とその場での実演により、理解と定着をサポート</p>
+                <p>● BIM実案件を通じたOJTにより、日常業務の中で学べる環境を実現<br>
+                  ● 実務を通じたスキル伝達とその場での実演により、理解と定着をサポート</p>
               </div>
             </div>
           </SplideSlide>
@@ -702,16 +702,16 @@
                   転職につながる実践スキル習得を見据えた教材と講師が求められていた。</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
-                <h4>提供支援内容　：</h4>
-                <p>・ウェビナー形式のライブレッスン講座を設計
+                <h4>支援内容　：</h4>
+                <p>● ウェビナー形式のライブレッスン講座を設計
                   （プロジェクト編／ファミリ編／ビジュアライズ編／Revitユーザー資格対策）<br>
-                  ・各講座の教材コンテンツをゼロから制作<br>
-                  ・講師として登壇し、双方向型のウェビナー指導を実施</p>
+                  ● 各講座の教材コンテンツをゼロから制作<br>
+                  ● 講師として登壇し、双方向型のウェビナー指導を実施</p>
               </div>
               <div class="service__container__casestudy__splide__item-contents-text">
                 <h4>成果　：</h4>
-                <p>・基礎から資格対策までをカバーし、実務に応用できるスキル習得を支援<br>
-                  ・段階的な学びで理解を深め、即戦力人材の育成に貢献</p>
+                <p>● 基礎から資格対策までをカバーし、実務に応用できるスキル習得を支援<br>
+                  ● 段階的な学びで理解を深め、即戦力人材の育成に貢献</p>
               </div>
             </div>
           </SplideSlide>
@@ -763,7 +763,7 @@ export default {
         perPage: 1,
         drag: 'free',
         snap: true,
-        autoplay: true, 
+        autoplay: false, 
         autoWidth: true,
         pagination: true,
         gap: '2.77vw',
@@ -783,7 +783,7 @@ export default {
         perPage: 1,
         drag: 'free',
         snap: true,
-        autoplay: true,
+        autoplay: false,
         autoWidth: true,
         pagination: true,
         gap: '2.77vw',
@@ -1698,16 +1698,14 @@ export default {
             &__text {
               margin-top: min(10px, 0.69vw);
               height: min(90px, 6.25vw);
-              position: relative;
               h3 {
                 font-size: min(32px, 2.22vw);
                 font-weight: 700;
-                height: auto;
+                height: 100%;
                 width: 100%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
               }
             }
 
