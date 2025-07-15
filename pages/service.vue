@@ -1234,6 +1234,7 @@ export default {
           @include mixins.max-screen(768px) {
             font-size: 16vw;
             margin-top: 2.66vw;
+            transform: translateY(60px);
           }
           &.inview {
             transform: translateY(0);
@@ -1440,6 +1441,7 @@ export default {
           @include mixins.max-screen(768px) {
             font-size: 16vw;
             margin-top: 2.66vw;
+            transform: translateY(60px);
           }
           &.inview {
             transform: translateY(0);
@@ -1643,6 +1645,7 @@ export default {
           @include mixins.max-screen(768px) {
             font-size: 16vw;
             margin-top: 2.66vw;
+            transform: translateY(60px);
           }
           &.inview {
             transform: translateY(0);
