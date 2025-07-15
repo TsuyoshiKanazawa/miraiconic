@@ -788,6 +788,7 @@ export default {
         pagination: true,
         gap: '2.77vw',
         focus: 'center',
+        snap: true,
         classes: {
           pagination: 'pagination',
           page: 'page',
@@ -1763,6 +1764,7 @@ export default {
       }
       .service__container__casestudy__splideSp {
         margin: min(60px, 4.16vw) 0 0;
+        padding: 0 3.77vw;
         position: relative;
         z-index: 3;
         opacity: 0;
@@ -1795,13 +1797,13 @@ export default {
               h3 {
                 font-size: 4.26vw;
                 font-weight: 700;
+                letter-spacing: 0.03em;
                 margin-top: 2.13vw;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
                 width: 100%;
-                height: auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
               }
             }
 
@@ -1809,20 +1811,19 @@ export default {
           .service__container__casestudy__splide__item-tag {
             display: flex;
             justify-content: center;
-            gap: min(10px, 0.69vw);
-            padding: min(20px, 1.38vw) 0;
+            gap: 1.33vw;
+            padding: 0 4vw;
             margin-top: 4.26vw;
             .tag {
-              font-size: 3.26vw;
+              font-size:  3.26vw;
               font-weight: 500;
               width: 20vw;
               height: 5.93vw;
               background-color: #DCF4FF;
               text-align: center;
               line-height: 5.93vw;
-              border-radius: 10.66vw;
+              border-radius: 40vw;
               color: white;
-
               &.dark {
                 color: #fff;
                 background-color: #3676B6;
@@ -1835,12 +1836,11 @@ export default {
             //height: 128vw;
             border-radius: 2.66vw;
             margin: 4vw auto 0;
-            padding: 5.33vw;
-            height: 120vw;
+            padding: 4vw 4vw;
+            height: 130vw;
             .service__container__casestudy__splide__item-contents-text {
               display: block;
               margin-bottom: min(20px, 1.38vw);
-              
               padding: 1vw 0;
               h4 {
                 font-size: 3.8vw;

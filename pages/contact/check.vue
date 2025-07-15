@@ -308,7 +308,7 @@ export default {
           width: 7.46vw;
           height: 7.46vw;
           right: 1vw;
-          top: 15%;
+          top: 12%;
         }
       }
       &:hover {

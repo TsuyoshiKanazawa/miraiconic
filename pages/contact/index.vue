@@ -271,15 +271,15 @@ export default {
       }
       img {
         position: absolute;
-        top: 50%;
+        top: 20%;
         right: min(12px, 0.83vw);
-        transform: translateY(-50%);
         width: min(36px, 2.4vw);
         height: min(36px, 2.4vw);
         @include mixins.max-screen(768px) {
           width: 7.46vw;
           height: 7.46vw;
           right: 1vw;
+          top: 12%;
         }
       }
       @include mixins.min-screen(769px) {

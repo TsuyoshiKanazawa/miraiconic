@@ -210,7 +210,7 @@ export default {
           h3 {
             font-size: 4.26vw;
             letter-spacing: 0.03em;
-            margin-top: 1.5vw;
+            margin-top: 2.13vw;
             font-weight: 700;
             height: 100%;
             width: 100%;
@@ -245,18 +245,25 @@ export default {
         padding: 4vw 4vw;
         background-color: #F2F2F2;
         border-radius: 2.66vw;
-        margin-top: 5vw;
-        height: 110vw;
+        margin-top: 4vw;
+        height: 130vw;
         &-text {
-          padding: 3vw 0vw;
+          padding: 1vw 0vw;
           h4 {
             font-size: 3.8vw;
             font-weight: 700;
+            text-align: left;
             letter-spacing: 0.03em;
+            width: auto;
+            margin-top: 2.33vw;
           }
           p {
             font-size: 3.26vw;
+            font-weight: 500;
+            line-height: 1.6;
+            width: auto;
             letter-spacing: 0.05em;
+            margin-top: 1.33vw;
           }
         }
       }
