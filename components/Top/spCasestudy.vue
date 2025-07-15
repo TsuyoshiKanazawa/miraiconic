@@ -189,6 +189,7 @@ export default {
   .casestudy-item-wrap {
     position: relative;
     z-index: 2;
+    
     .casestudy-item {
       background-color: #FFFFFF;
       border-radius: 10.66vw;

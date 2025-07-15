@@ -1623,6 +1623,11 @@ export default {
     &__casestudy {
       color: #252526;
       padding: min(50px, 3.47vw) 0 min(100px, 6.94vw);
+      @include mixins.max-screen(768px) {
+        background-color: #F2F2F2;
+        position: relative;
+        overflow: hidden;
+      }
       &__title {
         &__text {
           font-size: min(5.55vw, 80px);
@@ -1775,32 +1780,30 @@ export default {
           opacity: 1;
         }
         .service__container__casestudy__splide__item {
-          position: relative;
-          display: block;
-          background-color: #fff;
-          width: 92vw;
-          //height: 190.39vw;
-          height: auto;
+          background-color: #FFFFFF;
           border-radius: 10.66vw;
-          padding: 0 2.77vw 8vw;
+          width: 100%;
+          padding: 0 3vw 8vw;
+          margin-top: 10vw;
           .service__container__casestudy__splide__item-title {
-            position: relative;
+            font-size: 4.26vw;
             text-align: center;
+            padding: 7vw 0 3vw;
             p {
               font-size: 2.66vw;
-              margin-top: 8vw;
-              font-weight: 500;
+              letter-spacing: 0.05em;
+              font-weight: 400;
             }
             &__text {
               height: 20.26vw;
               position: relative;
               h3 {
                 font-size: 4.26vw;
-                font-weight: 700;
                 letter-spacing: 0.03em;
                 margin-top: 2.13vw;
-                width: 100%;
+                font-weight: 700;
                 height: 100%;
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1813,7 +1816,6 @@ export default {
             justify-content: center;
             gap: 1.33vw;
             padding: 0 4vw;
-            margin-top: 4.26vw;
             .tag {
               font-size:  3.26vw;
               font-weight: 500;
@@ -1831,17 +1833,13 @@ export default {
             }
           }
           .service__container__casestudy__splide__item-contents {
-            background-color: #F2F2F2;
-            width: 86.66vw;
-            //height: 128vw;
-            border-radius: 2.66vw;
-            margin: 4vw auto 0;
             padding: 4vw 4vw;
+            background-color: #F2F2F2;
+            border-radius: 2.66vw;
+            margin-top: 4vw;
             height: 130vw;
             .service__container__casestudy__splide__item-contents-text {
-              display: block;
-              margin-bottom: min(20px, 1.38vw);
-              padding: 1vw 0;
+              padding: 1vw 0vw;
               h4 {
                 font-size: 3.8vw;
                 font-weight: 700;

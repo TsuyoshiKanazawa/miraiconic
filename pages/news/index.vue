@@ -15,13 +15,13 @@
         <img loading="lazy" v-if="useIsMobile().value" class="news-line-top" src="/img/news/newsLine.svg" alt="" />
         <p class="news-date">{{ item.date }}</p>
         <h3 class="news-title">{{ item.title }}</h3>
-        <NuxtLink
+        <a
           class="news-link"
-          :to="`/news/${item.id}`"
+          :href="`/news/${item.id}`"
           v-if="item.mainText"
         >
           GO
-        </NuxtLink>
+        </a>
         <a
           class="news-link"
           :href="item.url"
