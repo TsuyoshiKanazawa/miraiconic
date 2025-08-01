@@ -1772,7 +1772,7 @@ export default {
       }
       .service__container__casestudy__splideSp {
         margin: min(60px, 4.16vw) 0 0;
-        padding: 0 3.77vw;
+        padding: 0 4vw;
         position: relative;
         z-index: 3;
         opacity: 0;
