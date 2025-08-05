@@ -11,9 +11,9 @@ export default defineNuxtConfig({
       microcmsApiKey: process.env.MICROCMS_API_KEY,
       siteUrl: 'https://miraconi.com',
       emailjs: {
-        serviceID: 'service_w2py6g6',
-        templateID: 'template_iyvjvau',
-        publicKey: 'OhzGRqewkPcbhrZ0o'
+        serviceID: process.env.EMAILJS_SERVICE_ID,
+        templateID: process.env.EMAILJS_TEMPLATE_ID,
+        publicKey: process.env.EMAILJS_PUBLIC_KEY
       }
     }
   },
@@ -34,18 +34,18 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' },
         { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
         { 'http-equiv': 'content-language', content: 'ja' },
-        { hid: 'description', name: 'description', content: '株式会社ミライコニックは、高品質なBIMモデル制作と教育支援を通じ、建設業界のDXをサポートします。' },
+        { hid: 'description', name: 'description', content: '株式会社ミライコニックは、高品質なBIMモデル制作と教育支援を通じ、建設業界のDXを支援します。' },
         { hid: 'keywords', name: 'keywords', content: 'ミライコニック, MIRAICONIC, BIM, 建設業界, DX, 教育支援' },
         { hid: 'og:site_name', property: 'og:site_name', content: 'ミライコニック / MIRAICONIC' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:url', property: 'og:url', content: 'https://miraconi.com/' },
         { hid: 'og:title', property: 'og:title', content: 'ミライコニック / MIRAICONIC' },
-        { hid: 'og:description', property: 'og:description', content: '株式会社ミライコニックは、高品質なBIMモデル制作と教育支援を通じ、建設業界のDXをサポートします。' },
+        { hid: 'og:description', property: 'og:description', content: '株式会社ミライコニックは、高品質なBIMモデル制作と教育支援を通じ、建設業界のDXを支援します。' },
         { hid: 'og:image', property: 'og:image', content: 'https://miraconi.com/img/OGP.jpg' },
         { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
         { hid: 'twitter:site', property: 'twitter:site', content: '@' },
         { hid: 'twitter:title', property: 'twitter:title', content: 'ミライコニック / MIRAICONIC' },
-        { hid: 'twitter:description', property: 'twitter:description', content: '株式会社ミライコニックは、高品質なBIMモデル制作と教育支援を通じ、建設業界のDXをサポートします。' },
+        { hid: 'twitter:description', property: 'twitter:description', content: '株式会社ミライコニックは、高品質なBIMモデル制作と教育支援を通じ、建設業界のDXを支援します。' },
         { hid: 'twitter:image', property: 'twitter:image', content: 'https://miraconi.com/img/OGP.jpg' }
       ],
       link: [

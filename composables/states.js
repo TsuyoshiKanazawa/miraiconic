@@ -24,20 +24,23 @@ export const useFetchNewsItem = async () => {
       limit: 100,
     }
   })
+
+  const formatter = new Intl.DateTimeFormat("ja-JP", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
   //console.log(res)
   const newsItems = res.contents.map(item => {
     // ISO文字列を Date に変換
-    const d = new Date(item.date)
+    const date = new Date(item.date)
     // UTC → JST (+9h)
-    d.setHours(d.getUTCHours() + 9)
-    // 各要素を取り出し
-    const yyyy = d.getFullYear()
-    const mm = String(d.getMonth() + 1).padStart(2, '0')
-    const dd = String(d.getDate()).padStart(2, '0')
+    const formatted = formatter.format(date).replace(/\//g, ".");
     // yyyy.mm.dd 形式にフォーマット
     return {
       ...item,
-      date: `${yyyy}.${mm}.${dd}`
+      date: formatted
     }
   })
   //console.log(res.items)
